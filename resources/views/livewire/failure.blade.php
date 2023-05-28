@@ -66,7 +66,7 @@
                     <ul class="wf-colors-selector my-3">
                         @foreach ( $failure->failureAttributes()->get() as $attribute)
                             <li class="wf-colors-selector-item"
-                            {{-- onclick="updateAttributeFailureQuoteData({{$failure->id}}, {{$attribute->id}})" --}}
+                            onclick="updateAttributeFailureQuoteData({{$failure->id}}, {{$attribute->id}})"
                             >
                                 <sl-card class="wf-colors-selector-item-card wf-card"data-id="{{ $failure->code . substr($attribute->name, 0, 1) }}" data-prix="339.9" data-color="Noir">
 
@@ -667,31 +667,31 @@
         });
     }
 
-    // function updateAttributeFailureQuoteData(failureId, attributeId) {
-    //     var failureId = failureId;
-    //     var attributeId = attributeId;
-    //     alert(2);
+    function updateAttributeFailureQuoteData(failureId, attributeId) {
+        var failureId = failureId;
+        var attributeId = attributeId;
+        alert(2);
 
-    //     var data = {
-    //         failureId: failureId,
-    //         attributeId: attributeId
-    //     };
+        var data = {
+            failureId: failureId,
+            attributeId: attributeId
+        };
 
-    //     $.ajaxSetup({
-    //         headers: {
-    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //         }
-    //     });
+        $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
 
-    //     $.ajax({
-    //         type:'POST',
-    //         url:"{{ route('update.attribute.failure.quote.post') }}",
-    //         data:{failureId:failureId, attributeId: attributeId},
-    //             success: function(data){
-    //                 alert(data.success);
-    //         }
-    //     });
-    // }
+        $.ajax({
+            type:'POST',
+            url:"{{ route('update.attribute.failure.quote.post') }}",
+            data:{failureId:failureId, attributeId: attributeId},
+                success: function(data){
+                    alert(data.success);
+            }
+        });
+    }
 
 </script>
 

@@ -100,14 +100,10 @@ class FailureDeviceController extends Controller
         if ($isChecked == 'true') {
             if (!isset($quoteData['failures'][$failureId])) {
                 $quoteData['failures'][$failureId] = [];
-            }else {
-                // dd($quoteData);
             }
         } else {
             if (isset($quoteData['failures'][$failureId])) {
                 unset($quoteData['failures'][$failureId]);
-            }else {
-                dd(3);
             }
         }
 
