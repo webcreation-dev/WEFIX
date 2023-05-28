@@ -4,7 +4,7 @@
         <a class="navbar-brand" href="https://wefix.net/" aria-label="Retourner à l&#39;accueil">
           <svg width="175px" height="36px" viewBox="0 0 185 36" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" transform="translate(.172843 .52)">
-              <path fill="#ff6900" d="m113.707157 34.85h-55.64c-1.5717335-.005486-2.844514-1.2782665-2.85-2.85v-29.15c.005486-1.57173354 1.2782665-2.84451397 2.85-2.85h55.64c1.571734.00548603 2.844514 1.27826646 2.85 2.85v29.15c-.005486 1.5717335-1.278266 2.844514-2.85 2.85"></path>
+              <path fill="#1d57c4" d="m113.707157 34.85h-55.64c-1.5717335-.005486-2.844514-1.2782665-2.85-2.85v-29.15c.005486-1.57173354 1.2782665-2.84451397 2.85-2.85h55.64c1.571734.00548603 2.844514 1.27826646 2.85 2.85v29.15c-.005486 1.5717335-1.278266 2.844514-2.85 2.85"></path>
               <path fill="#000" d="m21.957157 30.56c-.2575635-.0078475-.4802394-.1819395-.55-.43l-4.34-17.43h-.07l-4.27 17.43c-.0638413.2519741-.2900667.4288412-.55.43h-5c-.25706698 0-.48235079-.1719939-.55-.42l-6.61-25.1c-.04296343-.17271917-.00424681-.35560167.10502387-.49609255.10927068-.14049087.27699579-.22303345.45497613-.22392979h4.57c.26659641-.00232443.49920529.18043968.56.44002234l4.05 17.42h.07l4.45-17.43c.0638413-.25197411.2900667-.42884122.55-.43002234h4.52c.2599333.00118112.4861587.17804823.55.43002234l4.38 17.65h.07l4.2-17.64c.0599425-.25594316.2871412-.43770217.55-.44002234h4.47c.1776734 0 .3451985.08281744.4530534.22400933s.1437028.32460211.0969466.49601301l-6.75 25.1c-.0676492.2480061-.292933.42-.55.42z"></path>
               <path fill="#000" d="m39.897157 26c.9280497.8181537 2.1460062 1.2289438 3.38 1.14.9668443.0265955 1.9178316-.2496103 2.72-.79.5303198-.3314943.9674081-.792674 1.27-1.34.0971967-.2181628.3220612-.3506723.56-.33h3.4c.1880225-.0020626.3649655.0887362.4729299.2426855s.1330582.3512399.0670701.5273145c-.5711531 1.6696483-1.6607912 3.1131559-3.11 4.12-1.6550578 1.014414-3.569586 1.5251865-5.51 1.47-1.3836204.0211877-2.7584613-.2232284-4.05-.72-1.1361523-.4355374-2.1609838-1.1187584-3-2-.8528713-.9101066-1.5097713-1.9856527-1.93-3.16-.459698-1.2830832-.6898789-2.6370887-.68-4-.0169298-1.3652211.2204476-2.7216633.7-4 .8820989-2.3841051 2.7093888-4.2982365 5.05-5.29 1.2645104-.5345708 2.6274012-.7969273 4-.77 1.4610108-.0341176 2.908671.2849165 4.22.93 1.1819802.5958536 2.2090707 1.4586097 3 2.52.783885 1.0809179 1.3509946 2.3034296 1.67 3.6.302697 1.205572.4339879 2.4477865.39 3.69-.0107726.301442-.2583656.5401924-.56.54h-12.74c-.1595262-.0009186-.311872.0662436-.418802.1846304-.1069301.1183868-.158293.2767593-.141198.4353696.0364996 1.1319851.4762691 2.2136762 1.24 3.05m5.9-10c-.7624504-.726919-1.8005079-1.0911497-2.85-1-.7166214-.0243875-1.4289897.1194561-2.08.42-.5066743.2347275-.9568744.5757881-1.32 1-.3175091.3899238-.5553437.8384119-.7 1.32-.059648.1899674-.1064208.3837401-.14.58-.0333736.1664243.0105366.3390039.119391.4692404s.2709038.2040729.440609.2007596h7.12c.1745639.0024305.3402748-.0766895.4481346-.2139657.1078598-.1372761.1455275-.3170015.1018654-.4860343-.1754689-.855225-.5564301-1.6549004-1.11-2.33"></path>
               <g fill="#fff" transform="translate(59.147066 4.32)">
@@ -41,7 +41,12 @@
             <div class="d-flex flex-sm-row flex-column align-items-end mt-1">
               <s class="oldPrice fs-14 fw-medium me-sm-2"></s>
               <span class="newPrice title-section fs-21 text-primary">
-                {{ session('quoteData.totalPrice') }}
+                @if(session()->has('quoteDate.totalPrice'))
+                        {{ session('quoteData.totalPrice') }}
+                    @else
+                        0.00 €
+                    @endif
+                </span>
           </div>
         </div>
       </div>
@@ -51,12 +56,12 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid align-items-center mts">
         <div class="d-flex align-items-center">
-          <img class="ms-sm-n1 ms-n2" src="{{asset('reparation/GALAXYS23.png')}}" srcset="https://intranet.wefix.net/WB/Modeles/GALAXYS23.png 1.5x" alt="GALAXY S23" width="70">
+          <img class="ms-sm-n1 ms-n2" src="{{asset('reparation/'. $model->image )}}" srcset="https://intranet.wefix.net/WB/Modeles/GALAXYS23.png 1.5x" alt="GALAXY S23" width="70">
           <div class="d-flex flex-column">
-            <div class="text-dark fs-14 fw-medium d-none d-sm-block">SAMSUNG</div>
+            {{-- <div class="text-dark fs-14 fw-medium d-none d-sm-block">SAMSUNG</div> --}}
             <div class="d-flex flex-sm-row flex-column align-items-start scroll-device">
-              <div class="text-dark fs-14 fw-medium me-2 d-sm-none">SAMSUNG</div>
-              <span class="title-section fs-21 text-primary scroll-device-text">GALAXY S23</span>
+              {{-- <div class="text-dark fs-14 fw-medium me-2 d-sm-none">SAMSUNG</div> --}}
+              <span class="title-section fs-21 text-primary scroll-device-text">{{$model->name}}</span>
             </div>
           </div>
         </div>
@@ -65,8 +70,13 @@
             <div class="title-section fs-13 fw-medium d-none d-sm-block">Total de votre devis :</div>
             <div class="d-flex flex-sm-row flex-column align-items-end mt-1">
               <s class="oldPriceAlt fs-14 fw-medium me-sm-2"></s>
-              <span id="totalPrice"  class="newPriceAlt title-section fs-21 text-primary"> 0.00</span>
-              <span class=" title-section fs-21 text-primary">€</span>
+              <span id="totalPrice"  class="newPriceAlt title-section fs-21 text-primary">
+                    @if(session()->has('quoteDate.totalPrice'))
+                        {{ session('quoteData.totalPrice') }}
+                    @else
+                        0.00 €
+                    @endif
+                </span>
             </div>
           </div>
         </div>

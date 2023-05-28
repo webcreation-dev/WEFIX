@@ -36,5 +36,4 @@ class FailureController extends Component
     public function getAppointment() {
         return redirect()->route('failures.create');
     }
-
 }

@@ -88,4 +88,44 @@ class FailureDeviceController extends Controller
     {
         //
     }
+
+    public function updateFailureQuoteData(Request $request)
+    {
+        // dd(1);
+        $failureId = $request->input('failureId');
+        $isChecked = $request->input('isChecked');
+
+        $quoteData = session('quoteData', []);
+
+        if ($isChecked == 'true') {
+            if (!isset($quoteData['failures'][$failureId])) {
+                $quoteData['failures'][$failureId] = [];
+            }else {
+                // dd($quoteData);
+            }
+        } else {
+            if (isset($quoteData['failures'][$failureId])) {
+                unset($quoteData['failures'][$failureId]);
+            }else {
+                dd(3);
+            }
+        }
+
+        session(['quoteData' => $quoteData]);
+
+        return response()->json(['success' => true]);
+    }
+
+    public function updateAttributeFailureQuoteData(Request $request)
+    {
+        $failureId = $request->input('failureId');
+        $attributeId = $request->input('attributeId');
+
+        $quoteData = session('quoteData', []);
+        $quoteData['failures'][$failureId] = $attributeId;
+        session(['quoteData' => $quoteData]);
+
+        return response()->json(['success' => true]);
+    }
+
 }

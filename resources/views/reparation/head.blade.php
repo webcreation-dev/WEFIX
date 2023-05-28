@@ -2,6 +2,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Réparation GALAXY S23 : obtenez votre devis en ligne - WeFix</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta  name ="csrf-token" content ="{{ csrf_token() }}" />
     <meta name="description" content="Vous souhaitez réparer votre smartphone GALAXY S23 ? Découvrez les prestations de WeFix, expert de la réparation de smartphone.">
     <script async="" src="{{asset('reparation/gtm.js.téléchargement')}}"></script>
     <script src="{{asset('reparation/otSDKStub.js.téléchargement')}}" type="text/javascript" charset="UTF-8" data-domain-script="a6b87446-644c-4e57-a7de-cbeee0925cc9"></script>
@@ -1697,8 +1699,8 @@
 
       #onetrust-consent-sdk #onetrust-accept-btn-handler,
       #onetrust-banner-sdk #onetrust-reject-all-handler {
-        background-color: #FF6900;
-        border-color: #FF6900;
+        background-color: #1d57c4;
+        border-color: #1d57c4;
         color: #FFFFFF;
       }
 
@@ -1710,8 +1712,8 @@
 
       #onetrust-consent-sdk #onetrust-pc-btn-handler,
       #onetrust-consent-sdk #onetrust-pc-btn-handler.cookie-setting-link {
-        color: #FF6900;
-        border-color: #FF6900;
+        color: #1d57c4;
+        border-color: #1d57c4;
         background-color:
           #FFFFFF;
       }
@@ -4446,13 +4448,13 @@
 
       #onetrust-consent-sdk #onetrust-pc-sdk button:not(#clear-filters-handler):not(.ot-close-icon):not(#filter-btn-handler):not(.ot-remove-objection-handler):not(.ot-obj-leg-btn-handler):not([aria-expanded]):not(.ot-link-btn),
       #onetrust-consent-sdk #onetrust-pc-sdk .ot-leg-btn-container .ot-active-leg-btn {
-        background-color: #FF6900;
-        border-color: #FF6900;
+        background-color: #1d57c4;
+        border-color: #1d57c4;
         color: #FFFFFF;
       }
 
       #onetrust-consent-sdk #onetrust-pc-sdk .ot-active-menu {
-        border-color: #FF6900;
+        border-color: #1d57c4;
       }
 
       #onetrust-consent-sdk #onetrust-pc-sdk .ot-leg-btn-container .ot-remove-objection-handler {
@@ -4809,11 +4811,11 @@
       }
 
       #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-sdk-cookie-policy-group {
-        color: #FF6900;
+        color: #1d57c4;
       }
 
       #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy #cookie-policy-title {
-        color: #FF6900;
+        color: #1d57c4;
       }
 
       #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table th {

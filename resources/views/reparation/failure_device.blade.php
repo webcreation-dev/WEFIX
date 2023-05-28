@@ -206,7 +206,7 @@
                       <lineargradient id="d" gradientTransform="matrix(-.91390005 .40593927 -.40593927 -.91390005 894.81 612.25)" x1="363.97" x2="363.97" xlink:href="#a" y1="595.73" y2="212.58"></lineargradient>
                       <lineargradient id="e" gradientUnits="userSpaceOnUse" x1="307.66" x2="490.86" y1="325.46" y2="519.76">
                         <stop offset=".09" stop-color="#ff8f33"></stop>
-                        <stop offset="1" stop-color="#ff6900"></stop>
+                        <stop offset="1" stop-color="#1d57c4"></stop>
                       </lineargradient>
                       <filter id="f" filterUnits="userSpaceOnUse">
                         <feoffset dx="1.83" dy="1.83"></feoffset>
@@ -216,7 +216,7 @@
                         <fecomposite in="SourceGraphic"></fecomposite>
                       </filter>
                       <lineargradient id="g" gradientUnits="userSpaceOnUse" x1="118.1" x2="177.83" y1="345.54" y2="285.81">
-                        <stop offset="0" stop-color="#ff6900"></stop>
+                        <stop offset="0" stop-color="#1d57c4"></stop>
                         <stop offset=".37" stop-color="#ff750c"></stop>
                         <stop offset="1" stop-color="#ff942b"></stop>
                       </lineargradient>
@@ -325,7 +325,7 @@
                       </filter>
                       <lineargradient id="g" gradientTransform="matrix(0 1 -1 0 514.27 60.68)" gradientUnits="userSpaceOnUse" x1="23.1" x2="418.46" y1="164.27" y2="164.27">
                         <stop offset="0" stop-color="#ff822b"></stop>
-                        <stop offset="1" stop-color="#ff6900"></stop>
+                        <stop offset="1" stop-color="#1d57c4"></stop>
                       </lineargradient>
                       <lineargradient id="h" gradientTransform="matrix(.43082613 .90243495 -.90243495 .43082613 391.23 -39.21)" gradientUnits="userSpaceOnUse" x1="156.05" x2="392.69" y1="176.79" y2="176.79">
                         <stop offset="0" stop-color="#ffe6d4"></stop>

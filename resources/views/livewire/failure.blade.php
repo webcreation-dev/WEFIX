@@ -31,9 +31,14 @@
       @foreach ($failures as $failure)
         <div class="select-pannes-container">
             <label class="select-pannes">
-            <input class="pannes-checkbox" type="checkbox" data-pannes="" autocomplete="off" wire:click="selectFailure({{ $failure->id }})"
-            data-original-price={{$failure->price}} data-final-price={{$failure->reduction_price}}
-            data-img="https://intranet.wefix.net/WB/PictoReparation/FacadeAvant.png" data-id="{{$failure->code}}N" data-titre="Façade avant">
+                <input class="pannes-checkbox" type="checkbox" data-pannes="" autocomplete="off"
+                    value="{{ $failure->id }}"
+                    data-original-price="{{ $failure->price }}" data-final-price="{{ $failure->reduction_price }}"
+                    data-img="https://intranet.wefix.net/WB/PictoReparation/FacadeAvant.png" data-id="{{ $failure->code }}N"
+                    data-titre="Façade avant"
+                    data-failure-id="{{ $failure->id }}"
+                    onclick="updateQuoteData(this)">
+
             <div class="card-pannes" style="height: 5rem !important">
                 <div>
                 <img src="{{asset('reparation/'. $failure->image )}}" srcset="https://intranet.wefix.net/WB/PictoReparation/FacadeAvant.png 1.5x" alt="Façade avant">
@@ -61,7 +66,8 @@
                     <ul class="wf-colors-selector my-3">
                         @foreach ( $failure->failureAttributes()->get() as $attribute)
                             <li class="wf-colors-selector-item"
-                            wire:click="selectAttribute({{$failure->id}}, {{$attribute->id}})">
+                            {{-- onclick="updateAttributeFailureQuoteData({{$failure->id}}, {{$attribute->id}})" --}}
+                            >
                                 <sl-card class="wf-colors-selector-item-card wf-card"data-id="{{ $failure->code . substr($attribute->name, 0, 1) }}" data-prix="339.9" data-color="Noir">
 
                                     <div class="wf-colors-selector-item-card-body">
@@ -633,3 +639,59 @@
         Livewire.emit('totalPriceUpdated', totalPrice);
     });
 </script>
+
+<script>
+    function updateQuoteData(checkbox) {
+        var failureId = checkbox.dataset.failureId;
+        var isChecked = checkbox.checked;
+
+        alert(1);
+        var data = {
+            failureId: failureId,
+            isChecked: isChecked
+        };
+
+        $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            type:'POST',
+            url:"{{ route('update.failure.quote.post') }}",
+            data:{failureId:failureId, isChecked:isChecked},
+                success: function(data){
+                    alert(data.success);
+            }
+        });
+    }
+
+    // function updateAttributeFailureQuoteData(failureId, attributeId) {
+    //     var failureId = failureId;
+    //     var attributeId = attributeId;
+    //     alert(2);
+
+    //     var data = {
+    //         failureId: failureId,
+    //         attributeId: attributeId
+    //     };
+
+    //     $.ajaxSetup({
+    //         headers: {
+    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    //         }
+    //     });
+
+    //     $.ajax({
+    //         type:'POST',
+    //         url:"{{ route('update.attribute.failure.quote.post') }}",
+    //         data:{failureId:failureId, attributeId: attributeId},
+    //             success: function(data){
+    //                 alert(data.success);
+    //         }
+    //     });
+    // }
+
+</script>
+

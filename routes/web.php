@@ -8,6 +8,7 @@ use App\Http\Controllers\Repair\ModelBrandController;
 use App\Http\Controllers\Repair\SheduleStoreController;
 use App\Http\Controllers\Repair\StoreDeviceController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +21,7 @@ use App\Http\Controllers\Repair\StoreDeviceController;
 */
 
 Route::get('/', function () {
+    dd(session('quoteData'));
     return view('welcome');
 });
 
@@ -31,6 +33,13 @@ Route::resource('models', ModelBrandController::class);
 Route::resource('failures', FailureDeviceController::class);
 Route::resource('stores', StoreDeviceController::class);
 Route::resource('schedules', SheduleStoreController::class);
+
+Route::post('update_failure_quotedata', [FailureDeviceController::class, 'updateFailureQuoteData'])->name('update.failure.quote.post');;
+Route::post('update_attribute_failure_quotedata', [FailureDeviceController::class, 'updateAttributeFailureQuoteData'])->name('update.attribute.failure.quote.post');;
+
+
+
+
 
 
 

@@ -2,6 +2,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WeFix Expert Smartphone: Réparation et Protection</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <meta  name ="csrf-token" content ="{{ csrf_token() }}" />
     <meta name="description" content="WeFix, expert en réparation de smartphone. Réparation sur rendez-vous et garantie avec des techniciens certifiés. Trouvez le corner WeFix proche de chez vous !">
     <script async="" src="{{asset('layout/gtm.js.téléchargement')}}"></script>
     <script src="{{asset('layout/otSDKStub.js.téléchargement')}}" type="text/javascript" charset="UTF-8" data-domain-script="a6b87446-644c-4e57-a7de-cbeee0925cc9"></script>
