@@ -238,14 +238,18 @@
           </svg>
         </div>
       </div>
+
+
+
+
       <h1 class="title-section text-center" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">
-        <span class="text-shadow">Julian</span>, votre rendez-vous est confirmé !
+        <span class="text-shadow">{{ $quoteData['appointment'][0]['surname'] }}</span>, votre rendez-vous est confirmé !
       </h1>
       <section class="container mt-4">
         <div class="grid">
           <div class="g-col-lg-7 g-col-12">
             <p class="mt-3">
-              <strong>Julian</strong>, nous vous attendons avec impatience le <strong>vendredi 26 mai 2023</strong> à <strong>10:20</strong>, dans la boutique <strong>WeFix - Fnac Nice</strong>, pour la réparation de votre <strong>DESIRE 825</strong> !
+              <strong>{{ $quoteData['appointment'][0]['surname'] }}</strong>, nous vous attendons avec impatience le <strong>{{ $quoteData['schedule'][0]['day'] }} {{ $quoteData['schedule'][0]['date'] }} {{ date('Y') }}</strong> à <strong>{{ $quoteData['schedule'][0]['hour'] }}</strong>, dans la boutique <strong>{{ $quoteData['store'][0]['name'] }}</strong>, pour la réparation de votre <strong>{{ $quoteData['model']->name }}</strong> !
             </p>
             <alert class="mb-3" role="alert" data-other-pannes-alert="">
               <span>Votre téléphone ou tablette devra être <strong>dé-géolocalisé(e), sauvegardé(e) et la synchronisation de vos comptes désactivées</strong> ! </span>
@@ -272,36 +276,40 @@
               Retourner à l'accueil
             </sl-button>
           </div>
+
+
+
           <div class="g-col-lg-5 g-col-12 ps-xl-5 mt-lg-0 mt-3">
             <div class="p-4 h-100 ms-auto border-start">
               <div class="widget px-lg-2 py-2 mb-3">
                 <div class="title-section fs-lg fw-bold widget-title text-center">Détails de votre rendez-vous</div>
                 <div class="d-flex justify-content-between align-items-center p-2 border-bottom">
                   <div>
-                    <div class="widget-product-title title-section fs-md fw-bold">ADJIBI Julian</div>
-                    <div class="widget-product-meta fs-14">adjilan2403@gmail.com</div>
+                    <div class="widget-product-title title-section fs-md fw-bold">{{ $quoteData['appointment'][0]['name'] }} {{ $quoteData['appointment'][0]['surname'] }}</div>
+                    <div class="widget-product-meta fs-14">{{ $quoteData['appointment'][0]['mail'] }}</div>
                   </div>
                   <i class="ci-user fs-22 text-primary"></i>
                 </div>
                 <div class="d-flex justify-content-between align-items-center p-2 border-bottom">
                   <div>
-                    <div class="widget-product-title title-section fs-md fw-bold">WeFix - Fnac Nice</div>
-                    <div class="widget-product-meta fs-14">44 avenue Jean Médecin Nice 06000</div>
+                    <div class="widget-product-title title-section fs-md fw-bold">{{ $quoteData['store'][0]['name'] }}</div>
+                    <div class="widget-product-meta fs-14">{{ $quoteData['store'][0]['address'] }}</div>
                   </div>
                   <i class="ci-map fs-22 text-primary"></i>
                 </div>
                 <div class="d-flex justify-content-between align-items-center p-2 border-bottom">
                   <div>
-                    <div class="widget-product-title title-section fs-md fw-bold">créneau à 10:20</div>
-                    <div class="widget-product-meta fs-14">vendredi 26 mai 2023</div>
+                    <div class="widget-product-title title-section fs-md fw-bold">créneau à {{ $quoteData['schedule'][0]['hour'] }}</div>
+                    <div class="widget-product-meta fs-14">{{ $quoteData['schedule'][0]['day'] }} {{ $quoteData['schedule'][0]['date'] }} {{ date('Y') }}</div>
                   </div>
                   <i class="ci-time fs-22 text-primary"></i>
                 </div>
+
                 <div class="d-flex align-items-center py-2 border-bottom">
-                  <img src="{{asset('reparation/HTCDESIRE825.png')}}" alt="DESIRE 825" width="64">
+                  <img src="{{asset('reparation/'. $quoteData['model']->image )}}" alt="" width="64">
                   <div class="ps-2">
                     <div class="widget-product-meta fs-14 mb-1">HTC</div>
-                    <div class="widget-product-title title-section fs-lg fw-bold">DESIRE 825</div>
+                    <div class="widget-product-title title-section fs-lg fw-bold">{{$quoteData['model']->name}}</div>
                   </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center p-2 border-bottom">
@@ -330,7 +338,7 @@
                   </li>
                 </ul>
                 <div class="title-section text-center text-primary my-4">
-                  <span class="fw-medium text-dark fs-md">Votre total:</span> 9.90€
+                  <span class="fw-medium text-dark fs-md">Votre total:</span> {{$quoteData['totalPrice']}}€
                 </div>
                 <p class="text-muted fs-sm mt-3">
                   <sup>*</sup>Réduction de 10% applicable sur la réparation la plus chère de la prestation réservée via une prise de rendez-vous sur le site <a class="wf-decoration--underline" href="#">wefix.net</a>. Sous réserve que la réparation soit effectuée dans le point de vente et a l’heure choisie lors de la prise de rendez-vous. WeFix se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une autre offre.
@@ -339,6 +347,7 @@
             </div>
           </div>
         </div>
+
         <div class="row justify-content-center mt-3 mb-5" id="prepare-reparation">
           <div class="col-md-7 col-12">
             <div class="card border-0 shadow mt-lg-4">

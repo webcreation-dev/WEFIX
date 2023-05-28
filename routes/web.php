@@ -5,6 +5,8 @@ use App\Http\Controllers\Repair\TypeDeviceController;
 use App\Http\Controllers\Repair\BrandDeviceController;
 use App\Http\Controllers\Repair\FailureDeviceController;
 use App\Http\Controllers\Repair\ModelBrandController;
+use App\Http\Controllers\Repair\SheduleStoreController;
+use App\Http\Controllers\Repair\StoreDeviceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,43 +23,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/layouts', function () {
-    return view('layouts.app');
-});
-
-Route::get('/repair1', function () {
-    return view('reparation.typedevice');
-});
-
-Route::get('/repair2', function () {
-    return view('reparation.step2');
-});
-
-Route::get('/repair3', function () {
-    return view('reparation.step3');
-});
-
-Route::get('/repair4', function () {
-    return view('reparation.step4');
-});
-
-Route::get('/repair5', function () {
-    return view('reparation.step5');
-});
-
-Route::get('/repair6', function () {
-    return view('reparation.step6');
-});
-
-Route::get('/repair7', function () {
-    return view('reparation.step7');
-});
 
 //Route ressource
 Route::resource('typedevices', TypeDeviceController::class);
 Route::resource('brands', BrandDeviceController::class);
 Route::resource('models', ModelBrandController::class);
 Route::resource('failures', FailureDeviceController::class);
+Route::resource('stores', StoreDeviceController::class);
+Route::resource('schedules', SheduleStoreController::class);
+
 
 
 

@@ -4986,4 +4986,5 @@
         }
       }
     </style>
+    @livewireStyles
   </head>

@@ -16,6 +16,7 @@ class FailureDevice extends Model
         'reduction_price',
         'reduction',
         'rdv_online',
+        'code'
     ];
 
     public function modelBrands()

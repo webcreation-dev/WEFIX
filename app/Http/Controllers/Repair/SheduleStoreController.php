@@ -15,7 +15,9 @@ class SheduleStoreController extends Controller
      */
     public function index()
     {
-        //
+        $quoteData = session('quoteData', []);
+        // dd($quoteData['appointment'][0]['surname']);
+        return view('reparation.confirm_appointment', compact('quoteData'));
     }
 
     /**

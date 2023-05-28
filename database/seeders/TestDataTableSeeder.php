@@ -104,6 +104,7 @@ class TestDataTableSeeder extends Seeder
             'reduction_price' => '251.91',
             'reduction' => '10',
             'rdv_online' => true,
+            'code' => 'FA',
         ]);
         FailureDevice::create([
             'name' => 'Batterie',
@@ -112,6 +113,7 @@ class TestDataTableSeeder extends Seeder
             'reduction_price' => '63.92',
             'reduction' => '20',
             'rdv_online' => false,
+            'code' => 'BA',
         ]);
         FailureDevice::create([
             'name' => 'Appareil photo arrière',
@@ -120,6 +122,7 @@ class TestDataTableSeeder extends Seeder
             'reduction_price' => '71.92',
             'reduction' => '20',
             'rdv_online' => false,
+            'code' => 'APA',
         ]);
         FailureDevice::create([
             'name' => 'Appareil photo avant',
@@ -128,6 +131,7 @@ class TestDataTableSeeder extends Seeder
             'reduction_price' => '47.92',
             'reduction' => '20',
             'rdv_online' => false,
+            'code' => 'APAV',
         ]);
         FailureDevice::create([
             'name' => ' Connecteur de charge',
@@ -136,6 +140,7 @@ class TestDataTableSeeder extends Seeder
             'reduction_price' => '55.92',
             'reduction' => '20',
             'rdv_online' => false,
+            'code' => 'CC',
         ]);
         FailureDevice::create([
             'name' => 'Façade arrière',
@@ -144,6 +149,7 @@ class TestDataTableSeeder extends Seeder
             'reduction_price' => '60.72',
             'reduction' => '20',
             'rdv_online' => false,
+            'code' => 'FAR',
         ]);
         FailureDevice::create([
             'name' => 'Haut-parleur',
@@ -152,6 +158,7 @@ class TestDataTableSeeder extends Seeder
             'reduction_price' => '31.92',
             'reduction' => '20',
             'rdv_online' => false,
+            'code' => 'HP',
         ]);
         FailureDevice::create([
             'name' => 'Diagnostic de la panne',
@@ -160,6 +167,7 @@ class TestDataTableSeeder extends Seeder
             'reduction_price' => '0',
             'reduction' => '0',
             'rdv_online' => false,
+            'code' => 'DP',
         ]);
 
         //Association des attributs de pannes aux pannes d'appareils

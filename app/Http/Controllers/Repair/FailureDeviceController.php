@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Repair;
 
 use App\Http\Controllers\Controller;
 use App\Models\Repair\FailureDevice;
+use App\Models\Repair\ModelBrand;
 use Illuminate\Http\Request;
 
 
@@ -27,7 +28,9 @@ class FailureDeviceController extends Controller
      */
     public function create()
     {
-        //
+        $quoteData = session('quoteData');
+        $model = ModelBrand::find($quoteData['model'])[0];
+        return view('reparation.appointment', compact('model'));
     }
 
     /**

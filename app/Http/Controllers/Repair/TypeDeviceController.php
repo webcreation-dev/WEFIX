@@ -49,6 +49,11 @@ class TypeDeviceController extends Controller
      */
     public function show(TypeDevice $typedevice)
     {
+
+        $quoteData = session('quoteData', []);
+        $quoteData['typedevice'] = $typedevice;
+        session(['quoteData' => $quoteData]);
+
         $brand_devices = $typedevice->brandDevices()->get();
         return view('reparation.brand_device', compact('brand_devices'));
     }

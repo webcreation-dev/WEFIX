@@ -47,6 +47,10 @@ class ModelBrandController extends Controller
      */
     public function show(ModelBrand $model)
     {
+        $quoteData = session('quoteData', []);
+        $quoteData['model'] = $model;
+        session(['quoteData' => $quoteData]);
+
         $failures = $model->failureDevices()->get();
         return view('reparation.failure_device', compact('failures', 'model'));
     }

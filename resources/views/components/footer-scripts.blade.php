@@ -69,4 +69,5 @@
     </div>
   </div>
   <script src="{{asset('layout/home.bundle.min.js.téléchargement')}}"></script>
+  @livewireScripts
 

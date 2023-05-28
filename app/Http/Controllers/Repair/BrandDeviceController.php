@@ -48,6 +48,10 @@ class BrandDeviceController extends Controller
      */
     public function show(BrandDevice $brand)
     {
+        $quoteData = session('quoteData', []);
+        $quoteData['brand'] = $brand;
+        session(['quoteData' => $quoteData]);
+
         $model_brands = $brand->modelBrand()->get();
         return view('reparation.model_brand', compact('model_brands'));
     }

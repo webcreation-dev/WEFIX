@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('price');
             $table->string('reduction_price');
             $table->string('reduction');
+            $table->string('code');
             $table->boolean('rdv_online')->default(false);
             $table->timestamps();
         });
