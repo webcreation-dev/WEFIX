@@ -91,7 +91,7 @@ class FailureDeviceController extends Controller
 
     public function updateFailureQuoteData(Request $request)
     {
-        // dd(1);
+
         $failureId = $request->input('failureId');
         $isChecked = $request->input('isChecked');
 

@@ -37,7 +37,7 @@
                     data-img="https://intranet.wefix.net/WB/PictoReparation/FacadeAvant.png" data-id="{{ $failure->code }}N"
                     data-titre="Façade avant"
                     data-failure-id="{{ $failure->id }}"
-                    onclick="updateQuoteData(this)">
+                    onclick="updateQuoteData(this)"  @if(isset($quoteData['failures'][$failure->id])) checked @endif >
 
             <div class="card-pannes" style="height: 5rem !important">
                 <div>
@@ -68,7 +68,7 @@
                             <li class="wf-colors-selector-item"
                             onclick="updateAttributeFailureQuoteData({{$failure->id}}, {{$attribute->id}})"
                             >
-                                <sl-card class="wf-colors-selector-item-card wf-card"data-id="{{ $failure->code . substr($attribute->name, 0, 1) }}" data-prix="339.9" data-color="Noir">
+                                <sl-card class="wf-colors-selector-item-card wf-card"  data-id="{{ $failure->code . substr($attribute->name, 0, 1) }}" data-prix="339.9" data-color="Noir">
 
                                     <div class="wf-colors-selector-item-card-body">
                                     <div class="wf-colors-selector-item-card-body-badge" style="background-color: {{$attribute->code}}; border: 1px solid #{{$attribute->code}};"></div>
@@ -645,7 +645,6 @@
         var failureId = checkbox.dataset.failureId;
         var isChecked = checkbox.checked;
 
-        alert(1);
         var data = {
             failureId: failureId,
             isChecked: isChecked
@@ -662,7 +661,7 @@
             url:"{{ route('update.failure.quote.post') }}",
             data:{failureId:failureId, isChecked:isChecked},
                 success: function(data){
-                    alert(data.success);
+                    // alert(data.success);
             }
         });
     }
@@ -670,7 +669,6 @@
     function updateAttributeFailureQuoteData(failureId, attributeId) {
         var failureId = failureId;
         var attributeId = attributeId;
-        alert(2);
 
         var data = {
             failureId: failureId,
@@ -688,7 +686,7 @@
             url:"{{ route('update.attribute.failure.quote.post') }}",
             data:{failureId:failureId, attributeId: attributeId},
                 success: function(data){
-                    alert(data.success);
+                    // alert(data.success);
             }
         });
     }

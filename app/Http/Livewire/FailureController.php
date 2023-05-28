@@ -16,6 +16,7 @@ class FailureController extends Component
         return view('livewire.failure', [
             'model' => $this->model,
             'failures' => $failures,
+            'quoteData' => session('quoteData', []),
         ]);
     }
 
