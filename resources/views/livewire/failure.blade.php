@@ -68,7 +68,7 @@
                             <li class="wf-colors-selector-item"
                             onclick="updateAttributeFailureQuoteData({{$failure->id}}, {{$attribute->id}})"
                             >
-                                <sl-card class="wf-colors-selector-item-card wf-card"  data-id="{{ $failure->code . substr($attribute->name, 0, 1) }}" data-prix="339.9" data-color="Noir">
+                                <sl-card class="wf-colors-selector-item-card wf-card"  data-id="{{ $failure->code . substr($attribute->name, 0, 1) }}" data-prix="{{$failure->price}}" data-color="Noir">
 
                                     <div class="wf-colors-selector-item-card-body">
                                     <div class="wf-colors-selector-item-card-body-badge" style="background-color: {{$attribute->code}}; border: 1px solid #{{$attribute->code}};"></div>
@@ -635,10 +635,12 @@
 
 <script>
     document.getElementById('nextButton').addEventListener('click', function() {
-        var totalPrice = document.getElementById('totalPrice').innerText;
-        Livewire.emit('totalPriceUpdated', totalPrice);
+        var discountPrice = document.getElementById('discountPrice').innerText;
+        var notDiscountPrice = document.getElementById('notDiscountPrice').innerText;
+        Livewire.emit('priceUpdated', discountPrice, notDiscountPrice);
     });
 </script>
+
 
 <script>
     function updateQuoteData(checkbox) {

@@ -8,22 +8,25 @@ class QuoteModelController extends Component
 {
 
     public $model;
-    public $totalPrice;
+    public $discountPrice;
+    public $notDiscountPrice;
 
 
     public function render()
     {
         return view('livewire.quote-model', [
             'model' => $this->model,
+            'quoteData' => session('quoteData', []),
         ]);
     }
 
-    protected $listeners = ['totalPriceUpdated'];
+    protected $listeners = ['priceUpdated'];
 
-    public function totalPriceUpdated($totalPrice)
+    public function priceUpdated($discountPrice, $notDiscountPrice)
     {
         $quoteData = session('quoteData', []);
-        $quoteData['totalPrice'] = $totalPrice;
+        $quoteData['discountPrice'] = $discountPrice;
+        $quoteData['notDiscountPrice'] = $notDiscountPrice;
         session(['quoteData' => $quoteData]);
     }
 }

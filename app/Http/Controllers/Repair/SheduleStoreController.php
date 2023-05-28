@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Repair;
 
 use App\Http\Controllers\Controller;
+use App\Models\Repair\FailureAttribute;
+use App\Models\Repair\FailureDevice;
 use App\Models\Repair\SheduleStore;
 use Illuminate\Http\Request;
 
@@ -16,8 +18,9 @@ class SheduleStoreController extends Controller
     public function index()
     {
         $quoteData = session('quoteData', []);
-        // dd($quoteData['appointment'][0]['surname']);
-        return view('reparation.confirm_appointment', compact('quoteData'));
+
+        $failures = FailureDevice::findMany(array_keys($quoteData['failures']));
+        return view('reparation.confirm_appointment', compact('quoteData', 'failures'));
     }
 
     /**

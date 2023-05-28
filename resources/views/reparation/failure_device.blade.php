@@ -148,7 +148,7 @@
         <h1 class="title-section text-center my-4 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Que voulez-vous réparer sur votre {{$model->name}} ?</h1>
         <div class="mt-4">
           <div class="wf-speech-bubble">
-            <sl-avatar class="wf-avatar wf-avatar--md" image="/images/reparation/yves.webp" label="Yves de WeFix" shape="circle">
+            <sl-avatar class="wf-avatar wf-avatar--md" image="{{asset('reparation/yves.webp')}}" label="Yves de WeFix" shape="circle">
 
             </sl-avatar>
             <div class="wf-speech-bubble--text">

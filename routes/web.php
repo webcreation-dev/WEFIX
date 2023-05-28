@@ -21,8 +21,7 @@ use App\Http\Controllers\Repair\StoreDeviceController;
 */
 
 Route::get('/', function () {
-    dd(session('quoteData'));
-    return view('welcome');
+    return view('layouts.app');
 });
 
 

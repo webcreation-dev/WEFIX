@@ -246,7 +246,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle fw-medium" href="#" aria-label="Protégez tous vos appareils !">
-                <span>Protéger</span>
+                <span>Revendre</span>
               </a>
               <div class="dropdown-menu py-3 px-2">
                 <div class="d-flex flex-wrap flex-sm-nowrap" style="gap: 8px">
@@ -317,21 +317,13 @@
                 </div>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" aria-label="Découvrez les smartphones reconditionnés WeFix !">
-                <span class="fw-medium">Smartphones reconditionnés</span>
-              </a>
-            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="#" aria-label="Toutes nos boutiques WeFix !">
                 <span class="fw-medium">Nos boutiques</span>
               </a>
             </li>
-            <li class="nav-item d-none d-xl-block">
-              <a class="nav-link" href="#" aria-label="WeFix recrute !">
-                <span class="fw-medium">WeFix recrute</span>
-              </a>
-            </li>
+
             <li class="nav-item">
               <sl-icon class="nav-link" library="heroicons" name="magnifying-glass" style="display:inline-block;width:1.5em;height:1.5em;vertical-align:middle; cursor: pointer;" data-search-open="" aria-hidden="true">
                 <template shadowrootmode="open">

@@ -51,6 +51,16 @@ class ModelBrandController extends Controller
         $quoteData['model'] = $model;
         session(['quoteData' => $quoteData]);
 
+        // session()->forget([
+        //     'quoteData.failures',
+        //     'quoteData.totalPrice',
+        //     'quoteData.appointment',
+        //     'quoteData.store',
+        //     'quoteData.schedule',
+        //     'quoteData.discountPrice',
+        //     'quoteData.notDiscountPrice'
+        // ]);
+
         $failures = $model->failureDevices()->get();
         return view('reparation.failure_device', compact('failures', 'model'));
     }

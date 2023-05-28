@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Repair;
 
 use App\Models\Repair\BrandDevice;
 use App\Http\Controllers\Controller;
+use App\Models\Repair\TypeDevice;
 use Illuminate\Http\Request;
 
 
@@ -24,9 +25,18 @@ class BrandDeviceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $typedevice = TypeDevice::find($request->typedevice);
+        $brand = BrandDevice::find($request->brand);
+
+        $quoteData = session('quoteData', []);
+        $quoteData['typedevice'] = $typedevice;
+        $quoteData['brand'] = $brand;
+        session(['quoteData' => $quoteData]);
+
+        $model_brands = $brand->modelBrand()->get();
+        return view('reparation.model_brand', compact('model_brands'));
     }
 
     /**

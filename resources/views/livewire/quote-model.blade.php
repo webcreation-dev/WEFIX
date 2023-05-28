@@ -41,11 +41,7 @@
             <div class="d-flex flex-sm-row flex-column align-items-end mt-1">
               <s class="oldPrice fs-14 fw-medium me-sm-2"></s>
               <span class="newPrice title-section fs-21 text-primary">
-                @if(session()->has('quoteDate.totalPrice'))
-                        {{ session('quoteData.totalPrice') }}
-                    @else
-                        0.00 €
-                    @endif
+                @if(isset($quoteData['discountPrice'])) {{$quoteData['discountPrice']}} @else 0.00 €  @endif
                 </span>
           </div>
         </div>
@@ -69,13 +65,9 @@
           <div class="d-flex flex-column align-items-end">
             <div class="title-section fs-13 fw-medium d-none d-sm-block">Total de votre devis :</div>
             <div class="d-flex flex-sm-row flex-column align-items-end mt-1">
-              <s class="oldPriceAlt fs-14 fw-medium me-sm-2"></s>
-              <span id="totalPrice"  class="newPriceAlt title-section fs-21 text-primary">
-                    @if(session()->has('quoteDate.totalPrice'))
-                        {{ session('quoteData.totalPrice') }}
-                    @else
-                        0.00 €
-                    @endif
+              <s class="oldPriceAlt fs-14 fw-medium me-sm-2" id="notDiscountPrice"></s>
+              <span id="discountPrice"  class="newPriceAlt title-section fs-21 text-primary">
+                    @if(isset($quoteData['discountPrice'])) {{$quoteData['discountPrice']}} @else 0.00 €  @endif
                 </span>
             </div>
           </div>

@@ -203,7 +203,7 @@
                                                                     <div class="fc-daygrid-event-harness" style="margin-top: 0px;">
                                                                     <a href="{{ route('stores.show', ['store' => $store, 'day' => $day[0], 'date' => $day[count($day) - 2] . " " . $day[count($day) - 1],  'hour' => $time ]) }}" tabindex="0" class="fc-event fc-event-start fc-event-end fc-event-future fc-daygrid-event fc-daygrid-block-event fc-h-event border-0">
                                                                         <div class="fc-event-main">
-                                                                        <div class="fc-daygrid-event--title">{{$time}}</div>
+                                                                        <div style="color: white !important;" class="fc-daygrid-event--title">{{$time}}</div>
                                                                         </div>
                                                                     </a>
                                                                     </div>
