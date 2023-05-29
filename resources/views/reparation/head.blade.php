@@ -1,7 +1,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Réparation GALAXY S23 : obtenez votre devis en ligne - WeFix</title>
+    <title>MAYDAY PHONE | Réparation et Revente</title>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <meta  name ="csrf-token" content ="{{ csrf_token() }}" />
     <meta name="description" content="Vous souhaitez réparer votre smartphone GALAXY S23 ? Découvrez les prestations de WeFix, expert de la réparation de smartphone.">
@@ -27,18 +27,7 @@
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: dark)">
     <meta property="og:title" content="Réparation GALAXY S23 : obtenez votre devis en ligne - WeFix">
     <meta property="og:description" content="Vous souhaitez réparer votre smartphone GALAXY S23 ? Découvrez les prestations de WeFix, expert de la réparation de smartphone.">
-    <meta property="og:image" content="/favicon.ico">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wefix.net">
-    <meta property="fb:app_id" content="321799494915860">
-    <meta name="msvalidate.01" content="8E127BEFA74C17826CFC56FC55267BD7">
-    <meta name="google-site-verification" content="mRvxWb201L9W84P1EoOo94dSn-TbBIz8bWIM0V6Y9D4">
-    <meta name="google-site-verification" content="Uh0oNNwPiiHVsO1es7ue7ZQ-xPwlBCgTddAvLH9tiAg">
-    <meta name="google-site-verification" content="Uv_0RYXRGZS2euPaqNd19CXVfwl8ej2KMW23NSMidIc">
-    <meta name="google-site-verification" content="oKw4RR_KKkN9p3PM3-pUT73hKSautMf2hl0e_EMqJ_w">
-    <link rel="canonical" href="https://www.wefix.net/reparation/smartphone/samsung/galaxy-s23">
-    <link rel="alternate" href="https://wefix.net/" hreflang="x-default">
-    <link rel="alternate" href="https://wefix.net/" hreflang="fr">
+    <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('reparation/app.bundle.min.css')}}">
     <script src="{{asset('reparation/otBannerSdk.js.téléchargement')}}" async="" type="text/javascript"></script>
     <style id="onetrust-style">
