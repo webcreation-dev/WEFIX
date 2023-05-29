@@ -21,7 +21,7 @@
                     </sl-icon>
                 </button>
             </div>
-            <a class="navbar-brand order-2 order-lg-1" href="#" aria-label="Retourner à l&#39;accueil">
+            <a class="navbar-brand order-2 order-lg-1" href="/" aria-label="Retourner à l&#39;accueil">
                 <svg width="175px" height="36px" viewBox="0 0 185 36" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" transform="translate(.172843 .52)">
                         <path fill="#1d57c4"
