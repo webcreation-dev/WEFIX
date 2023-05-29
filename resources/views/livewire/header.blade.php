@@ -6,7 +6,7 @@
                     aria-label="Ouvrir le menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <button class="navbar-toggler" type="button" data-search-open="">
+                {{-- <button class="navbar-toggler" type="button" data-search-open="">
                     <sl-icon library="heroicons" name="magnifying-glass"
                         style="display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;" aria-hidden="true">
                         <template shadowrootmode="open">
@@ -19,7 +19,7 @@
                             </svg>
                         </template>
                     </sl-icon>
-                </button>
+                </button> --}}
             </div>
             <a class="navbar-brand order-2 order-lg-1" href="/" aria-label="Retourner à l&#39;accueil">
                 <img src="{{asset('images/logo.png')}}" alt="" width="200">
@@ -105,7 +105,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <sl-icon class="nav-link" library="heroicons" name="magnifying-glass"
                             style="display:inline-block;width:1.5em;height:1.5em;vertical-align:middle; cursor: pointer;"
                             data-search-open="" aria-hidden="true">
@@ -119,7 +119,7 @@
                                 </svg>
                             </template>
                         </sl-icon>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>

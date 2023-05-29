@@ -5,7 +5,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navigation" aria-label="Ouvrir le menu">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <button class="navbar-toggler" type="button" data-search-open="">
+          {{-- <button class="navbar-toggler" type="button" data-search-open="">
             <sl-icon library="heroicons" name="magnifying-glass" style="display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;" aria-hidden="true">
               <template shadowrootmode="open">
                 <!---->
@@ -14,7 +14,7 @@
                 </svg>
               </template>
             </sl-icon>
-          </button>
+          </button> --}}
         </div>
         <a class="navbar-brand order-2 order-lg-1" href="#" aria-label="Retourner à l&#39;accueil">
           <svg width="175px" height="36px" viewBox="0 0 185 36" xmlns="http://www.w3.org/2000/svg">
