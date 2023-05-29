@@ -141,7 +141,7 @@
             </div>
 
             <div class="wf-aside__screen-content modal-body">
-                <a class="wf-aside__screen-content-card" href="#">
+                <a class="wf-aside__screen-content-card" href="{{route('stepsellings.index')}}">
                     <div class="wf-aside__screen-content-card--title">
                         <span>REVENDRE</span>
                     </div>
