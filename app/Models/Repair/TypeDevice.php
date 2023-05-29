@@ -12,6 +12,9 @@ class TypeDevice extends Model
     protected $fillable = [
         'name',
         'image',
+        'slug',
+        'icon',
+        'estimate_price',
     ];
 
     public function brandDevices()

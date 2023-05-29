@@ -76,7 +76,7 @@
                 <ul class="navbar-nav ms-auto" role="list">
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-medium" href="#"
+                        <a class="nav-link dropdown-toggle fw-medium" href="{{route('stepsellings.index')}}"
                             aria-label="Protégez tous vos appareils !">
                             <span>REVENDRE</span>
                         </a>
@@ -95,7 +95,7 @@
                                     href="{{ route('typedevices.show', $typedevice) }}"
                                     aria-label="Réparez votre smartphone !">
                                     <div class="d-flex align-items-center">
-                                        <img src="{{asset('images/'. $typedevice->image )}}" alt="">
+                                        <img src="{{asset('reparation/'. $typedevice->icon )}}" alt="">
                                         <div class="ms-3">
                                             <span
                                                 class="d-block text-heading fs-md mts fw-medium">{{$typedevice->name}}</span>
@@ -229,7 +229,7 @@
 
                 @foreach ($typedevices as $typedevice)
                     <a class="wf-aside__reparation-content-card" href="{{ route('typedevices.show', $typedevice) }}" aria-label="Réparez votre smartphone !">
-                        <img src="{{asset('reparation/'. $typedevice->image )}}" alt="">
+                        <img src="{{asset('reparation/'. $typedevice->icon )}}" alt="">
                         <div class="wf-aside__reparation-content-card-body">
                             <div class="wf-aside__reparation-content-card-body--title">{{$typedevice->name}}</div>
                             <div class="wf-aside__reparation-content-card-body--subtitle">Réparez votre

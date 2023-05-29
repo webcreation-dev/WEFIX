@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Repair;
+namespace App\Http\Controllers\Selling;
 
-use App\Models\Repair\TypeDevice;
+use App\Models\Selling\QuestionStepSelling;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-
-class TypeDeviceController extends Controller
+class QuestionStepSellingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,7 @@ class TypeDeviceController extends Controller
      */
     public function index()
     {
-        $typedevices = TypeDevice::take(3)->get();
-
-        return view('reparation.typedevice', compact('typedevices'));
+        //
     }
 
     /**
@@ -45,27 +42,21 @@ class TypeDeviceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\TypeDevice  $typedevice
+     * @param  \App\Models\QuestionStepSelling  $questionStepSelling
      * @return \Illuminate\Http\Response
      */
-    public function show(TypeDevice $typedevice)
+    public function show(QuestionStepSelling $questionStepSelling)
     {
-
-        $quoteData = session('quoteData', []);
-        $quoteData['typedevice'] = $typedevice;
-        session(['quoteData' => $quoteData]);
-
-        $brand_devices = $typedevice->brandDevices()->get();
-        return view('reparation.brand_device', compact('brand_devices'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\TypeDevice  $typedevice
+     * @param  \App\Models\QuestionStepSelling  $questionStepSelling
      * @return \Illuminate\Http\Response
      */
-    public function edit(TypeDevice $typedevice)
+    public function edit(QuestionStepSelling $questionStepSelling)
     {
         //
     }
@@ -74,10 +65,10 @@ class TypeDeviceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\TypeDevice  $typedevice
+     * @param  \App\Models\QuestionStepSelling  $questionStepSelling
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TypeDevice $typedevice)
+    public function update(Request $request, QuestionStepSelling $questionStepSelling)
     {
         //
     }
@@ -85,10 +76,10 @@ class TypeDeviceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\TypeDevice  $typeDevice
+     * @param  \App\Models\QuestionStepSelling  $questionStepSelling
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TypeDevice $typeDevice)
+    public function destroy(QuestionStepSelling $questionStepSelling)
     {
         //
     }

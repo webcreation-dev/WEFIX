@@ -48,7 +48,7 @@
                 <a class="col-lg-4 col-md-6 col-12" href="{{ route('typedevices.show', $typedevice) }}" aria-label="Réparez votre smartphone !">
                     <div class="animated-icon btn cta-primary d-flex align-items-center justify-content-between w-100 py-3">
                     <div class="d-flex align-items-center">
-                        <img src="{{asset('images/'. $typedevice->image )}}" alt="">
+                        <img src="{{asset('images/'. $typedevice->icon )}}" alt="">
                         <span class="ms-2">{{$typedevice->name}}</span>
                     </div>
                     <i class="ci-arrow-right fw-bold me-2"></i>

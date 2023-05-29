@@ -10,6 +10,7 @@ class BrandDevice extends Model
     use HasFactory;
 
     protected $fillable = [
+        'name',
         'image',
         'type_device_id'
     ];

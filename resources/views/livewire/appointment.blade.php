@@ -2,9 +2,9 @@
 
     <div class="grid" style="--wf-gap: 16px">
       <div class="d-flex g-col-sm-6 g-col-12">
-        <input class="btn-check" type="radio" id="MR" name="civility" wire:model="appointmentFields.civility" value="MR" checked="f">
+        <input class="btn-check" type="radio" id="MR" name="civility" wire:model="appointmentFields.civility" required value="MR" checked="f">
         <label class="btn btn-outline-primary fw-medium w-50 me-2" for="MR">Monsieur</label>
-        <input class="btn-check" type="radio" id="MME" name="civility" wire:model="appointmentFields.civility" value="MME">
+        <input class="btn-check" type="radio" id="MME" name="civility" wire:model="appointmentFields.civility" required value="MME">
         <label class="btn btn-outline-primary fw-medium w-50" for="MME">Madame</label>
       </div>
     </div>
@@ -12,35 +12,35 @@
     <div class="grid mt-3" style="--wf-gap: 16px">
       <div class="g-col-sm-6 g-col-12">
         <div class="form-floating">
-          <input class="form-control" type="text" name="surname" id="surname" wire:model="appointmentFields.surname" style="text-transform: capitalize" placeholder="..." maxlength="40" autofocus="" autocomplete="" required="">
+          <input class="form-control" type="text" required name="surname" id="surname" wire:model="appointmentFields.surname" style="text-transform: capitalize" placeholder="..." maxlength="40" autofocus="" autocomplete="" required="">
           <label class="fs-sm mts" for="surname">Votre prénom</label>
           <div class="invalid-tooltip fs-12 fw-medium fade-in mt-1">Veuillez entrer votre prénom !</div>
         </div>
       </div>
       <div class="g-col-sm-6 g-col-12">
         <div class="form-floating">
-          <input class="form-control" type="text" name="name" id="name" wire:model="appointmentFields.name"  style="text-transform: capitalize" placeholder="..." maxlength="40" autocomplete="" required="">
+          <input class="form-control" type="text" required name="name" id="name" wire:model="appointmentFields.name"  style="text-transform: capitalize" placeholder="..." maxlength="40" autocomplete="" required="">
           <label class="fs-sm mts" for="name">Votre nom</label>
           <div class="invalid-tooltip fs-12 fw-medium fade-in mt-1">Veuillez entrer votre nom !</div>
         </div>
       </div>
       <div class="g-col-12">
         <div class="form-floating">
-          <input class="form-control" type="email" name="mail" wire:model="appointmentFields.mail" id="mail" placeholder="..." maxlength="60" autocomplete="" required="">
+          <input class="form-control" type="email" required name="mail" wire:model="appointmentFields.mail" id="mail" placeholder="..." maxlength="60" autocomplete="" required="">
           <label class="fs-sm mts" for="mail">Votre adresse mail</label>
           <div class="invalid-tooltip fs-12 fw-medium fade-in mt-1">Adresse mail incorrecte !</div>
         </div>
       </div>
       <div class="g-col-sm-6 g-col-12">
         <div class="form-floating">
-          <input class="form-control" type="number" name="postal" id="postal" wire:model="appointmentFields.postal" placeholder="..." inputmode="numeric" oninput="this.value = this.value.replace(/D+/g, &#39;&#39;)" required="">
+          <input class="form-control" type="number" required name="postal" id="postal" wire:model="appointmentFields.postal" placeholder="..." inputmode="numeric" oninput="this.value = this.value.replace(/D+/g, &#39;&#39;)" required="">
           <label class="fs-sm mts" for="postal">Votre code postal</label>
           <div class="invalid-tooltip fs-12 fw-medium fade-in mt-1">Veuillez entrer votre code postal !</div>
         </div>
       </div>
       <div class="g-col-sm-6 g-col-12">
         <div class="form-floating">
-          <select class="form-select" name="country" id="country" wire:model="appointmentFields.country">
+          <select class="form-select" name="country" required id="country" wire:model="appointmentFields.country">
             <option value="France" selected="">France</option>
             <option value="Belgique">Belgique</option>
           </select>
@@ -52,14 +52,14 @@
       </div>
       <div class="g-col-12">
         <div class="form-floating">
-          <input class="form-control" type="number" name="phone" wire:model="appointmentFields.phone" id="phone" placeholder="..." inputmode="numeric" oninput="this.value = this.value.replace(/D+/g, &#39;&#39;)" autocomplete="" required="">
+          <input class="form-control" type="number" required name="phone" wire:model="appointmentFields.phone" id="phone" placeholder="..." inputmode="numeric" oninput="this.value = this.value.replace(/D+/g, &#39;&#39;)" autocomplete="" required="">
           <label class="fs-sm mts" for="phone">Numéro de téléphone</label>
           <div class="invalid-tooltip fs-12 fw-medium fade-in mt-1">Veuillez entrer votre numéro de téléphone !</div>
         </div>
       </div>
       <div class="g-col-12">
         <div class="checkbox-container">
-          <input class="checkbox-input" type="checkbox" id="newsletter" wire:model="appointmentFields.newsletter">
+          <input class="checkbox-input" type="checkbox" required id="newsletter" wire:model="appointmentFields.newsletter">
           <label class="checkbox" for="newsletter">
             <span>
               <svg class="checkbox-symbol">
