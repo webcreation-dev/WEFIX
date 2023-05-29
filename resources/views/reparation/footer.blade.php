@@ -1,6 +1,6 @@
 <footer class="footer-slim">
     <div class="container py-md-3 py-4 d-flex flex-column align-items-center">
-      <a href="https://wefix.net/" aria-label="Retourner à l&#39;accueil">
+      <a href= aria-label="Retourner à l&#39;accueil">
         <svg width="176px" height="40px" viewBox="0 0 185 36" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" transform="translate(.172843 .52)">
             <path d="m113.707157 34.85h-55.64c-1.5717335-.005486-2.844514-1.2782665-2.85-2.85v-29.15c.005486-1.57173354 1.2782665-2.84451397 2.85-2.85h55.64c1.571734.00548603 2.844514 1.27826646 2.85 2.85v29.15c-.005486 1.5717335-1.278266 2.844514-2.85 2.85" fill="#1d57c4"></path>
@@ -33,17 +33,17 @@
       <div class="widget widget-links widget-light mt-md-0 mt-3">
         <div class="grid mts" style="--wf-gap: 16px">
           <div class="g-col-md-3 g-col-6">
-            <a class="widget-list-link fs-14 fw-bold" href="https://wefix.net/nous-contacter" aria-label="Nous contacter">
+            <a class="widget-list-link fs-14 fw-bold" href= aria-label="Nous contacter">
               <span class="text-light hover-underline-light">Nous contacter</span>
             </a>
           </div>
           <div class="g-col-md-3 g-col-6">
-            <a class="widget-list-link fs-14 fw-bold" href="https://wefix.net/centre-aide" aria-label="Mentions légales">
+            <a class="widget-list-link fs-14 fw-bold" href= aria-label="Mentions légales">
               <span class="text-light hover-underline-light">Besoin d'aide ?</span>
             </a>
           </div>
           <div class="g-col-md-3 g-col-6">
-            <a class="widget-list-link fs-14 fw-bold" href="https://wefix.net/politique-cookies" aria-label="Politique cookies">
+            <a class="widget-list-link fs-14 fw-bold" href= aria-label="Politique cookies">
               <span class="text-light hover-underline-light">Politique cookies</span>
             </a>
           </div>
@@ -161,7 +161,7 @@
           </div>
           <h2 id="ot-pc-title">Votre centre de confidentialité ⚙️</h2>
           <div id="ot-pc-desc">Vous pouvez paramétrer vos choix ici concernant les cookies déposés par <b>WeFix</b> ou <b>ses partenaires</b> sur le site www.wefix.net. Cliquez sur les différentes catégories pour obtenir plus de détails sur chacune d'entre elles. Vous pouvez modifier les paramètres par défaut. Vous pouvez <b>«&nbsp;tout autoriser&nbsp;»/&nbsp;«&nbsp;tout refuser&nbsp;»</b> ou <b>exprimer vos préférences</b> pour chaque finalité de cookies soumises à votre choix. Pour activer ou désactiver les cookies soumis à votre choix, il vous suffit de cliquer sur les boutons <b>«&nbsp;tout autoriser&nbsp;»/&nbsp;«&nbsp;tout refuser&nbsp;»</b> ou activer le bouton de paramétrage dans chaque catégorie. La catégorie est désactivée lorsque le bouton est grisé. Elle est activée lorsque le bouton est en couleur. Votre choix s’applique à tous les cookies de la même catégorie. Vous devez enregistrer vos choix après le paramétrage des catégories. Enfin, <b class="text-danger">la désactivation de certains cookies</b> peut avoir une incidence sur votre expérience de navigation notamment pour lire les videos du site. <br>
-            <a href="https://www.wefix.net/pages/cookies" class="privacy-notice-link" rel="noopener" target="_blank" aria-label="Pour en savoir plus sur la protection de votre vie privée., s&#39;ouvre dans un nouvel onglet">Plus d’informations sur les cookies <i class="ci-arrow-right ms-1"></i>
+            <a href= class="privacy-notice-link" rel="noopener" target="_blank" aria-label="Pour en savoir plus sur la protection de votre vie privée., s&#39;ouvre dans un nouvel onglet">Plus d’informations sur les cookies <i class="ci-arrow-right ms-1"></i>
             </a>
           </div>
           <button id="accept-recommended-btn-handler">Autoriser tous les cookies</button>
@@ -380,7 +380,7 @@
           </div>
           <!-- Footer logo -->
           <div class="ot-pc-footer-logo">
-            <a href="https://www.onetrust.com/products/cookie-consent/" target="_blank" rel="noopener noreferrer" aria-label="Powered by OneTrust S&#39;ouvre dans un nouvel onglet">
+            <a href= target="_blank" rel="noopener noreferrer" aria-label="Powered by OneTrust S&#39;ouvre dans un nouvel onglet">
               <img alt="Powered by Onetrust" src="{{asset('reparation/powered_by_logo.svg')}}" title="Powered by OneTrust S&#39;ouvre dans un nouvel onglet">
             </a>
           </div>

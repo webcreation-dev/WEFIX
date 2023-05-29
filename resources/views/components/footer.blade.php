@@ -6,28 +6,28 @@
             <div class="title">RÉPARATION</div>
             <ul role="list">
               <li>
-                <a href="https://wefix.net/blog/reparation-sur-rdv" aria-label="Rendez-vous réparation">Rendez-vous réparation</a>
+                <a href="#" aria-label="Rendez-vous réparation">Rendez-vous réparation</a>
               </li>
               <li>
-                <a href="https://wefix.net/reparation/smartphone/apple/iphone-11" aria-label="Réparation iPhone 11">Réparation iPhone 11</a>
+                <a href="#" aria-label="Réparation iPhone 11">Réparation iPhone 11</a>
               </li>
               <li>
-                <a href="https://wefix.net/reparation/smartphone/apple/iphone-12" aria-label="Réparation iPhone 12">Réparation iPhone 12</a>
+                <a href="#" aria-label="Réparation iPhone 12">Réparation iPhone 12</a>
               </li>
               <li>
-                <a href="https://wefix.net/reparation/smartphone/apple" aria-label="Réparation Apple">Réparation Apple</a>
+                <a href="#" aria-label="Réparation Apple">Réparation Apple</a>
               </li>
               <li>
-                <a href="https://wefix.net/reparation/smartphone/samsung" aria-label="Réparation Samsung">Réparation Samsung</a>
+                <a href="#" aria-label="Réparation Samsung">Réparation Samsung</a>
               </li>
               <li>
-                <a href="https://wefix.net/reparation/smartphone/huawei" aria-label="Réparation Huawei">Réparation Huawei</a>
+                <a href="#" aria-label="Réparation Huawei">Réparation Huawei</a>
               </li>
               <li>
-                <a href="https://wefix.net/reparation/smartphone" aria-label="Smartphones">Smartphones</a>
+                <a href="#" aria-label="Smartphones">Smartphones</a>
               </li>
               <li>
-                <a href="https://wefix.net/reparation/tablette" aria-label="Tablettes">Tablettes</a>
+                <a href="#" aria-label="Tablettes">Tablettes</a>
               </li>
             </ul>
           </div>
@@ -35,28 +35,28 @@
             <div class="title">DÉCOUVREZ AUSSI</div>
             <ul role="list">
               <li>
-                <a href="https://wefix.net/accessoires-smartphone/protection/protection-ecran" aria-label="Protection XFORCE">Protection XFORCE</a>
+                <a href="#" aria-label="Protection XFORCE">Protection XFORCE</a>
               </li>
               <li>
-                <a href="https://wefix.net/blog/transfert-de-donnees" aria-label="Transfert de données">Transfert de données</a>
+                <a href="#" aria-label="Transfert de données">Transfert de données</a>
               </li>
               <li>
-                <a href="https://wefix.net/blog/nos-smartphones-reconditionnes" aria-label="Smartphones reconditionnés">Smartphones reconditionnés</a>
+                <a href="#" aria-label="Smartphones reconditionnés">Smartphones reconditionnés</a>
               </li>
               <li>
-                <a href="https://wefix.net/blog/accessoires-smartphone" aria-label="Nos accessoires">Nos accessoires</a>
+                <a href="#" aria-label="Nos accessoires">Nos accessoires</a>
               </li>
               <li>
-                <a href="https://wefix.net/blog/changement-batterie" aria-label="Changement batterie">Changement batterie</a>
+                <a href="#" aria-label="Changement batterie">Changement batterie</a>
               </li>
               <li>
-                <a href="https://wefix.net/blog/changement-ecran" aria-label="Changer écran iPhone">Changer écran iPhone</a>
+                <a href="#" aria-label="Changer écran iPhone">Changer écran iPhone</a>
               </li>
               <li>
-                <a href="https://wefix.net/bouyguestelecom" aria-label="Client Bouygues Telecom ?">Client Bouygues Telecom ?</a>
+                <a href="#" aria-label="Client Bouygues Telecom ?">Client Bouygues Telecom ?</a>
               </li>
               <li>
-                <a href="https://wefix.net/darty-max" aria-label="Abonné Darty Max Intégral ?">Abonné Darty Max Intégral ?</a>
+                <a href="#" aria-label="Abonné Darty Max Intégral ?">Abonné Darty Max Intégral ?</a>
               </li>
             </ul>
           </div>
@@ -64,22 +64,22 @@
             <div class="title">BESOIN D'AIDE ?</div>
             <ul role="list">
               <li>
-                <a href="https://boutique.wefix.net/" aria-label="Trouver une boutique">Trouver une boutique</a>
+                <a href="#" aria-label="Trouver une boutique">Trouver une boutique</a>
               </li>
               <li>
-                <a href="https://wefix.net/centre-aide" aria-label="Besoin d&#39;aide ?">Besoin d'aide ?</a>
+                <a href="#" aria-label="Besoin d&#39;aide ?">Besoin d'aide ?</a>
               </li>
               <li>
-                <a href="https://wefix.net/cgv" aria-label="Nos CGV">Nos CGV</a>
+                <a href="#" aria-label="Nos CGV">Nos CGV</a>
               </li>
               <li>
-                <a href="https://wefix.net/nous-contacter" aria-label="Nous contacter">Nous contacter</a>
+                <a href="#" aria-label="Nous contacter">Nous contacter</a>
               </li>
               <li>
-                <a href="https://wefix.net/politique-cookies" aria-label="Politique cookies">Politique cookies</a>
+                <a href="#" aria-label="Politique cookies">Politique cookies</a>
               </li>
               <li>
-                <a href="https://wefix.net/politique-de-confidentialite" aria-label="Politique de confidentialité">Politique de confidentialité</a>
+                <a href="#" aria-label="Politique de confidentialité">Politique de confidentialité</a>
               </li>
             </ul>
           </div>
@@ -87,16 +87,16 @@
             <div class="title">À PROPOS DE NOUS</div>
             <ul role="list">
               <li>
-                <a href="https://wefix.net/blog/histoire-wefix" aria-label="Qui sommes-nous ?">Qui sommes-nous ?</a>
+                <a href="#" aria-label="Qui sommes-nous ?">Qui sommes-nous ?</a>
               </li>
               <li>
-                <a href="https://jobs.wefix.net/" aria-label="WeFix recrute">WeFix recrute</a>
+                <a href="#" aria-label="WeFix recrute">WeFix recrute</a>
               </li>
               <li>
-                <a href="https://wefix.net/mentions-legales" aria-label="Mentions légales">Mentions légales</a>
+                <a href="#" aria-label="Mentions légales">Mentions légales</a>
               </li>
               <li>
-                <a href="https://wefix.net/egalite-homme-femme" aria-label="Index égalité H/F">Index égalité H/F</a>
+                <a href="#" aria-label="Index égalité H/F">Index égalité H/F</a>
               </li>
             </ul>
           </div>
@@ -123,7 +123,7 @@
       </div>
       <div class="d-flex flex-md-row flex-column align-items-center justify-content-md-between">
         <div class="d-flex flex-column align-items-center align-items-md-start">
-          <a href="https://wefix.net/" aria-label="Retourner à l&#39;accueil">
+          <a href="#" aria-label="Retourner à l&#39;accueil">
             <svg width="175px" height="36px" viewBox="0 0 185 36" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" transform="translate(.172843 .52)">
                 <path d="m113.707157 34.85h-55.64c-1.5717335-.005486-2.844514-1.2782665-2.85-2.85v-29.15c.005486-1.57173354 1.2782665-2.84451397 2.85-2.85h55.64c1.571734.00548603 2.844514 1.27826646 2.85 2.85v29.15c-.005486 1.5717335-1.278266 2.844514-2.85 2.85" fill="#1d57c4"></path>
@@ -156,16 +156,16 @@
         </div>
         <div class="mt-md-0 mt-4">
           <div class="title-subsection fs-16 text-light fw-bold mb-2 text-md-start text-center">Rejoignez-nous sur </div>
-          <a class="btn-social bs-lg bs-light bs-facebook me-2" href="https://www.facebook.com/wefix.net" aria-label="Rejoignez-nous sur Facebook" target="_blank" rel="noreferrer noopener">
+          <a class="btn-social bs-lg bs-light bs-facebook me-2" href="#" aria-label="Rejoignez-nous sur Facebook" target="_blank" rel="noreferrer noopener">
             <i class="text-light ci-facebook"></i>
           </a>
-          <a class="btn-social bs-lg bs-light bs-twitter me-2" href="https://twitter.com/wefix_france?lang=fr" aria-label="Rejoignez-nous sur Twitter" target="_blank" rel="noreferrer noopener">
+          <a class="btn-social bs-lg bs-light bs-twitter me-2" href="#" aria-label="Rejoignez-nous sur Twitter" target="_blank" rel="noreferrer noopener">
             <i class="text-light ci-twitter"></i>
           </a>
-          <a class="btn-social bs-lg bs-light bs-instagram me-2" href="https://www.instagram.com/wefix_fr" aria-label="Rejoignez-nous sur Instagram" target="_blank" rel="noreferrer noopener">
+          <a class="btn-social bs-lg bs-light bs-instagram me-2" href="#" aria-label="Rejoignez-nous sur Instagram" target="_blank" rel="noreferrer noopener">
             <i class="text-light ci-instagram"></i>
           </a>
-          <a class="btn-social bs-lg bs-light bs-linkedin" href="https://fr.linkedin.com/company/wefix" aria-label="Rejoignez-nous sur Linkedin" target="_blank" rel="noreferrer noopener">
+          <a class="btn-social bs-lg bs-light bs-linkedin" href="#" aria-label="Rejoignez-nous sur Linkedin" target="_blank" rel="noreferrer noopener">
             <i class="text-light ci-linkedin"></i>
           </a>
         </div>

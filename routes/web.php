@@ -23,8 +23,11 @@ use App\Http\Controllers\Selling\StepSellingController;
 */
 
 Route::get('/', function () {
-    dd(session('stepSelling', []));
     return view('layouts.app');
+});
+
+Route::get('/estimation', function () {
+    return view('selling.estimation');
 });
 
 
@@ -43,6 +46,7 @@ Route::post('update_failure_quotedata', [FailureDeviceController::class, 'update
 Route::post('update_attribute_failure_quotedata', [FailureDeviceController::class, 'updateAttributeFailureQuoteData'])->name('update.attribute.failure.quote.post');;
 Route::post('update_attribute_failure_quotedata', [FailureDeviceController::class, 'updateAttributeFailureQuoteData'])->name('update.attribute.failure.quote.post');;
 Route::post('update_question_selling_device', [StepSellingController::class, 'updateQuestionSellingDevice'])->name('update.question.selling.device.post');;
+Route::get('estimate_price_device', [StepSellingController::class, 'estimatePriceDevice'])->name('estimate.price.device');
 
 
 

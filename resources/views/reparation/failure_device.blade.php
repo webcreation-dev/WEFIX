@@ -19,7 +19,7 @@
               <!---->
               <slot></slot>
             </template>
-            <a class="wf-step__item" href="https://wefix.net/reparation/smartphone" aria-label="Marque">
+            <a class="wf-step__item" href="#" aria-label="Marque">
               <div class="wf-step__item--dot">
                 <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
                   <template shadowrootmode="open">
@@ -45,7 +45,7 @@
               </div>
               <div class="wf-step__item--text" aria-current="page">Marque</div>
             </a>
-            <a class="wf-step__item" href="https://wefix.net/reparation/smartphone/samsung" aria-label="Modèle">
+            <a class="wf-step__item" href="#" aria-label="Modèle">
               <div class="wf-step__item--dot">
                 <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
                   <template shadowrootmode="open">

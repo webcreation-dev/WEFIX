@@ -135,7 +135,7 @@
           </sl-resize-observer>
         </div>
         <div class="wf-heading--md wf-align--center sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Choisissez votre modèle  </div>
-        <sl-input class="wf-input wf-width--input wf-mt--2 wf-mb--3" placeholder="Recherchez votre modèle ..." size="large" type="search" inputmode="text" data-grid-control="text-filter" data-path=".wf-name" data-skip="[^a-zA-Z0-9]+" clearable="true" autocorrect="false" autocomplete="true" form="" data-optional="" data-valid="" data-id="0">
+        {{-- <sl-input class="wf-input wf-width--input wf-mt--2 wf-mb--3" placeholder="Recherchez votre modèle ..." size="large" type="search" inputmode="text" data-grid-control="text-filter" data-path=".wf-name" data-skip="[^a-zA-Z0-9]+" clearable="true" autocorrect="false" autocomplete="true" form="" data-optional="" data-valid="" data-id="0">
 
           <sl-icon slot="prefix" library="heroicons" name="magnifying-glass" aria-hidden="true">
             <template shadowrootmode="open">
@@ -153,10 +153,10 @@
               </svg>
             </template>
           </sl-icon>
-        </sl-input>
+        </sl-input> --}}
         <div class="wf-grid wf-grid--devices wf-mt--4 wf-mb--3 data-grid-html" data-grid="">
             @foreach ($model_brands as $model)
-                <sl-card class="wf-card wf-card--model sal-animate" @click="location.href = &#39;/reparation/smartphone/htc/u12-plus&#39;" data-grid-item="" data-sal="slide-up" data-sal-delay="100" data-sal-duration="200">
+                <sl-card class="wf-card wf-card--model sal-animate"  data-grid-item="" data-sal="slide-up" data-sal-delay="100" data-sal-duration="200">
                     <a href="{{ route('models.show', $model) }}">
                     <img src="{{asset('reparation/'. $model->image )}}" alt="">
                     <div class="wf-name wf-paragraph--xs wf-weight--bold wf-font--mts wf-align--center">{{$model->name}} </div>

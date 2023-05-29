@@ -10,48 +10,8 @@
         @livewire('header-controller')
       <div class="text-center w-100">
         <div data-rdv-animation="">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 140" width="140" height="140" class="wf__lottie--schedule" preserveAspectRatio="xMidYMid slice" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
-            <defs>
-              <clippath id="__lottie_element_2">
-                <rect width="140" height="140" x="0" y="0"></rect>
-              </clippath>
-              <image href="#"></image>
-              <image href="#"></image>
-              <image href="#"></image>
-              <image href="#"></image>
-              <g id="__lottie_element_12">
-                <g class="png" style="display: block;" transform="matrix(0.20000000298023224,0,0,0.20000000298023224,10,10)" opacity="1">
-                  <image width="600px" height="600px" preserveAspectRatio="xMidYMid slice" href="#"></image>
-                </g>
-              </g>
-              <mask id="__lottie_element_12_1" mask-type="alpha">
-                <use href="#"></use>
-              </mask>
-            </defs>
-            <g clip-path="url(#__lottie_element_2)">
-              <g class="png" style="display: block;" transform="matrix(0.20000000298023224,0,0,0.20000000298023224,10,10)" opacity="1">
-                <image width="600px" height="600px" preserveAspectRatio="xMidYMid slice" href="#"></image>
-              </g>
-              <g mask="url(#__lottie_element_12_1)" style="display: block;">
-                <g class="png" transform="matrix(0.20000000298023224,0,0,0.20000000298023224,18.799999237060547,18.799999237060547)" opacity="1">
-                  <image width="512px" height="512px" preserveAspectRatio="xMidYMid slice" href="#"></image>
-                </g>
-              </g>
-              <g style="display: none;" transform="matrix(1.7977277040481567,0,0,1.7977277040481567,48.08260726928711,43.84396743774414)" opacity="0.0025822170948276834">
-                <g opacity="1" transform="matrix(1.0592800378799438,0,0,1.0592800378799438,26.847999572753906,31.847999572753906)">
-                  <path fill="rgb(215,238,251)" fill-opacity="1" d=" M0,-18.847999572753906 C10.40221118927002,-18.847999572753906 18.847999572753906,-10.40221118927002 18.847999572753906,0 C18.847999572753906,10.40221118927002 10.40221118927002,18.847999572753906 0,18.847999572753906 C-10.40221118927002,18.847999572753906 -18.847999572753906,10.40221118927002 -18.847999572753906,0 C-18.847999572753906,-10.40221118927002 -10.40221118927002,-18.847999572753906 0,-18.847999572753906z"></path>
-                </g>
-              </g>
-              <g class="png" style="display: block;" transform="matrix(0.20000000298023224,0,0,0.20000000298023224,77.30000305175781,81.80000305175781)" opacity="1">
-                <image width="192px" height="192px" preserveAspectRatio="xMidYMid slice" href="#"></image>
-              </g>
-              <g style="display: block;" transform="matrix(1,0,0,1,68,75)" opacity="1">
-                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                  <path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="4" d=" M18.25,26.625 C18.25,26.625 23.625,33.75 23.625,33.75 C23.625,33.75 38.375,21.5 38.375,21.5"></path>
-                </g>
-              </g>
-            </g>
-          </svg>
+
+          <img src="{{asset('images/téléchargement.png')}}" alt="" width="100">
         </div>
       </div>
 
@@ -88,7 +48,7 @@
               </div>
             </div>
             <p class="mt-3">Un mail de confirmation vous a été envoyé, contenant toutes les informations nécessaires à votre venue. Un SMS de confirmation vous a également été envoyé. <br> Un peu de patience, la réception du mail peut parfois prendre quelques minutes. </p>
-            <sl-button class="wf-button wf-button--primary wf-mt--3" href="#" aria-label="Retourner sur la page principale !" size="large" variant="default" data-optional="" data-valid="">
+            <sl-button class="wf-button wf-button--primary wf-mt--3" href="/" aria-label="Retourner sur la page principale !" size="large" variant="default" data-optional="" data-valid="">
               Retourner à l'accueil
             </sl-button>
           </div>

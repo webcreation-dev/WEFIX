@@ -29,6 +29,12 @@ class StepSellingController extends Component
         session(['stepSelling' => $stepSelling]);
 
         redirect()->route('stepsellings.edit', ['model' => $model, 'stepselling' => $current_step]);
-
     }
+
+
+    public function estimatePriceDevice($model)
+    {
+        return redirect()->route('estimate.price.device');
+    }
+
 }

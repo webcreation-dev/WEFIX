@@ -67,6 +67,7 @@ class StepSellingController extends Controller
         session()->forget([
             'stepSelling.step',
             'stepSelling.answer',
+            'stepSelling.functions',
         ]);
 
         $model_brands = $brand->modelBrand()->get();
@@ -117,7 +118,13 @@ class StepSellingController extends Controller
      */
     public function update(Request $request, StepSelling $stepSelling)
     {
-        //
+        $stepSelling = session('stepSelling', []);
+        return view('selling.estimation', compact('stepSelling'));
+    }
+
+    public function estimatePriceDevice() {
+        $stepSelling = session('stepSelling', []);
+        return view('selling.estimation', compact('stepSelling'));
     }
 
     /**
@@ -135,9 +142,16 @@ class StepSellingController extends Controller
     {
         $step = $request->input('step');
         $question = $request->input('question');
+        $nameStep  = $request->input('nameStep');
+        $answer = $request->input('answer');
 
         $stepSelling = session('stepSelling', []);
         $stepSelling['answer'][$step] = $question;
+        $stepSelling['functions'][$step] = [
+            'name' => $nameStep,
+            'answer' => $answer,
+        ];
+
         session(['stepSelling' => $stepSelling]);
 
         return response()->json(['success' => true]);

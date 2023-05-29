@@ -7,10 +7,10 @@
         <div class="select-pannes-container">
             <label class="select-pannes">
                 <input class="pannes-checkbox" name="pannes" type="radio" data-pannes="" autocomplete="off"
-                    value=""
+                    value="" data-name-step="{{$current_step_selling->name}}" data-answer="{{$question->title}}"
                     data-img="https://intranet.wefix.net/WB/PictoReparation/FacadeAvant.png"
                     data-id="{{ $question->id }}N" data-titre="Façade avant" data-step-selling-id="{{$current_step_selling->id}}" data-question-step-selling-id="{{ $question->id }}"
-                    onclick="updateQuestionSellingDevice(this)" @if($stepSelling['answer'][$current_step_selling->id] == $question->id) checked @endif >
+                    onclick="updateQuestionSellingDevice(this)" @isset($stepSelling['answer'][$current_step_selling->id]) @if($stepSelling['answer'][$current_step_selling->id] == $question->id) checked @endif @endisset  >
 
                 <div class="card-pannes" style="height: 5rem !important">
                     <div>
@@ -34,7 +34,7 @@
     </sl-details>
 
     @if ($total_step == $current_step)
-        <div class="btn btn-lg cta-primary" style="float: right;">VOIR L'ESTIMATION</div>
+        <div class="btn btn-lg cta-primary" wire:click="estimatePriceDevice('{{$model}}')" style="float: right;">VOIR L'ESTIMATION</div>
     @else
         <div class="btn btn-lg cta-primary" wire:click="nextStepSelling('{{$current_step}}', '{{$model}}')"    style="float: right;">CONTINUER
         </div>
@@ -57,11 +57,15 @@
 
         var question = checkbox.dataset.questionStepSellingId;
         var step = checkbox.dataset.stepSellingId;
+        var nameStep = checkbox.dataset.nameStep;
+        var answer = checkbox.dataset.answer;
         // alert(step);
 
         var data = {
             question: question,
             step: step,
+            nameStep: nameStep,
+            answer: answer
         };
 
         $.ajaxSetup({
@@ -73,7 +77,7 @@
         $.ajax({
             type:'POST',
             url:"{{ route('update.question.selling.device.post') }}",
-            data:{question: question, step: step},
+            data:{question: question, step: step, nameStep: nameStep, answer: answer },
                 success: function(data){
                     // alert(data.success);
             }

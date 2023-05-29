@@ -82,17 +82,20 @@
                     <div class="widget px-lg-2 py-2 mb-3">
                         <div class="title-section fs-lg fw-bold widget-title text-center">Point des fonctionnalités</div>
 
+                        @isset($stepSelling['functions'])
+                            @foreach ($stepSelling['functions'] as $function)
+                                <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
+                                    <div class="d-flex align-items-center me-2">
+                                        <div class="widget-product-title title-section fs-lg fw-bold">{{$function['name']}}</div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <div class="widget-product-meta fs-14">{{$function['answer']}}</div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endisset
 
-
-                        <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
-                            <div class="d-flex align-items-center me-2">
-                                <div class="widget-product-title title-section fs-lg fw-bold">Modèle</div>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <div class="widget-product-meta fs-14">Xbox 360</div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
+                        {{-- <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
                             <div class="d-flex align-items-center me-2">
                                 <div class="widget-product-title title-section fs-lg fw-bold">Accessoires</div>
                             </div>
@@ -115,7 +118,8 @@
                             <div class="d-flex flex-column">
                                 <div class="widget-product-meta fs-14">Parfait état</div>
                             </div>
-                        </div>
+                        </div> --}}
+
                     </div>
                 </div>
             </div>
