@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Repair\FailureAttribute;
 use App\Models\Repair\FailureDevice;
 use App\Models\Repair\SheduleStore;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\QuoteReparationMail;
 use Illuminate\Http\Request;
 
 class SheduleStoreController extends Controller
@@ -18,8 +20,9 @@ class SheduleStoreController extends Controller
     public function index()
     {
         $quoteData = session('quoteData', []);
-
         $failures = FailureDevice::findMany(array_keys($quoteData['failures']));
+
+        Mail::to($quoteData['appointment'][0]['mail'])->send(new QuoteReparationMail($quoteData));
         return view('reparation.confirm_appointment', compact('quoteData', 'failures'));
     }
 

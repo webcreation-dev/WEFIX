@@ -26,8 +26,8 @@
 
             <div class="form wf-form-client-reparation mt-4 title mb-1"
                 style="opacity: 0.8; text-align:left !important;">
-                Le reconditionneur vous fait une offre à <strong>456,00 €</strong> pour votre <strong>MacBook Pro 15
-                    (Mi-2018)</strong>.
+                Le reconditionneur vous fait une offre à <strong>456,00 €</strong> pour votre
+                <strong>{{ $stepSelling['model']->name }}</strong>.
                 C’est la plus élevée parmi tous nos partenaires.
             </div>
 

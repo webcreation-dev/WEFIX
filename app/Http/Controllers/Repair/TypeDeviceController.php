@@ -55,6 +55,17 @@ class TypeDeviceController extends Controller
         $quoteData['typedevice'] = $typedevice;
         session(['quoteData' => $quoteData]);
 
+        session()->forget([
+            'quoteData.failures',
+            'quoteData.totalPrice',
+            'quoteData.appointment',
+            'quoteData.store',
+            'quoteData.schedule',
+            'quoteData.discountPrice',
+            'quoteData.notDiscountPrice'
+        ]);
+
+
         $brand_devices = $typedevice->brandDevices()->get();
         return view('reparation.brand_device', compact('brand_devices'));
     }
