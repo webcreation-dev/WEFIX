@@ -30,7 +30,7 @@
             <alert class="mb-3" role="alert" data-other-pannes-alert="">
               <span>Votre téléphone ou tablette devra être <strong>dé-géolocalisé(e), sauvegardé(e) et la synchronisation de vos comptes désactivées</strong> ! </span>
             </alert>
-            <div class="my-md-5 my-4">
+            {{-- <div class="my-md-5 my-4">
               <div class="title-section fs-lg text-center" data-sal="slide-up" data-sal-delay="600" data-sal-duration="300">Ajouter le rendez-vous dans mon agenda&nbsp;:</div>
               <div class="d-flex flex-md-row flex-column justify-content-md-evenly mt-3">
                 <a class="btn-market btn-apple" href="#" aria-label="Ajouter votre rendez-vous à Apple Calendar !">
@@ -46,7 +46,7 @@
                   <span class="btn-market-title">Outlook Calendar</span>
                 </a>
               </div>
-            </div>
+            </div> --}}
             <p class="mt-3">Un mail de confirmation vous a été envoyé, contenant toutes les informations nécessaires à votre venue. Un SMS de confirmation vous a également été envoyé. <br> Un peu de patience, la réception du mail peut parfois prendre quelques minutes. </p>
             <sl-button class="wf-button wf-button--primary wf-mt--3" href="/" aria-label="Retourner sur la page principale !" size="large" variant="default" data-optional="" data-valid="">
               Retourner à l'accueil
