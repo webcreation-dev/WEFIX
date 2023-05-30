@@ -171,7 +171,7 @@
         <div class="title-section" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Votre réparation <strong>GALAXY S23</strong> en express. </div>
         <div class="title-section" data-sal="slide-up" data-sal-delay="500" data-sal-duration="300">Avec une garantie de <strong>1 an</strong> ! <sup>**</sup>
         </div>
-        <p class="mt-3">Exigez le meilleur pour votre GALAXY S23, en nous confiant sa réparation dans une des nombreuses boutiques de notre réseau. Récupérez-le comme neuf après seulement <strong>1 heure</strong>. Tous les composants que nous utilisons pour redonner souffle à votre appareil sont rigoureusement testés avant et après la réparation. Nous offrons <strong>1 an</strong> de garantie pour toutes les réparations. </p>
+        <p class="mt-3">Exigez le meilleur pour votre {{$model->name}}, en nous confiant sa réparation dans une des nombreuses boutiques de notre réseau. Récupérez-le comme neuf après seulement <strong>1 heure</strong>. Tous les composants que nous utilisons pour redonner souffle à votre appareil sont rigoureusement testés avant et après la réparation. Nous offrons <strong>1 an</strong> de garantie pour toutes les réparations. </p>
         <div class="wf-engagements wf-mt--5 wf-mb--3">
           <div class="wf-heading--md">Les <span>engagements</span> de WeFix </div>
           <div class="wf-paragraph--md">Chaque mois, c’est plus de <strong>30000 réparations</strong> qui sont assurées par les techniciens <strong>WeFix</strong> ! 👍 </div>
