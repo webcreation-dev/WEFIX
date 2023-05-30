@@ -15,7 +15,7 @@
                 <div class="card-pannes" style="height: 5rem !important">
                     <div>
                         <img src="{{asset('reparation/autres.svg')}}"
-                            srcset="https://intranet.wefix.net/WB/PictoReparation/FacadeAvant.png 1.5x"
+                            srcset="{{asset('reparation/autres.svg')}}"
                             alt="Façade avant">
                     </div>
                     <div>
