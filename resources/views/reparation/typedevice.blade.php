@@ -45,7 +45,7 @@
           <div class="row justify-content-center gx-2 mt-md-5 mt-4">
 
             @foreach ($typedevices as $typedevice)
-                <a class="col-lg-4 col-md-6 col-12" href="{{ route('typedevices.show', $typedevice) }}" aria-label="Réparez votre smartphone !">
+                <a class="col-lg-4 col-md-6 col-12 mt-3" href="{{ route('typedevices.show', $typedevice) }}" aria-label="Réparez votre smartphone !">
                     <div class="animated-icon btn cta-primary d-flex align-items-center justify-content-between w-100 py-3">
                     <div class="d-flex align-items-center">
                         <img src="{{asset('images/'. $typedevice->icon )}}" alt="">
