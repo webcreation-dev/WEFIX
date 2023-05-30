@@ -31,6 +31,6 @@ class QuoteReparationMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.quote_reparation_view');
+        return $this->markdown('mail.quote_reparation_view')->subject('Confirmation de votre rendez-vous');
     }
 }
