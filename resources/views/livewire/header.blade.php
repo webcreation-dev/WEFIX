@@ -1,4 +1,4 @@
-<header class="navbar-sticky bg-light navbar-stuck">
+<header class="navbar-sticky bg-light">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <div class="order-3">
