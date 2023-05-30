@@ -17,7 +17,9 @@ class TypeDeviceController extends Controller
     public function index()
     {
         $typedevices = TypeDevice::take(3)->get();
-
+        session()->forget([
+            'quoteData.typedevice',
+        ]);
         return view('reparation.typedevice', compact('typedevices'));
     }
 
@@ -56,13 +58,8 @@ class TypeDeviceController extends Controller
         session(['quoteData' => $quoteData]);
 
         session()->forget([
-            'quoteData.failures',
-            'quoteData.totalPrice',
-            'quoteData.appointment',
-            'quoteData.store',
-            'quoteData.schedule',
-            'quoteData.discountPrice',
-            'quoteData.notDiscountPrice'
+            'quoteData.brand',
+            'quoteData.model',
         ]);
 
 

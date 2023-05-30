@@ -7,7 +7,7 @@
         <div class="navbar-tool">
           <div class="d-none d-md-block">
             <div class="d-flex align-items-center">
-              <img class="ms-sm-n1 ms-n2" src="{{asset('reparation/'. $model->image )}}" srcset="https://intranet.wefix.net/WB/Modeles/GALAXYS23.png 1.5x" alt="GALAXY S23" width="70">
+              <img class="ms-sm-n1 ms-n2" src="{{asset('reparation/'. $model->image )}}" srcset="{{asset('reparation/'. $model->image )}}" alt="GALAXY S23" width="70">
               <div class="d-flex flex-column">
                 {{-- <div class="text-dark fs-14 fw-medium"></div> --}}
                 <span class="title-section fs-21 text-primary ellipsis-navbar-text">{{$model->name}}</span>
@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid align-items-center mts">
         <div class="d-flex align-items-center">
-          <img class="ms-sm-n1 ms-n2" src="{{asset('reparation/'. $model->image )}}" srcset="https://intranet.wefix.net/WB/Modeles/GALAXYS23.png 1.5x" alt="GALAXY S23" width="70">
+          <img class="ms-sm-n1 ms-n2" src="{{asset('reparation/'. $model->image )}}" srcset="{{asset('reparation/'. $model->image )}}" alt="GALAXY S23" width="70">
           <div class="d-flex flex-column">
             {{-- <div class="text-dark fs-14 fw-medium d-none d-sm-block">SAMSUNG</div> --}}
             <div class="d-flex flex-sm-row flex-column align-items-start scroll-device">

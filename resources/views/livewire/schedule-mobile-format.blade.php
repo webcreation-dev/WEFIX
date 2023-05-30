@@ -29,7 +29,7 @@
                                         créneau le</span> {{$day[0]}} {{$day[count($day) - 2] . " " . $day[count($day) - 1]}}
                                 </div>
                                 <div
-                                    class="badge rounded-pill bg-primary title-subsection text-light fs-12 me-3">
+                                    class="badge rounded-pill title-subsection text-light fs-12 me-3" style="background: #1d57c4;">
                                     <div class="d-flex align-items-center">{{count($times)}}<span
                                             class="d-none d-sm-block mx-1">créneaux</span> libres </div>
                                 </div>
@@ -42,21 +42,16 @@
                                 <div class="d-flex flex-wrap">
 
                                     @foreach ($times as $time)
-                                        <div class="col-4 text-center my-2"
-                                        wire:click="confirmAppointment('{{$day[0]}}', '{{$day[count($day) - 2] . " " . $day[count($day) - 1]}}', {{$time}}')"
-                                          >
+                                        <div class="col-4 text-center my-2">
                                             <label>
-                                                <input class="scheduleCheckbox card-input-element d-none"
-                                                    type="checkbox">
-                                                <div class="bg-primary title-subsection fs-16 text-light p-3 rounded"
-                                                    >
-                                                    {{$time}}</div>
+
+                                                <div onclick="confirmAppointment(this)" data-day="{{$day[0]}}" data-hour="{{$time}}" data-date="{{$day[count($day) - 2] . " " . $day[count($day) - 1]}}"
+                                                class="title-subsection fs-16 text-light p-3 rounded" style="background: #1d57c4;">
+                                                    {{$time}}
+                                                </div>
                                             </label>
                                         </div>
-
                                     @endforeach
-
-
                                 </div>
                             </div>
                         </div>
@@ -67,3 +62,14 @@
 
     </div>
 </div>
+
+<script>
+
+    function confirmAppointment(appointment) {
+        var day = appointment.dataset.day;
+        var hour = appointment.dataset.hour;
+        var date = appointment.dataset.date;
+
+        Livewire.emit('confirmAppointment', day, hour, date);
+    }
+</script>

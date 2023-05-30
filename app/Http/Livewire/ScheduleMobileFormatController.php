@@ -19,12 +19,14 @@ class ScheduleMobileFormatController extends Component
         ]);
     }
 
+    protected $listeners = ['confirmAppointment'];
+
     public function confirmAppointment($day, $date, $hour) {
 
         $quoteData = session('quoteData', []);
         $quoteData['schedule'] = [$day, $date, $hour];
         session(['quoteData' => $quoteData]);
 
-        return redirect()->route('schedules.index');
+        return redirect()->route('stores.show', ['store' => 1, 'day' => $day, 'date' => $date,  'hour' => $hour ]);
     }
 }

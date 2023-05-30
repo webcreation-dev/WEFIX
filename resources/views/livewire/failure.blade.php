@@ -331,7 +331,7 @@
 
     </sl-details>
 
-    <sl-details class="wf-details wf-details--static wf-details--pannes" summary="Services" open="">
+    {{-- <sl-details class="wf-details wf-details--static wf-details--pannes" summary="Services" open="">
       <template shadowrootmode="open">
         <!---->
         <div part="base" class=" details details--open ">
@@ -439,8 +439,8 @@
           </div>
         </div>
       </label>
-    </sl-details>
-    <label class="select-xforce disabled" for="xforce" data-xforce-card="">
+    </sl-details> --}}
+    <label class="select-xforce disabled" style="display:none;" for="xforce" data-xforce-card="">
       <input type="checkbox" name="protection" id="xforce" autocomplete="off" data-xforce-checkbox="" data-type-stock="CORNER">
       <div class="card-xforce">
         <div>
@@ -466,7 +466,7 @@
         </div>
       </div>
     </label>
-    <div class="disabled" data-bouygues="">
+    <div class="disabled" data-bouygues="" style="display:none;">
       <label class="select-bouygues">
         <input class="bouygues-checkbox" type="checkbox" data-bs-toggle="collapse" data-bs-target="#collapse-bouygues" aria-expanded="false" aria-controls="collapse-bouygues" autocomplete="off">
         <div class="card-bouygues">
@@ -521,7 +521,7 @@
         </div>
       </label>
     </div>
-    <div class="collapse" id="collapse-bouygues">
+    {{-- <div class="collapse" id="collapse-bouygues">
       <p>
         <i class="ci-rocket"></i> Entrez votre numéro de téléphone afin de vérifier votre éligibilité et <strong>calculer votre réduction</strong> sur les pannes sélectionnées.
       </p>
@@ -533,8 +533,8 @@
         </div>
         <feedback class="fade-in none" data-feedback-bouygues=""></feedback>
       </form>
-    </div>
-    <div class="disabled" data-darty="">
+    </div> --}}
+    <div class="disabled" data-darty=""  style="display:none;">
       <label class="select-darty">
         <input class="darty-checkbox" type="checkbox" data-bs-toggle="collapse" data-bs-target="#collapse-darty" aria-expanded="false" aria-controls="collapse-darty" autocomplete="off">
         <div class="card-darty">
@@ -593,7 +593,7 @@
         </div>
       </label>
     </div>
-    <div class="collapse" id="collapse-darty">
+    {{-- <div class="collapse" id="collapse-darty">
       <p>
         <i class="ci-rocket"></i> Entrez votre adresse mail de souscription afin de vérifier votre éligibilité et <strong>calculer votre réduction</strong> sur les pannes sélectionnées.
       </p>
@@ -605,7 +605,7 @@
         </div>
         <feedback class="fade-in none" data-feedback-darty=""></feedback>
       </form>
-    </div>
+    </div> --}}
     <div class="d-none" data-pannes-total="">
       <div>
         <div>
