@@ -1,6 +1,6 @@
 <footer class="footer-slim">
     <div class="container py-md-3 py-4 d-flex flex-column align-items-center">
-      <a href= aria-label="Retourner à l&#39;accueil">
+      <a href="/">
 
         <img src="{{asset('images/mayday-phone-logo.png')}}" style="border-radius: 5px;" alt="" width="300" >
       </a>

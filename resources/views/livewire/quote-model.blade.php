@@ -1,7 +1,7 @@
 <header class="bg-light navbar-reveal">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid align-items-center mts">
-        <a class="navbar-brand" href="https://wefix.net/" aria-label="Retourner à l&#39;accueil">
+        <a class="navbar-brand" href="/" aria-label="Retourner à l&#39;accueil">
             <img src="{{asset('images/logo.png')}}" alt="" width="215">
         </a>
         <div class="navbar-tool">

@@ -123,7 +123,7 @@
       </div>
       <div class="d-flex flex-md-row flex-column align-items-center justify-content-md-between">
         <div class="d-flex flex-column align-items-center align-items-md-start">
-          <a href="#" aria-label="Retourner à l&#39;accueil">
+          <a href="/" aria-label="Retourner à l&#39;accueil">
             <img src="{{asset('images/mayday-phone-logo.png')}}" style="border-radius: 5px;" alt="" width="250">
           </a>
           <div class="mt-2">
