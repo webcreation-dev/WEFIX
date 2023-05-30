@@ -23,7 +23,6 @@ use App\Http\Controllers\Selling\StepSellingController;
 */
 
 Route::get('/', function () {
-    dd(session('quoteData', []));
     return view('layouts.app');
 });
 
