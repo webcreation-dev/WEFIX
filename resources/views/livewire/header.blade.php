@@ -147,7 +147,8 @@
                     </div>
                 </a>
 
-                <a class="wf-aside__screen-content-card" href="#" @click="reparation = !reparation"
+                <a class="wf-aside__screen-content-card" href="{{ route('typedevices.index') }}"
+                {{-- @click="reparation = !reparation" --}}
                     >
                     <div class="wf-aside__screen-content-card--title">
                         <span>REPARER</span>
