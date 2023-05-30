@@ -35,18 +35,6 @@ class BrandDeviceController extends Controller
         $quoteData['brand'] = $brand;
         session(['quoteData' => $quoteData]);
 
-        session()->forget([
-            // 'quoteData.model',
-            'quoteData.failures',
-            'quoteData.totalPrice',
-            'quoteData.appointment',
-            'quoteData.store',
-            'quoteData.schedule',
-            'quoteData.discountPrice',
-            'quoteData.notDiscountPrice'
-        ]);
-
-
         $model_brands = $brand->modelBrand()->get();
         return view('reparation.model_brand', compact('model_brands'));
     }
@@ -73,6 +61,16 @@ class BrandDeviceController extends Controller
         $quoteData = session('quoteData', []);
         $quoteData['brand'] = $brand;
         session(['quoteData' => $quoteData]);
+
+        session()->forget([
+            'quoteData.failures',
+            'quoteData.totalPrice',
+            'quoteData.appointment',
+            'quoteData.store',
+            'quoteData.schedule',
+            'quoteData.discountPrice',
+            'quoteData.notDiscountPrice'
+        ]);
 
         $model_brands = $brand->modelBrand()->get();
         return view('reparation.model_brand', compact('model_brands'));
