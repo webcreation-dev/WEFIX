@@ -171,8 +171,8 @@
       </section>
       <section class="container-fluid mt-4 mb-5">
         <div class="d-block d-lg-none">
-          <button class="btn cta-primary w-100 py-3 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="[data-corner-aside-map]">
-            <i class="ci-map me-2"></i>Voir les boutiques sur la carte </button>
+          {{-- <button class="btn cta-primary w-100 py-3 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="[data-corner-aside-map]">
+            <i class="ci-map me-2"></i>Voir les boutiques sur la carte </button> --}}
           <aside class="offcanvas offcanvas-expand w-100" data-corner-aside-map="">
             <div class="offcanvas-body p-0">
               <div class="h-100 rounded-0" data-corner-map="">
