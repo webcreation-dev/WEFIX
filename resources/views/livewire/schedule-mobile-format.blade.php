@@ -42,12 +42,13 @@
                                 <div class="d-flex flex-wrap">
 
                                     @foreach ($times as $time)
-                                        <div class="col-4 text-center my-2"  >
+                                        <div class="col-4 text-center my-2"
+                                        wire:click="confirmAppointment('{{$day[0]}}', '{{$day[count($day) - 2] . " " . $day[count($day) - 1]}}', {{$time}}')"
+                                          >
                                             <label>
                                                 <input class="scheduleCheckbox card-input-element d-none"
                                                     type="checkbox">
                                                 <div class="bg-primary title-subsection fs-16 text-light p-3 rounded"
-                                                wire:click="confirmAppointment('{{$day[0]}}', '{{$day[count($day) - 2] . " " . $day[count($day) - 1]}}', {{$time}}')"
                                                     >
                                                     {{$time}}</div>
                                             </label>
