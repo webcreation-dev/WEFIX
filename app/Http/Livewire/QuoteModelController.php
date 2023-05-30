@@ -28,6 +28,8 @@ class QuoteModelController extends Component
         $quoteData['discountPrice'] = $discountPrice;
         $quoteData['notDiscountPrice'] = $notDiscountPrice;
         session(['quoteData' => $quoteData]);
+        return redirect()->route('failures.create');
+
     }
 }
 

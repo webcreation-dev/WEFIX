@@ -122,7 +122,7 @@
                   <span class="fw-medium text-dark fs-md">Votre total:</span> {{$quoteData['discountPrice']}}
                 </div>
                 <p class="text-muted fs-sm mt-3">
-                  <sup>*</sup>Réduction de 10% applicable sur la réparation la plus chère de la prestation réservée via une prise de rendez-vous sur le site <a class="wf-decoration--underline" href="#">wefix.net</a>. Sous réserve que la réparation soit effectuée dans le point de vente et a l’heure choisie lors de la prise de rendez-vous. WeFix se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une autre offre.
+                  <sup>*</sup>Réduction de 10% applicable sur la réparation la plus chère de la prestation réservée via une prise de rendez-vous sur le site <a class="wf-decoration--underline" href="#">wefix.net</a>. Sous réserve que la réparation soit effectuée dans le point de vente et a l’heure choisie lors de la prise de rendez-vous. Mayday Phone se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une autre offre.
                 </p>
               </div>
             </div>
@@ -133,10 +133,10 @@
           <div class="col-md-7 col-12">
             <div class="card border-0 shadow mt-lg-4">
               <div class="card-body fs-lg mb-n2">
-                <p>Réparer c'est prolonger la vie de tous vos appareils high-tech. Déjà <strong>200 tonnes</strong> de déchets électroniques ont été évitées grâce à celles et ceux qui comme vous, ont adopté le réflexe WeFix. </p>
+                <p>Réparer c'est prolonger la vie de tous vos appareils high-tech. Déjà <strong>200 tonnes</strong> de déchets électroniques ont été évitées grâce à celles et ceux qui comme vous, ont adopté le réflexe Mayday Phone. </p>
                 <p class="mt-2 text-center fw-bolder fs-18 text-primary">Vous en faites partie, merci beaucoup !</p>
               </div>
-              <sl-avatar class="mx-auto mb-n4 wf-avatar wf-avatar--md" image="/images/reparation/yves.webp" label="Yves de WeFix" shape="circle">
+              <sl-avatar class="mx-auto mb-n4 wf-avatar wf-avatar--md" image="/images/reparation/yves.webp" label="Yves de Mayday Phone" shape="circle">
 
               </sl-avatar>
             </div>
@@ -145,8 +145,8 @@
       </section>
       <section class="wf-container--default mt-5">
         <div class="wf-engagements wf-mt--5 wf-mb--3">
-          <div class="wf-heading--md">Les <span>engagements</span> de WeFix </div>
-          <div class="wf-paragraph--md">Chaque mois, c’est plus de <strong>30000 réparations</strong> qui sont assurées par les techniciens <strong>WeFix</strong> ! 👍 </div>
+          <div class="wf-heading--md">Les <span>engagements</span> de Mayday Phone </div>
+          <div class="wf-paragraph--md">Chaque mois, c’est plus de <strong>30000 réparations</strong> qui sont assurées par les techniciens <strong>Mayday Phone</strong> ! 👍 </div>
           <div class="wf-engagements-snap wf-mt--3">
             <div class="wf-engagements-grid">
               <sl-card class="wf-card">

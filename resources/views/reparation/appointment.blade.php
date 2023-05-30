@@ -152,7 +152,7 @@
         </div>
         <h1 class="title-section text-center my-4 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Complétez le formulaire pour prendre rendez-vous </h1>
         <div class="wf-speech-bubble">
-          <sl-avatar class="wf-avatar wf-avatar--md" image="/images/reparation/yves.webp" label="Yves de WeFix" shape="circle">
+          <sl-avatar class="wf-avatar wf-avatar--md" image="/images/reparation/yves.webp" label="Yves de Mayday Phone" shape="circle">
           </sl-avatar>
           <div class="wf-speech-bubble--text">À l’étape suivante, vous pourrez choisir la boutique la plus proche de chez vous, afin de prendre rendez-vous et de <strong>profiter de -10% de remise sur votre réparation <sup>*</sup>
             </strong>. </div>
@@ -160,7 +160,7 @@
         @livewire('appointment-controller')
 
         <p class="text-muted fs-sm mt-5">
-          <sup>*</sup>Réduction de 10% applicable sur la réparation la plus chère de la prestation réservée via une prise de rendez-vous sur le site <a class="wf-decoration--underline" href="#">wefix.net</a>. Sous réserve que la réparation soit effectuée dans le point de vente et a l’heure choisie lors de la prise de rendez-vous. WeFix se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une autre offre.
+          <sup>*</sup>Réduction de 10% applicable sur la réparation la plus chère de la prestation réservée via une prise de rendez-vous sur le site <a class="wf-decoration--underline" href="#">wefix.net</a>. Sous réserve que la réparation soit effectuée dans le point de vente et a l’heure choisie lors de la prise de rendez-vous. Mayday Phone se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une autre offre.
         </p>
       </section>
     </main>

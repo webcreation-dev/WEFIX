@@ -99,7 +99,7 @@
                 <div class="wf-corner-card__body">
                 <div class="wf-corner-card__body--header">
                     <div class="wf-corner-card__body--header-title">
-                    <span>2.</span> WeFix - Fnac Nice
+                    <span>2.</span> Mayday Phone - Fnac Nice
                     </div>
                     <div class="wf-corner-card__body--header-info">
                     <div>44 avenue Jean Médecin,</div>

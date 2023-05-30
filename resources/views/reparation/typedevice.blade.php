@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0018)https://wefix.net/ -->
+<!-- saved from url=(0018)https://Mayday Phone.net/ -->
 <html lang="en">
   @include('components.head')
 
@@ -37,7 +37,7 @@
       <section class="mt-md-5 mt-4">
         <div class="container">
           <div class="wf-speech-bubble">
-            <sl-avatar class="wf-avatar wf-avatar--md" image="{{asset('reparation/yves.webp')}}" label="Yves de WeFix" shape="circle">
+            <sl-avatar class="wf-avatar wf-avatar--md" image="{{asset('reparation/yves.webp')}}" label="Yves de Mayday Phone" shape="circle">
 
             </sl-avatar>
             <div class="wf-speech-bubble--text">Quel type d'appareil souhaitez-vous réparer aujourd'hui ?</div>
@@ -254,13 +254,13 @@
       </section>
       <section class="wf-container--default mt-5">
         <div class="wf-engagements wf-mt--5 wf-mb--3">
-          <div class="wf-heading--md">Les <span>engagements</span> de WeFix </div>
-          <div class="wf-paragraph--md">Chaque mois, c’est plus de <strong>30000 réparations</strong> qui sont assurées par les techniciens <strong>WeFix</strong> ! 👍 </div>
+          <div class="wf-heading--md">Les <span>engagements</span> de Mayday Phone </div>
+          <div class="wf-paragraph--md">Chaque mois, c’est plus de <strong>30000 réparations</strong> qui sont assurées par les techniciens <strong>Mayday Phone</strong> ! 👍 </div>
           <div class="wf-engagements-snap wf-mt--3">
             <div class="wf-engagements-grid">
               <sl-card class="wf-card">
 
-                <sl-icon library="wefix" name="engagement-express" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-express" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg">
@@ -318,7 +318,7 @@
               </sl-card>
               <sl-card class="wf-card">
 
-                <sl-icon library="wefix" name="engagement-fnac" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-fnac" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 1652.06 681.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg">
@@ -346,7 +346,7 @@
               </sl-card>
               <sl-card class="wf-card">
 
-                <sl-icon library="wefix" name="engagement-garantie" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-garantie" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg">
@@ -415,7 +415,7 @@
               </sl-card>
               <sl-card class="wf-card">
 
-                <sl-icon library="wefix" name="engagement-techniciens" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-techniciens" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg">
@@ -521,7 +521,7 @@
       </section>
       <section class="container mt-5 mb-3">
         <p class="text-muted fs-sm">
-          <sup>*</sup>Réduction de 10% applicable sur la réparation la plus chère de la prestation réservée via une prise de rendez-vous sur le site <a class="wf-decoration--underline" href="#">wefix.net</a>. Sous réserve que la réparation soit effectuée dans le point de vente et à l’heure choisie lors de la prise de rendez-vous. WeFix se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une autre offre.
+          <sup>*</sup>Réduction de 10% applicable sur la réparation la plus chère de la prestation réservée via une prise de rendez-vous sur le site <a class="wf-decoration--underline" href="#">Mayday Phone.net</a>. Sous réserve que la réparation soit effectuée dans le point de vente et à l’heure choisie lors de la prise de rendez-vous. Mayday Phone se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une autre offre.
         </p>
         <p class="text-muted fs-sm mt-1">
           <sup>**</sup>La garantie est de <strong>3 mois</strong> pour le changement de batterie.

@@ -646,7 +646,7 @@ class TestDataTableSeeder extends Seeder
             'zip_code' => '06260',
         ]);
         StoreDevice::create([
-            'name' => 'WeFix - Fnac Nice',
+            'name' => 'Mayday Phone - Fnac Nice',
             'address' => '44 avenue Jean Médecin, 06000 Nice',
             'city' => 'France',
             'zip_code' => '06260',

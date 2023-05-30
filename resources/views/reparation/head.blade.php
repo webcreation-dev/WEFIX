@@ -4,7 +4,7 @@
     <title>MAYDAY PHONE | Réparation et Revente</title>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <meta  name ="csrf-token" content ="{{ csrf_token() }}" />
-    <meta name="description" content="Vous souhaitez réparer votre smartphone GALAXY S23 ? Découvrez les prestations de WeFix, expert de la réparation de smartphone.">
+    <meta name="description" content="Vous souhaitez réparer votre smartphone GALAXY S23 ? Découvrez les prestations de Mayday Phone, expert de la réparation de smartphone.">
     <script async="" src="{{asset('reparation/gtm.js.téléchargement')}}"></script>
     <script src="{{asset('reparation/otSDKStub.js.téléchargement')}}" type="text/javascript" charset="UTF-8" data-domain-script="a6b87446-644c-4e57-a7de-cbeee0925cc9"></script>
     <script>
@@ -20,13 +20,13 @@
       })(window, document, "script", "dataLayer", "GTM-WC998KW")
     </script>
     <meta name="author" content="Cuzeac Florin, Thomas Boual">
-    <meta name="keywords" content="WeFix, Réparation, Smartphones, Tablettes, Fnac, Darty, Samsung, Apple, Huawei">
+    <meta name="keywords" content="Mayday Phone, Réparation, Smartphones, Tablettes, Fnac, Darty, Samsung, Apple, Huawei">
     <meta name="robots" content="index">
     <meta name="theme-color" content="#FFFFFF">
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: dark)">
-    <meta property="og:title" content="Réparation GALAXY S23 : obtenez votre devis en ligne - WeFix">
-    <meta property="og:description" content="Vous souhaitez réparer votre smartphone GALAXY S23 ? Découvrez les prestations de WeFix, expert de la réparation de smartphone.">
+    <meta property="og:title" content="Réparation GALAXY S23 : obtenez votre devis en ligne - Mayday Phone">
+    <meta property="og:description" content="Vous souhaitez réparer votre smartphone GALAXY S23 ? Découvrez les prestations de Mayday Phone, expert de la réparation de smartphone.">
     <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('reparation/app.bundle.min.css')}}">
     <script src="{{asset('reparation/otBannerSdk.js.téléchargement')}}" async="" type="text/javascript"></script>

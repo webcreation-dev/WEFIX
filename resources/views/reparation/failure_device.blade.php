@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<!-- saved from url=(0058)https://wefix.net/reparation/smartphone/samsung/galaxy-s23 -->
+<!-- saved from url=(0058)https://Mayday Phone.net/reparation/smartphone/samsung/galaxy-s23 -->
 <html lang="en">
   @include('reparation.head')
   <body x-init="" cz-shortcut-listen="true">
@@ -148,7 +148,7 @@
         <h1 class="title-section text-center my-4 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Que voulez-vous réparer sur votre {{$model->name}} ?</h1>
         <div class="mt-4">
           <div class="wf-speech-bubble">
-            <sl-avatar class="wf-avatar wf-avatar--md" image="{{asset('reparation/yves.webp')}}" label="Yves de WeFix" shape="circle">
+            <sl-avatar class="wf-avatar wf-avatar--md" image="{{asset('reparation/yves.webp')}}" label="Yves de Mayday Phone" shape="circle">
 
             </sl-avatar>
             <div class="wf-speech-bubble--text">
@@ -168,13 +168,13 @@
 
 
       <section class="wf-container--default wf-mt--5">
-        <div class="title-section" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Votre réparation <strong>GALAXY S23</strong> en express. </div>
+        <div class="title-section" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Votre réparation <strong>{{$model->name}}</strong> en express. </div>
         <div class="title-section" data-sal="slide-up" data-sal-delay="500" data-sal-duration="300">Avec une garantie de <strong>1 an</strong> ! <sup>**</sup>
         </div>
         <p class="mt-3">Exigez le meilleur pour votre {{$model->name}}, en nous confiant sa réparation dans une des nombreuses boutiques de notre réseau. Récupérez-le comme neuf après seulement <strong>1 heure</strong>. Tous les composants que nous utilisons pour redonner souffle à votre appareil sont rigoureusement testés avant et après la réparation. Nous offrons <strong>1 an</strong> de garantie pour toutes les réparations. </p>
         <div class="wf-engagements wf-mt--5 wf-mb--3">
-          <div class="wf-heading--md">Les <span>engagements</span> de WeFix </div>
-          <div class="wf-paragraph--md">Chaque mois, c’est plus de <strong>30000 réparations</strong> qui sont assurées par les techniciens <strong>WeFix</strong> ! 👍 </div>
+          <div class="wf-heading--md">Les <span>engagements</span> de Mayday Phone </div>
+          <div class="wf-paragraph--md">Chaque mois, c’est plus de <strong>30000 réparations</strong> qui sont assurées par les techniciens <strong>Mayday Phone</strong> ! 👍 </div>
           <div class="wf-engagements-snap wf-mt--3">
             <div class="wf-engagements-grid">
               <sl-card class="wf-card">
@@ -187,7 +187,7 @@
                     <slot name="footer" part="footer" class="card__footer"></slot>
                   </div>
                 </template>
-                <sl-icon library="wefix" name="engagement-express" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-express" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg">
@@ -253,7 +253,7 @@
                     <slot name="footer" part="footer" class="card__footer"></slot>
                   </div>
                 </template>
-                <sl-icon library="wefix" name="engagement-fnac" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-fnac" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 1652.06 681.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg">
@@ -289,7 +289,7 @@
                     <slot name="footer" part="footer" class="card__footer"></slot>
                   </div>
                 </template>
-                <sl-icon library="wefix" name="engagement-garantie" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-garantie" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg">
@@ -366,7 +366,7 @@
                     <slot name="footer" part="footer" class="card__footer"></slot>
                   </div>
                 </template>
-                <sl-icon library="wefix" name="engagement-techniciens" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-techniciens" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg">

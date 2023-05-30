@@ -5,7 +5,7 @@
         <img src="{{asset('images/mayday-phone-logo.png')}}" style="border-radius: 5px;" alt="" width="300" >
       </a>
       <div class="mt-1 mb-md-4">
-        <div class="fs-xs text-light">© Tous droits réservés. <strong>WeFix 2023</strong>. </div>
+        <div class="fs-xs text-light">© Tous droits réservés. <strong>Mayday Phone 2023</strong>. </div>
       </div>
       <div class="widget widget-links widget-light mt-md-0 mt-3">
         <div class="grid mts" style="--wf-gap: 16px">

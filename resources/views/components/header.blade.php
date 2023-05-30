@@ -319,7 +319,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#" aria-label="Toutes nos boutiques WeFix !">
+              <a class="nav-link" href="#" aria-label="Toutes nos boutiques Mayday Phone !">
                 <span class="fw-medium">Nos boutiques</span>
               </a>
             </li>

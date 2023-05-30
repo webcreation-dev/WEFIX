@@ -2,7 +2,7 @@
 
     <div class="grid" style="--wf-gap: 16px">
       <div class="d-flex g-col-sm-6 g-col-12">
-        <input class="btn-check" type="radio" id="MR" name="civility" wire:model="appointmentFields.civility" required value="MR" checked="f">
+        <input class="btn-check" type="radio"  id="MR" name="civility" wire:model="appointmentFields.civility" required value="MR" checked>
         <label class="btn btn-outline-primary fw-medium w-50 me-2" for="MR">Monsieur</label>
         <input class="btn-check" type="radio" id="MME" name="civility" wire:model="appointmentFields.civility" required value="MME">
         <label class="btn btn-outline-primary fw-medium w-50" for="MME">Madame</label>
@@ -15,6 +15,9 @@
           <input class="form-control" type="text" required name="surname" id="surname" wire:model="appointmentFields.surname" style="text-transform: capitalize" placeholder="..." maxlength="40" autofocus="" autocomplete="" required="">
           <label class="fs-sm mts" for="surname">Votre prénom</label>
           <div class="invalid-tooltip fs-12 fw-medium fade-in mt-1">Veuillez entrer votre prénom !</div>
+            @error("appointmentFields.surname")
+                <span class="text-danger">{{ $message }}</span>
+            @enderror
         </div>
       </div>
       <div class="g-col-sm-6 g-col-12">
@@ -22,6 +25,9 @@
           <input class="form-control" type="text" required name="name" id="name" wire:model="appointmentFields.name"  style="text-transform: capitalize" placeholder="..." maxlength="40" autocomplete="" required="">
           <label class="fs-sm mts" for="name">Votre nom</label>
           <div class="invalid-tooltip fs-12 fw-medium fade-in mt-1">Veuillez entrer votre nom !</div>
+            @error("appointmentFields.name")
+                    <span class="text-danger">{{ $message }}</span>
+            @enderror
         </div>
       </div>
       <div class="g-col-12">
@@ -29,6 +35,9 @@
           <input class="form-control" type="email" required name="mail" wire:model="appointmentFields.mail" id="mail" placeholder="..." maxlength="60" autocomplete="" required="">
           <label class="fs-sm mts" for="mail">Votre adresse mail</label>
           <div class="invalid-tooltip fs-12 fw-medium fade-in mt-1">Adresse mail incorrecte !</div>
+          @error("appointmentFields.mail")
+                    <span class="text-danger">{{ $message }}</span>
+            @enderror
         </div>
       </div>
       <div class="g-col-sm-6 g-col-12">
@@ -36,6 +45,9 @@
           <input class="form-control" type="number" required name="postal" id="postal" wire:model="appointmentFields.postal" placeholder="..." inputmode="numeric" oninput="this.value = this.value.replace(/D+/g, &#39;&#39;)" required="">
           <label class="fs-sm mts" for="postal">Votre code postal</label>
           <div class="invalid-tooltip fs-12 fw-medium fade-in mt-1">Veuillez entrer votre code postal !</div>
+          @error("appointmentFields.postal")
+                    <span class="text-danger">{{ $message }}</span>
+            @enderror
         </div>
       </div>
       <div class="g-col-sm-6 g-col-12">
@@ -48,6 +60,9 @@
               <img src="{{asset('reparation/france.svg')}}" alt="France" width="18px" height="18px">
             </span>
           </label>
+          @error("appointmentFields.country")
+                    <span class="text-danger">{{ $message }}</span>
+            @enderror
         </div>
       </div>
       <div class="g-col-12">
@@ -55,6 +70,9 @@
           <input class="form-control" type="number" required name="phone" wire:model="appointmentFields.phone" id="phone" placeholder="..." inputmode="numeric" oninput="this.value = this.value.replace(/D+/g, &#39;&#39;)" autocomplete="" required="">
           <label class="fs-sm mts" for="phone">Numéro de téléphone</label>
           <div class="invalid-tooltip fs-12 fw-medium fade-in mt-1">Veuillez entrer votre numéro de téléphone !</div>
+            @error("appointmentFields.phone")
+                    <span class="text-danger">{{ $message }}</span>
+            @enderror
         </div>
       </div>
       <div class="g-col-12">
@@ -71,13 +89,36 @@
                 <use xlink:href="#"></use>
               </svg>
             </span>
-            <span class="text-muted fs-sm">Je ne souhaite pas recevoir des informations commerciales, des nouveautés, des promotions et tous les bons plans et remises <strong>de la part de WeFix</strong>. </span>
+            <span class="text-muted fs-sm">Je ne souhaite pas recevoir des informations commerciales, des nouveautés, des promotions et tous les bons plans et remises <strong>de la part de Mayday Phone</strong>. </span>
           </label>
         </div>
       </div>
     </div>
     <div class="text-center mt-md-3 mt-5">
-      <button class="btn btn-lg cta-primary" type="submit" data-event-type="rdv" wire:click="submitForm" data-label-form-submit="" size="large">PRENDRE RENDEZ-VOUS</button>
-      <button class="btn btn-link fs-lg fw-bold text-dark underline wf-mt--2" wire:click="submitForm" type="submit" data-event-type="devis" data-label-devis-submit="" size="medium">Recevoir mon devis </button>
+      <button class="btn btn-lg cta-primary" type="submit" onclick="validateForm()" data-event-type="rdv" wire:click="submitForm" data-label-form-submit="" size="large">PRENDRE RENDEZ-VOUS</button>
+      {{-- <button class="btn btn-link fs-lg fw-bold text-dark underline wf-mt--2" wire:click="submitForm" type="submit" data-event-type="devis" data-label-devis-submit="" size="medium">Recevoir mon devis </button> --}}
     </div>
   </form>
+
+{{--
+  <script>
+    function validateForm() {
+        var fields = document.querySelectorAll('input[required]');
+        var isValid = true;
+
+        for (var i = 0; i < fields.length; i++) {
+            if (fields[i].value === "") {
+                isValid = false;
+                fields[i].classList.add("error");
+            } else {
+                fields[i].classList.remove("error");
+            }
+        }
+
+        if (!isValid) {
+            alert("Veuillez remplir tous les champs obligatoires.");
+        }
+
+        return isValid;
+    }
+</script> --}}

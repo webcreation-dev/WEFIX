@@ -4,7 +4,7 @@
     <title>MAYDAY PHONE | Réparation et Revente</title>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <meta  name ="csrf-token" content ="{{ csrf_token() }}" />
-    <meta name="description" content="WeFix, expert en réparation de smartphone. Réparation sur rendez-vous et garantie avec des techniciens certifiés. Trouvez le corner WeFix proche de chez vous !">
+    <meta name="description" content="Mayday Phone, expert en réparation de smartphone. Réparation sur rendez-vous et garantie avec des techniciens certifiés. Trouvez le corner Mayday Phone proche de chez vous !">
     <script async="" src="{{asset('layout/gtm.js.téléchargement')}}"></script>
     <script src="{{asset('layout/otSDKStub.js.téléchargement')}}" type="text/javascript" charset="UTF-8" data-domain-script="a6b87446-644c-4e57-a7de-cbeee0925cc9"></script>
     <script>
@@ -20,12 +20,12 @@
       })(window, document, "script", "dataLayer", "GTM-WC998KW")
     </script>
     <meta name="author" content="Cuzeac Florin, Thomas Boual">
-    <meta name="keywords" content="WeFix, Réparation, Smartphones, Tablettes, Fnac, Darty, Samsung, Apple, Huawei">
+    <meta name="keywords" content="Mayday Phone, Réparation, Smartphones, Tablettes, Fnac, Darty, Samsung, Apple, Huawei">
     <meta name="robots" content="index">
     <meta name="theme-color" content="#FFFFFF">
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: dark)">
-    <meta property="og:title" content="WeFix Expert Smartphone: Réparation et Protection">
+    <meta property="og:title" content="Mayday Phone Expert Smartphone: Réparation et Protection">
     <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('layout/app.bundle.min.css')}}">
     <script src="{{asset('layout/otBannerSdk.js.téléchargement')}}" async="" type="text/javascript"></script>

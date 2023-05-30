@@ -244,7 +244,7 @@
                 réparation la plus chère de la prestation réservée via une prise de rendez-vous sur le site <a
                     class="wf-decoration--underline" href="#">wefix.net</a>. Sous réserve que la
                 réparation soit effectuée dans le point de vente et a l’heure choisie lors de la prise de rendez-vous.
-                WeFix se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une autre
+                Mayday Phone se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une autre
                 offre. </div>
         </section>
     </main>

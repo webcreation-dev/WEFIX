@@ -163,7 +163,7 @@
         <h1 class="title-section text-center my-4" data-sal="fade-in" data-sal-delay="400" data-sal-duration="300">Choisissez votre boutique !</h1>
         <div class="mt-4">
           <div class="wf-speech-bubble">
-            <sl-avatar class="wf-avatar wf-avatar--md" image="/images/reparation/yves.webp')}}" label="Yves de WeFix" shape="circle">
+            <sl-avatar class="wf-avatar wf-avatar--md" image="/images/reparation/yves.webp')}}" label="Yves de Mayday Phone" shape="circle">
             </sl-avatar>
             <div class="wf-speech-bubble--text">Prenez rendez-vous dans une de nos boutiques afin de réserver votre pièce pour votre réparation.</div>
           </div>
