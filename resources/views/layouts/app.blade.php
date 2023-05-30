@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0018)https://wefix.net/ -->
+<!-- saved from url=(0018)https://Mayday Phone.net/ -->
 <html lang="en">
   @include('components.head')
 
@@ -31,7 +31,7 @@
             </div>
 
             <div class="wf-banner-list--item swiper-slide swiper-slide-next" tabindex="-1" style="width: 357px; margin-right: 30px;" data-swiper-slide-index="1">
-              <a href="#" aria-label="Deezer vous offre 4 mois d&#39;abonnement pour tout achat chez WeFix">
+              <a href="#" aria-label="Deezer vous offre 4 mois d&#39;abonnement pour tout achat chez Mayday Phone">
 
                   <picture>
                     <source type="image/webp" srcset="{{asset('reparation/banner-mobile4.webp 3840w')}}" media="(max-width: 767px)" width="750" height="750">
@@ -111,7 +111,7 @@
 
       <section class="wf-container--default" role="main">
         <div class="wf-snap wf-snap-univers wf-mt--3">
-          <div class="wf-heading--md sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Découvrez <span>l'univers WeFix</span> ! </div>
+          <div class="wf-heading--md sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Découvrez <span>l'univers Mayday Phone</span> ! </div>
           <div class="wf-snap-univers-scrollable">
             <div class="wf-snap-univers-grid">
               <sl-card class="wf-card wf-card-univers-repair">
@@ -164,12 +164,12 @@
                   </div>
                 </template>
                 <div class="wf-card-univers-recos--image">
-                  <img decoding="async" fetchpriority="high" src="{{asset('layout/recos.webp')}}" srcset="{{asset('images/recos.webp')}}" alt="Découvrez les reconditionnés par WeFix !" draggable="false" oncontextmenu="return false">
+                  <img decoding="async" fetchpriority="high" src="{{asset('layout/recos.webp')}}" srcset="{{asset('images/recos.webp')}}" alt="Découvrez les reconditionnés par Mayday Phone !" draggable="false" oncontextmenu="return false">
                 </div>
                 <div>
                   <div class="wf-heading--xs">Smartphones</div>
                   <div class="wf-heading--xs wf-weight--normal">reconditionnés</div>
-                  <sl-button class="wf-button wf-button--primary wf-mt--2" href="#" aria-label="Découvrez les reconditionnés par WeFix !" size="medium" variant="default" data-optional="" data-valid="">
+                  <sl-button class="wf-button wf-button--primary wf-mt--2" href="#" aria-label="Découvrez les reconditionnés par Mayday Phone !" size="medium" variant="default" data-optional="" data-valid="">
                     Découvrir !
                   </sl-button>
                 </div>
@@ -186,7 +186,7 @@
           <div class="wf-engagements-assurance-grid">
             <sl-card class="wf-card">
 
-              <sl-icon library="wefix" name="assurance-fnac" style="font-size: 8rem" aria-hidden="true">
+              <sl-icon library="Mayday Phone" name="assurance-fnac" style="font-size: 8rem" aria-hidden="true">
                 <template shadowrootmode="open">
                   <!---->
                   <svg fill="none" height="117" viewBox="0 0 284 117" width="284" xmlns="http://www.w3.org/2000/svg')}}" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg')}}">
@@ -202,7 +202,7 @@
             </sl-card>
             <sl-card class="wf-card">
 
-              <sl-icon library="wefix" name="assurance-reparation" style="font-size: 8rem" aria-hidden="true">
+              <sl-icon library="Mayday Phone" name="assurance-reparation" style="font-size: 8rem" aria-hidden="true">
                 <template shadowrootmode="open">
                   <!---->
                   <svg fill="none" height="297" viewBox="0 0 285 297" width="285" xmlns="http://www.w3.org/2000/svg')}}" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg')}}">
@@ -390,7 +390,7 @@
             </sl-card>
             <sl-card class="wf-card">
 
-              <sl-icon library="wefix" name="assurance-experts" style="font-size: 8rem" aria-hidden="true">
+              <sl-icon library="Mayday Phone" name="assurance-experts" style="font-size: 8rem" aria-hidden="true">
                 <template shadowrootmode="open">
                   <!---->
                   <svg fill="none" height="233" viewBox="0 0 219 233" width="219" xmlns="http://www.w3.org/2000/svg')}}" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg')}}">
@@ -748,12 +748,12 @@
                   </svg>
                 </template>
               </sl-icon>
-              <div class="wf-heading--xs wf-mt--2">Experts WeFix</div>
+              <div class="wf-heading--xs wf-mt--2">Experts Mayday Phone</div>
               <div class="wf-paragraph--sm wf-mt--1">certifiés.</div>
             </sl-card>
             <sl-card class="wf-card">
 
-              <sl-icon library="wefix" name="assurance-boutiques" style="font-size: 8rem" aria-hidden="true">
+              <sl-icon library="Mayday Phone" name="assurance-boutiques" style="font-size: 8rem" aria-hidden="true">
                 <template shadowrootmode="open">
                   <!---->
                   <svg width="207" height="217" viewBox="0 0 207 217" fill="none" xmlns="http://www.w3.org/2000/svg')}}" part="svg')}}">
@@ -1005,7 +1005,7 @@
         </div>
         <div class="wf-banner wf-banner--offers wf-my--5" data-sal="fade-in" data-sal-delay="400" data-sal-duration="400" data-sal-once="">
           <div class="wf-heading--md wf-align--center" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Nos <span>offres</span> du moment </div>
-          <div class="wf-paragraph--md wf-align--center" data-sal="slide-up" data-sal-delay="600" data-sal-duration="500">Découvrez nos offres du moment, valables dans votre boutique WeFix ! </div>
+          <div class="wf-paragraph--md wf-align--center" data-sal="slide-up" data-sal-delay="600" data-sal-duration="500">Découvrez nos offres du moment, valables dans votre boutique Mayday Phone ! </div>
           <div class="wf-banner-carousel swiper wf-mt--3 swiper-initialized swiper-horizontal swiper-backface-hidden" id="promotions">
             <div class="wf-banner-list swiper-wrapper" style="transform: translate3d(-774px, 0px, 0px); transition-duration: 0ms;">
 
@@ -1073,17 +1073,17 @@
       <section class="wf-container--default page-home-messages wf-mt--5">
         <div>
           <div>
-            <img src="{{asset('images/recrutement.svg')}}" srcset="{{asset('images/recrutement.svg')}}" alt="Postulez simplement sur notre site carrières WeFix">
+            <img src="{{asset('images/recrutement.svg')}}" srcset="{{asset('images/recrutement.svg')}}" alt="Postulez simplement sur notre site carrières Mayday Phone">
           </div>
           <div>
-            <div class="title-section" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Postulez simplement sur notre site carrières WeFix.</div>
+            <div class="title-section" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Postulez simplement sur notre site carrières Mayday Phone.</div>
             <p class="mt-3">
-              <strong>Rejoindre l'aventure WeFix</strong> c'est participer à l'essor d'une belle PME Française qui se donne les moyens de ses ambitions !
+              <strong>Rejoindre l'aventure Mayday Phone</strong> c'est participer à l'essor d'une belle PME Française qui se donne les moyens de ses ambitions !
             </p>
             <p>
               <strong>Nous n'attendons qu'une chose :</strong> continuer à grandir et performer grâce à l'efficacité, l'implication et le sens de service inné de nos collaborateurs !
             </p>
-            <sl-button class="wf-button wf-button--primary wf-mt--3" href="#" aria-label="Postulez simplement sur notre site carrières WeFix" size="large" variant="default" data-optional="" data-valid="">
+            <sl-button class="wf-button wf-button--primary wf-mt--3" href="#" aria-label="Postulez simplement sur notre site carrières Mayday Phone" size="large" variant="default" data-optional="" data-valid="">
               Consultez nos offres !
             </sl-button>
           </div>
@@ -1094,7 +1094,7 @@
           </div>
           <div>
             <div class="title-section" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Le leader de la réparation express à votre service !</div>
-            <p class="mt-3">Réparer, accessoiriser ou encore protéger votre smartphone des tracas du quotidien : <strong>c’est la mission WeFix</strong>. </p>
+            <p class="mt-3">Réparer, accessoiriser ou encore protéger votre smartphone des tracas du quotidien : <strong>c’est la mission Mayday Phone</strong>. </p>
             <p>Avec plus de <strong>150 boutiques</strong> en France et en Belgique à votre service, il y a forcément un <strong>eXpert</strong> près de chez vous, pour vous conseiller et vous aider. </p>
             <sl-button class="wf-button wf-button--primary wf-mt--3" href="#" aria-label="Le leader de la réparation express à votre service !" size="large" variant="default" data-optional="" data-valid="">
              Voir nos boutiques !
@@ -1137,7 +1137,7 @@
                             <div>LSA</div>
                             <div>le 21/02/2019</div>
                           </div>
-                          <div class="title">Le mariage entre Fnac &amp; Darty et WeFix prend corps.</div>
+                          <div class="title">Le mariage entre Fnac &amp; Darty et Mayday Phone prend corps.</div>
                           <a href="#" target="_blank" rel="noreferrer noopener">Lire l'article <i class="ci-arrow-right"></i>
                           </a>
                         </div>
@@ -1153,7 +1153,7 @@
                             <div>Le Figaro</div>
                             <div>le 20/09/2018</div>
                           </div>
-                          <div class="title">Fnac Darty s'offre les boutiques de réparation de mobiles WeFix.</div>
+                          <div class="title">Fnac Darty s'offre les boutiques de réparation de mobiles Mayday Phone.</div>
                           <a href="#" target="_blank" rel="noreferrer noopener">Lire l'article <i class="ci-arrow-right"></i>
                           </a>
                         </div>
@@ -1185,13 +1185,13 @@
       </section>
       <section class="wf-container--default mb-5">
         <div class="wf-engagements wf-mt--5 wf-mb--3">
-          <div class="wf-heading--md">Les <span>engagements</span> de WeFix </div>
-          <div class="wf-paragraph--md">Chaque mois, c’est plus de <strong>30000 réparations</strong> qui sont assurées par les techniciens <strong>WeFix</strong> ! 👍 </div>
+          <div class="wf-heading--md">Les <span>engagements</span> de Mayday Phone </div>
+          <div class="wf-paragraph--md">Chaque mois, c’est plus de <strong>30000 réparations</strong> qui sont assurées par les techniciens <strong>Mayday Phone</strong> ! 👍 </div>
           <div class="wf-engagements-snap wf-mt--3">
             <div class="wf-engagements-grid">
               <sl-card class="wf-card">
 
-                <sl-icon library="wefix" name="engagement-express" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-express" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg')}}" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg')}}">
@@ -1249,7 +1249,7 @@
               </sl-card>
               <sl-card class="wf-card">
 
-                <sl-icon library="wefix" name="engagement-fnac" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-fnac" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 1652.06 681.77" xmlns="http://www.w3.org/2000/svg')}}" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg')}}">
@@ -1277,7 +1277,7 @@
               </sl-card>
               <sl-card class="wf-card">
 
-                <sl-icon library="wefix" name="engagement-garantie" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-garantie" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg')}}" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg')}}">
@@ -1346,7 +1346,7 @@
               </sl-card>
               <sl-card class="wf-card">
 
-                <sl-icon library="wefix" name="engagement-techniciens" style="font-size: 8rem" aria-hidden="true">
+                <sl-icon library="Mayday Phone" name="engagement-techniciens" style="font-size: 8rem" aria-hidden="true">
                   <template shadowrootmode="open">
                     <!---->
                     <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg')}}" xmlns:xlink="http://www.w3.org/1999/xlink" part="svg')}}">
@@ -1455,10 +1455,10 @@
           <sup>*</sup>Engagement <strong>12</strong> ou <strong>24 mois</strong>.
         </p>
         <p class="text-muted fs-sm">
-          <sup>*</sup>Offre valable du 25 avril au 16 mai 2023 dans les points de vente WeFix participants sous réserve de stock disponible. 25% de réduction sur les deux produits lors de l’achat simultané d’une coque de protection Magsafe et d’une protection d’écran XFORCE Antibactérien ou Mat. Offre non cumulable avec d’autres promotions en cours.
+          <sup>*</sup>Offre valable du 25 avril au 16 mai 2023 dans les points de vente Mayday Phone participants sous réserve de stock disponible. 25% de réduction sur les deux produits lors de l’achat simultané d’une coque de protection Magsafe et d’une protection d’écran XFORCE Antibactérien ou Mat. Offre non cumulable avec d’autres promotions en cours.
         </p>
         <p class="text-muted fs-sm">
-          <sup>*</sup>Offre valable du 25 avril au 16 mai 2023 dans les points de vente WeFix participants sous réserve de stock disponible. Le tour de cou à 4,90€ lors de l’achat simultané d’une coque de protection Magsafe, Soft, Impact ou Flex et d’un tour de cou universel. Offre non cumulable avec d’autres promotions en cours.
+          <sup>*</sup>Offre valable du 25 avril au 16 mai 2023 dans les points de vente Mayday Phone participants sous réserve de stock disponible. Le tour de cou à 4,90€ lors de l’achat simultané d’une coque de protection Magsafe, Soft, Impact ou Flex et d’un tour de cou universel. Offre non cumulable avec d’autres promotions en cours.
         </p>
       </section>
     </main>
