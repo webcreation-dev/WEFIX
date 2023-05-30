@@ -21,6 +21,7 @@ class SheduleStoreController extends Controller
     {
         $quoteData = session('quoteData', []);
         $failures = FailureDevice::findMany(array_keys($quoteData['failures']));
+        dd($quoteData['appointment'][0]['mail']);
 
         Mail::to($quoteData['appointment'][0]['mail'])->send(new QuoteReparationMail($quoteData));
         return view('reparation.confirm_appointment', compact('quoteData', 'failures'));
