@@ -40,8 +40,55 @@
                 <div class="ec-pro-rightside ec-common-rightside col-lg-12 col-md-12">
 
                     <!-- Single product content Start -->
-                    @livewire('single-product-controller', ['product' => $product])
+                    <div class="single-pro-block">
+                        <div class="single-pro-inner">
+                            <div class="row">
+                                <div class="single-pro-img single-pro-img-no-sidebar">
+                                    <div class="single-product-scroll">
+                                        <div class="single-product-cover">
+                                            @foreach ($product->productImages()->get() as $image )
+                                                <div class="single-slide zoom-image-hover">
+                                                    <img class="img-responsive" src={{asset('e-commerce/'. $image->image )}}
+                                                        alt="">
+                                                </div>
+                                            @endforeach
+
+                                        </div>
+                                        <div class="single-nav-thumb">
+                                            @foreach ($product->productImages()->get() as $image )
+                                                <div class="single-slide">
+                                                    <img class="img-responsive" src={{asset('e-commerce/'. $image->image )}}
+                                                        alt="">
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                                @livewire('single-product-controller', ['product' => $product])
+
+                                {{-- <div class="ec-single-qty">
+                                    <div class="qty-plus-minus">
+                                        <input class="qty-input" type="text" name="ec_qtybtn" value="1" />
+                                    </div>
+                                    <div class="ec-single-cart ">
+                                        <button class="btn btn-primary">Add To Cart</button>
+                                    </div>
+                                    <div class="ec-single-wishlist">
+                                        <a class="ec-btn-group wishlist" title="Wishlist"><img
+                                                src="{{asset('assets/images/icons/wishlist.svg')}}" class="svg_img pro_svg"
+                                                alt="" /></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+
                     <!--Single product content End -->
+
+
                     <!-- Single product tab start -->
                     <div class="ec-single-pro-tab">
                         <div class="ec-single-pro-tab-wrapper">

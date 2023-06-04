@@ -1,27 +1,3 @@
-<div class="single-pro-block">
-    <div class="single-pro-inner">
-        <div class="row">
-            <div class="single-pro-img single-pro-img-no-sidebar">
-                <div class="single-product-scroll">
-                    <div class="single-product-cover">
-                        @foreach ($product->productImages()->get() as $image )
-                            <div class="single-slide zoom-image-hover">
-                                <img class="img-responsive" src={{asset('e-commerce/'. $image->image )}}
-                                    alt="">
-                            </div>
-                        @endforeach
-
-                    </div>
-                    <div class="single-nav-thumb">
-                        @foreach ($product->productImages()->get() as $image )
-                            <div class="single-slide">
-                                <img class="img-responsive" src={{asset('e-commerce/'. $image->image )}}
-                                    alt="">
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
             <div class="single-pro-desc single-pro-desc-no-sidebar">
                 <div class="single-pro-content">
                     <h5 class="ec-single-title"> {{$product->name}} </h5>
@@ -58,7 +34,7 @@
                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
                                                     <button wire:click="addAttributes('{{ $product->id }}', '{{ $attribute->id }}', '{{ $attributeName->id }}')" style="height: 32px; font-size: 13px !important; border-radius: 2px; padding: 0; margin: 0; display: inline-block; line-height: 1;"
 
-                                                        {{-- class="btn btn-block @if ($product->isActive($product->id, $attribute->id, $attributeName->id)) btn-info @else btn-primary @endif " --}}
+                                                        class="btn btn-block @if ($this->isActive($product->id, $attribute->id, $attributeName->id)) btn-info @else btn-primary @endif "
                                                         >{{ $attributeName->name }}</button>
                                                 </div>
                                             @endforeach
@@ -69,38 +45,44 @@
                                     <span>{{$attribute->name}}</span>
                                     <div class="ec-pro-variation-content">
                                         @foreach ( $attribute->attributesName()->get() as $attributeName)
-
-                                        <li wire:click="addAttributes('{{ $product->id }}', '{{ $attribute->id }}', '{{ $attributeName->id }}')"
-                                            {{-- class="@if ($product->isActive($product->id, $attribute->id, $attributeName->id)) active @endif" --}}
-                                            >
-                                            <span style="background-color: {{ $attributeName->name }};"></span>
-                                        </li>
-
-
-
-
+                                            <li wire:click="addAttributes('{{ $product->id }}', '{{ $attribute->id }}', '{{ $attributeName->id }}')"
+                                                class="@if ($this->isActive($product->id, $attribute->id, $attributeName->id)) active @endif"
+                                                >
+                                                <span style="background-color: {{ $attributeName->name }};"></span>
+                                            </li>
                                         @endforeach
 
                                     </div>
                                 </div>
                             @endif
                         @endforeach
-
-
                     </div>
 
                     <div class="ec-single-qty">
-                        <div class="qty-plus-minus">
-                            <input class="qty-input" type="text" name="ec_qtybtn" value="1" />
-                        </div>
-                        <div class="ec-single-cart ">
-                            <button class="btn btn-primary">Add To Cart</button>
-                        </div>
-                        <div class="ec-single-wishlist">
-                            <a class="ec-btn-group wishlist" title="Wishlist"><img
-                                    src="{{asset('assets/images/icons/wishlist.svg')}}" class="svg_img pro_svg"
-                                    alt="" /></a>
-                        </div>
+
+                        @if ($this->insideCart($product->id))
+                            <div class="ec-single-cart ">
+                                <button wire:click='goToCart' class="btn btn-success">GO TO CART</button>
+                            </div>
+                        @else
+                            <div class="qty-plus-minus ">
+                                <div class="dec ec_qtybtn" wire:click="decrementQuantity('{{ $product->id }}')">-</div>
+                                <input class="qty-input" type="text" name="ec_qtybtn" value="{{ $this->quantityProduct }}">
+                                <div class="dec ec_qtybtn" wire:click="incrementQuantity('{{ $product->id }}')">+</div>
+                            </div>
+                            @if ($this->addProductCart($product->id))
+                                <div class="ec-single-cart ">
+                                    <button wire:click="addCart('{{ $product->id }}', '{{ $attribute->id }}', '{{ $attributeName->id }}')" class="btn btn-primary">Add To Cart</button>
+                                </div>
+                            @endif
+
+                            <div class="ec-single-wishlist">
+                                <a class="ec-btn-group wishlist" title="Wishlist"><img
+                                        src="{{asset('assets/images/icons/wishlist.svg')}}" class="svg_img pro_svg"
+                                        alt="" /></a>
+                            </div>
+                        @endif
+
 
                     </div>
                 </div>

@@ -6,6 +6,7 @@
     <title>Ekka - Ecommerce HTML Template.</title>
     <meta name="keywords" content="apparel, catalog, clean, ecommerce, ecommerce HTML, electronics, fashion, html eCommerce, html store, minimal, multipurpose, multipurpose ecommerce, online store, responsive ecommerce template, shops" />
     <meta name="description" content="Best ecommerce html template for single and multi vendor store.">
+    <meta  name ="csrf-token" content ="{{ csrf_token() }}" />
     <meta name="author" content="ashishmaraviya">
 
    <!-- site Favicon -->

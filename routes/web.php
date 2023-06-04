@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Ecommerce\CartController;
 use App\Http\Controllers\Ecommerce\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Repair\TypeDeviceController;
@@ -26,7 +27,7 @@ use Illuminate\Support\Facades\Session;
 */
 
 Route::get('/', function () {
-    // dd(Session::get('cart'));
+    dd(Session::get('cart'));
     return view('layouts.app');
 });
 
@@ -49,12 +50,16 @@ Route::resource('models', ModelBrandController::class);
 Route::resource('failures', FailureDeviceController::class);
 Route::resource('stores', StoreDeviceController::class);
 Route::resource('schedules', SheduleStoreController::class);
+
 Route::resource('sells', SellDeviceController::class);
 Route::resource('stepsellings', StepSellingController::class);
 Route::resource('questionsteps', QuestionStepSellingController::class);
-Route::resource('products', ProductController::class);
 
-Route::post('update_failure_quotedata', [FailureDeviceController::class, 'updateFailureQuoteData'])->name('update.failure.quote.post');;
+Route::resource('products', ProductController::class);
+Route::resource('carts', CartController::class);
+Route::post('update_quantity_product_cart', [CartController::class, 'updateQuantityProductCart'])->name('update.quantity.product.cart');
+
+Route::post('update_failure_quotedata', [FailureDeviceController::class, 'updateFailureQuoteData'])->name('update.failure.quote.post');
 Route::post('update_attribute_failure_quotedata', [FailureDeviceController::class, 'updateAttributeFailureQuoteData'])->name('update.attribute.failure.quote.post');;
 Route::post('update_attribute_failure_quotedata', [FailureDeviceController::class, 'updateAttributeFailureQuoteData'])->name('update.attribute.failure.quote.post');;
 Route::post('update_question_selling_device', [StepSellingController::class, 'updateQuestionSellingDevice'])->name('update.question.selling.device.post');;

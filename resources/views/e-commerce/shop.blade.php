@@ -1,6 +1,5 @@
 <!DOCTYPE html>
  <html lang="en">
-
  @include('components.e-commerce.head')
 <body class="shop_page">
     {{-- <div id="ec-overlay"><span class="loader_img"></span></div> --}}

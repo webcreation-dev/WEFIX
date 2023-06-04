@@ -13,4 +13,8 @@ class Cart extends Model
         'user_id',
         'product_id',
     ];
+
+    public static function getProduct($id){
+        return Product::find($id);
+    }
 }

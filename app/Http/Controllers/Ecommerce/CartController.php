@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Ecommerce;
 use App\Http\Controllers\Controller;
 use App\Models\Ecommerce\Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+
 
 class CartController extends Controller
 {
@@ -15,7 +17,14 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        $cart = Session::get('cart');
+        $cartActive = [];
+        foreach ($cart as $product => $item) {
+            if (isset($item['status']) && $item['status'] == 'cart') {
+                $cartActive[$product] = $item;
+            }
+        }
+        return view('e-commerce.cart', compact('cartActive'));
     }
 
     /**
@@ -82,5 +91,13 @@ class CartController extends Controller
     public function destroy(Cart $cart)
     {
         //
+    }
+
+    public function updateQuantityProductCart(Request $request) {
+        $cart = Session::get('cart');
+        $cart[$request->product]['quantity'] = $request->quantity;
+        Session::put('cart', $cart);
+        return response()->json(['success' => true]);
+
     }
 }

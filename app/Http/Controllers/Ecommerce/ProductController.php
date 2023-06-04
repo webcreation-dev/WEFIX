@@ -63,6 +63,12 @@ class ProductController extends Controller
             Session::put('cart', []);
         }
 
+        $cart = Session::get('cart');
+        if(!array_key_exists($product->id, $cart)){
+            $cart[$product->id]['product'] = $product->id;
+            Session::put('cart', $cart);
+        }
+
 
         return view('e-commerce.single-product', compact('product', 'upsells'));
     }
