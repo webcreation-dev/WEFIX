@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Ecommerce;
 use App\Http\Controllers\Controller;
 use App\Models\Ecommerce\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class OrderController extends Controller
 {
@@ -15,7 +16,15 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+
+        $cart = Session::get('cart');
+        $cartActive = [];
+        foreach ($cart as $product => $item) {
+            if (isset($item['status']) && $item['status'] == 'cart') {
+                $cartActive[$product] = $item;
+            }
+        }
+        return view('e-commerce.checkout', compact('cartActive'));
     }
 
     /**

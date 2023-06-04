@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Ecommerce\CartController;
+use App\Http\Controllers\Ecommerce\OrderController;
 use App\Http\Controllers\Ecommerce\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Repair\TypeDeviceController;
@@ -27,7 +28,7 @@ use Illuminate\Support\Facades\Session;
 */
 
 Route::get('/', function () {
-    dd(Session::get('cart'));
+    // dd(Session::get('cart'));
     return view('layouts.app');
 });
 
@@ -57,6 +58,7 @@ Route::resource('questionsteps', QuestionStepSellingController::class);
 
 Route::resource('products', ProductController::class);
 Route::resource('carts', CartController::class);
+Route::resource('orders', OrderController::class);
 Route::post('update_quantity_product_cart', [CartController::class, 'updateQuantityProductCart'])->name('update.quantity.product.cart');
 
 Route::post('update_failure_quotedata', [FailureDeviceController::class, 'updateFailureQuoteData'])->name('update.failure.quote.post');
