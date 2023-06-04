@@ -201,7 +201,7 @@
                 total = total + sum;
                 $(this).closest('.product-cart').find('.ec-cart-pro-subtotal .total').text(sum.toFixed(2));
             });
-            totalGlobal = total.toFixed(2) + parseFloat($('.delivery-charges').text());
+            totalGlobal = total + parseFloat($('.delivery-charges').text());
 
             $('.subtotal').text(total.toFixed(2));
             $('.total_global').text(totalGlobal);

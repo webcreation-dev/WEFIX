@@ -44,7 +44,7 @@
                          </tr>
                          <tr>
                              <td class="text-left">Delivery Charges :</td>
-                             <td class="text-right "><span class="side-delivery-charges">300.00</span> <span>€</span></td>
+                             <td class="text-right "><span class="side-delivery-charges">80.00</span> <span>€</span></td>
                          </tr>
                          <tr>
                              <td class="text-left ">Total :</td>
