@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Ecommerce;
 
+use App\Http\Controllers\Controller;
 use App\Models\Ecommerce\OrderItem;
 use Illuminate\Http\Request;
 

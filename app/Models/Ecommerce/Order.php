@@ -19,7 +19,7 @@ class Order extends Model
         'country',
         'zip_code',
         'phone',
-        'amount',
+        'total_amount',
         'order_status',
         'payment_status',
         'payment_id',

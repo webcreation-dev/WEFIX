@@ -1,9 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Ecommerce;
 
+use App\Http\Controllers\Controller;
+use App\Models\Ecommerce\Category;
 use App\Models\Ecommerce\Product;
+use App\Models\Ecommerce\Attribute;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use League\CommonMark\Extension\Attributes\Node\Attributes;
 
 class ProductController extends Controller
 {
@@ -14,7 +19,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $categories = new Category();
+        $products = Product::all();
+        $attributes = Attribute::all();
+        return view('e-commerce.shop', compact('products', 'categories', 'attributes'));
     }
 
     /**
@@ -46,7 +54,17 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        $category_id = $product->category()->first()->id;
+        $upsells = Category::find($category_id)->products()
+        // ->where('product_id', '!=', $product->id)
+        ->limit(4)->get();
+
+        if (!Session::has('cart')) {
+            Session::put('cart', []);
+        }
+
+
+        return view('e-commerce.single-product', compact('product', 'upsells'));
     }
 
     /**

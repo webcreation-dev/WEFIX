@@ -4,6 +4,7 @@ namespace App\Models\Ecommerce;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Session;
 
 class Product extends Model
 {
@@ -11,9 +12,44 @@ class Product extends Model
 
     protected $fillable = [
         'name',
+        'price',
+        'reduction_price',
+        'percentage_reduction',
+        'star',
+        'note',
+        'reviews_number',
         'description',
-        'sizing',
-        'measurement',
-        'selling_price',
     ];
+
+    public function productImages()
+    {
+        return $this->hasMany(ProductImage::class);
+    }
+
+    public function attributes()
+    {
+        $attributes_name_id = $this->belongsToMany(AttributeName::class, 'merge_product_attribute_names')
+                                ->pluck('attribute_name_id')
+                                ->toArray();
+
+        $attributes_id = AttributeName::whereIn('id', $attributes_name_id)
+                                    ->distinct('attribute_id')
+                                    ->pluck('attribute_id')
+                                    ->toArray();
+        $attributes = Attribute::findMany($attributes_id);
+        return $attributes;
+    }
+
+    public function category()
+    {
+        return $this->belongsToMany(Category::class, 'product_categories');
+    }
+
+    public function isActive($product, $attribute, $attributeName){
+
+        $cart = Session::get('cart');
+        $status = ($cart[$product]['attributes'][$attribute] == $attributeName) ? true : false;
+        return $status;
+    }
+
 }
