@@ -6,6 +6,8 @@ use Livewire\Component;
 
 class CheckoutFormController extends Component
 {
+    public $orderFields = [];
+
     public function render()
     {
         $cart = Session::get('cart');
@@ -19,4 +21,27 @@ class CheckoutFormController extends Component
             'cartActive' => $cartActive,
         ]);
     }
+
+    public function rules()
+    {
+            return [
+                'orderFields.first_name' => 'required',
+                'orderFields.last_name' => 'required',
+                'orderFields.email' => 'required',
+                'orderFields.apartment' => 'required',
+                'orderFields.city' => 'required',
+                'orderFields.country' => 'required',
+                'orderFields.zip_code' => 'required',
+                'orderFields.phone' => 'required',
+                'orderFields.total_amount' => 'required',
+          ];
+    }
+
+    public function submitFormCheckout() {
+
+        $validatedData = $this->validate();
+        dd($validatedData);
+
+    }
+
 }

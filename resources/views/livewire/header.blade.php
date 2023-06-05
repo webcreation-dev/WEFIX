@@ -28,6 +28,12 @@
                 <ul class="navbar-nav ms-auto" role="list">
 
                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-medium" href="/"
+                            aria-label="Protégez tous vos appareils !">
+                            <span>ACCUEIL</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle fw-medium" href="{{route('stepsellings.index')}}"
                             aria-label="Protégez tous vos appareils !">
                             <span>REVENDRE</span>
@@ -67,7 +73,6 @@
                                                     alt="Protection écran Apple" width="100%" height="100%"
                                                     draggable="false" oncontextmenu="return false">
                                             </div>
-                                            {{-- <div class="mts fs-16 fw-medium">APPLE</div> --}}
                                         </a>
                                     </li>
                                     @endforeach
@@ -100,7 +105,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#" aria-label="Toutes nos boutiques Mayday Phone !">
+                        <a class="nav-link" href="{{route('products.index')}}" aria-label="Toutes nos boutiques Mayday Phone !">
                             <span class="fw-medium">NOS BOUTIQUES</span>
                         </a>
                     </li>

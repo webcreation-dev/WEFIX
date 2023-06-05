@@ -16,13 +16,13 @@
                 <div class="col-12">
                     <div class="row ec_breadcrumb_inner">
                         <div class="col-md-6 col-sm-12">
-                            <h2 class="ec-breadcrumb-title">Single Products</h2>
+                            <h2 class="ec-breadcrumb-title">PRODUIT UNIQUE</h2>
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <!-- ec-breadcrumb-list start -->
                             <ul class="ec-breadcrumb-list">
-                                <li class="ec-breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="ec-breadcrumb-item active">Products</li>
+                                <li class="ec-breadcrumb-item"><a href="index.html">ACCUEIL</a></li>
+                                <li class="ec-breadcrumb-item active">PRODUIT UNIQUE</li>
                             </ul>
                             <!-- ec-breadcrumb-list end -->
                         </div>
@@ -66,25 +66,6 @@
                                 </div>
                                 @livewire('single-product-controller', ['product' => $product])
 
-                                {{-- <div class="ec-single-qty">
-                                    <div class="qty-plus-minus">
-                                        <input class="qty-input" type="text" name="ec_qtybtn" value="1" />
-                                    </div>
-                                    <div class="ec-single-cart ">
-                                        <button class="btn btn-primary">Add To Cart</button>
-                                    </div>
-                                    <div class="ec-single-wishlist">
-                                        <a class="ec-btn-group wishlist" title="Wishlist"><img
-                                                src="{{asset('assets/images/icons/wishlist.svg')}}" class="svg_img pro_svg"
-                                                alt="" /></a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
 
                     <!--Single product content End -->
 
@@ -96,16 +77,16 @@
                                 <ul class="nav nav-tabs">
                                     <li class="nav-item">
                                         <a class="nav-link active" data-bs-toggle="tab"
-                                            data-bs-target="#ec-spt-nav-details" role="tablist">Detail</a>
+                                            data-bs-target="#ec-spt-nav-details" role="tablist">Détail</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#ec-spt-nav-info"
-                                            role="tablist">More Information</a>
+                                            role="tablist">Plus d'information</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#ec-spt-nav-review"
-                                            role="tablist">Reviews</a>
-                                    </li>
+                                            role="tablist">Avis</a>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <div class="tab-content  ec-single-pro-tab-content">
@@ -134,114 +115,22 @@
                                         </ul>
                                     </div>
                                 </div>
-
-                                <div id="ec-spt-nav-review" class="tab-pane fade">
-                                    <div class="row">
-                                        <div class="ec-t-review-wrapper">
-                                            <div class="ec-t-review-item">
-                                                <div class="ec-t-review-avtar">
-                                                    <img src="{{asset('assets/images/review-image/1.jpg')}}" alt="" />
-                                                </div>
-                                                <div class="ec-t-review-content">
-                                                    <div class="ec-t-review-top">
-                                                        <div class="ec-t-review-name">Jeny Doe</div>
-                                                        <div class="ec-t-review-rating">
-                                                            <i class="ecicon eci-star fill"></i>
-                                                            <i class="ecicon eci-star fill"></i>
-                                                            <i class="ecicon eci-star fill"></i>
-                                                            <i class="ecicon eci-star fill"></i>
-                                                            <i class="ecicon eci-star-o"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ec-t-review-bottom">
-                                                        <p>Lorem Ipsum is simply dummy text of the printing and
-                                                            typesetting industry. Lorem Ipsum has been the industry's
-                                                            standard dummy text ever since the 1500s, when an unknown
-                                                            printer took a galley of type and scrambled it to make a
-                                                            type specimen.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="ec-t-review-item">
-                                                <div class="ec-t-review-avtar">
-                                                    <img src="{{asset('assets/images/review-image/2.jpg')}}" alt="" />
-                                                </div>
-                                                <div class="ec-t-review-content">
-                                                    <div class="ec-t-review-top">
-                                                        <div class="ec-t-review-name">Linda Morgus</div>
-                                                        <div class="ec-t-review-rating">
-                                                            <i class="ecicon eci-star fill"></i>
-                                                            <i class="ecicon eci-star fill"></i>
-                                                            <i class="ecicon eci-star fill"></i>
-                                                            <i class="ecicon eci-star-o"></i>
-                                                            <i class="ecicon eci-star-o"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ec-t-review-bottom">
-                                                        <p>Lorem Ipsum is simply dummy text of the printing and
-                                                            typesetting industry. Lorem Ipsum has been the industry's
-                                                            standard dummy text ever since the 1500s, when an unknown
-                                                            printer took a galley of type and scrambled it to make a
-                                                            type specimen.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="ec-ratting-content">
-                                            <h3>Add a Review</h3>
-                                            <div class="ec-ratting-form">
-                                                <form action="#">
-                                                    <div class="ec-ratting-star">
-                                                        <span>Your rating:</span>
-                                                        <div class="ec-t-review-rating">
-                                                            <i class="ecicon eci-star fill"></i>
-                                                            <i class="ecicon eci-star fill"></i>
-                                                            <i class="ecicon eci-star-o"></i>
-                                                            <i class="ecicon eci-star-o"></i>
-                                                            <i class="ecicon eci-star-o"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ec-ratting-input">
-                                                        <input name="your-name" placeholder="Name" type="text" />
-                                                    </div>
-                                                    <div class="ec-ratting-input">
-                                                        <input name="your-email" placeholder="Email*" type="email"
-                                                            required />
-                                                    </div>
-                                                    <div class="ec-ratting-input form-submit">
-                                                        <textarea name="your-commemt"
-                                                            placeholder="Enter Your Comment"></textarea>
-                                                        <button class="btn btn-primary" type="submit"
-                                                            value="Submit">Submit</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- product details description area end -->
                 </div>
 
             </div>
         </div>
     </section>
-    <!-- End Single product -->
 
-    <!-- Related Product Start -->
     <section class="section ec-releted-product section-space-p">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <div class="section-title">
-                        <h2 class="ec-bg-title">Related products</h2>
-                        <h2 class="ec-title">Related products</h2>
-                        <p class="sub-title">Browse The Collection of Top Products</p>
+                        <h2 class="ec-title">Produits associés</h2>
+                        <p class="sub-title">Parcourir la collection des meilleurs produits</p>
                     </div>
                 </div>
             </div>
@@ -262,11 +151,11 @@
                                     <span class="percentage">20%</span>
                                     @if ( $loop->iteration % 2 == 0)
                                         <span class="flags">
-                                            <span class="sale">Sale</span>
+                                            <span class="sale">Solde</span>
                                         </span>
                                     @else
                                         <span class="flags">
-                                            <span class="new">New</span>
+                                            <span class="new">Nouveau</span>
                                         </span>
 
                                     @endif
@@ -275,7 +164,7 @@
 
                                         <button title="Add To Cart" class=" add-to-cart"><img
                                                 src="{{asset('assets/images/icons/cart.svg')}}" class="svg_img pro_svg"
-                                                alt="" /> Add To Cart</button>
+                                                alt="" /> AJOUTER AU PANIER</button>
                                         <a class="ec-btn-group wishlist" title="Wishlist"><img
                                                 src="{{asset('assets/images/icons/wishlist.svg')}}"
                                                 class="svg_img pro_svg" alt="" /></a>
@@ -283,13 +172,12 @@
                                 </div>
                             </div>
                             <div class="ec-pro-content">
-                                <h5 class="ec-pro-title"><a href="product-left-sidebar.html">Round Neck T-Shirt</a></h5>
+                                <h5 class="ec-pro-title"><a href="product-left-sidebar.html">{{$product->name}}</a></h5>
                                 <div class="ec-pro-rating">
                                     @for ($i = 0; $i < $product->star; $i++)
                                         <i class="ecicon eci-star fill"></i>
                                     @endfor
                                 </div>
-                                <div class="ec-pro-list-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dutmmy text ever since the 1500s, when an unknown printer took a galley.</div>
                                 <span class="ec-price">
                                     <span class="old-price">{{$product->price}} €</span>
                                     <span class="new-price">{{$product->reduction_price}} €</span>

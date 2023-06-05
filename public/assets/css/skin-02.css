@@ -17092,7 +17092,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   transform: scale(1.1);
 }
 .ec-tools-sidebar .ec-color-desc ul li a.colorcode1 {
-  background-color: #3474d4;
+  background-color: #1d57c4;
 }
 .ec-tools-sidebar .ec-color-desc ul li a.colorcode2 {
   background-color: #7f77fd;
@@ -32231,7 +32231,7 @@ input[type=email]:focus::-webkit-input-placeholder {
    vendor Page CSS
    	- Single Vendor
    	- Multi Vendor
-   	- Vendor Sidebar 
+   	- Vendor Sidebar
    	- Vendor Dashboard
    	- Vendor Upload
    	- Vendor Profile

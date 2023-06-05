@@ -2,8 +2,6 @@
  <html lang="en">
  @include('components.e-commerce.head')
 <body class="shop_page">
-    {{-- <div id="ec-overlay"><span class="loader_img"></span></div> --}}
-
     @include('components.e-commerce.header')
 
     <div class="sticky-header-next-sec  ec-breadcrumb section-space-mb">
@@ -12,12 +10,12 @@
                 <div class="col-12">
                     <div class="row ec_breadcrumb_inner">
                         <div class="col-md-6 col-sm-12">
-                            <h2 class="ec-breadcrumb-title">Shop</h2>
+                            <h2 class="ec-breadcrumb-title">NOS BOUTIQUES</h2>
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <ul class="ec-breadcrumb-list">
-                                <li class="ec-breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="ec-breadcrumb-item active">Shop</li>
+                                <li class="ec-breadcrumb-item"><a href="index.html">ACCUEIL</a></li>
+                                <li class="ec-breadcrumb-item active">NOS BOUTIQUES</li>
                             </ul>
                         </div>
                     </div>
@@ -39,15 +37,12 @@
                             </div>
                         </div>
                         <div class="col-md-6 ec-sort-select">
-                            <span class="sort-by">Sort by</span>
+                            <span class="sort-by">Filtrer par</span>
                             <div class="ec-select-inner">
                                 <select name="ec-select" id="ec-select">
                                     <option selected disabled>Position</option>
                                     <option value="1">Relevance</option>
                                     <option value="2">Name, A to Z</option>
-                                    <option value="3">Name, Z to A</option>
-                                    <option value="4">Price, low to high</option>
-                                    <option value="5">Price, high to low</option>
                                 </select>
                             </div>
                         </div>
@@ -98,7 +93,6 @@
                                                         <i class="ecicon eci-star fill"></i>
                                                     @endfor
                                                 </div>
-                                                <div class="ec-pro-list-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dutmmy text ever since the 1500s, when an unknown printer took a galley.</div>
                                                 <span class="ec-price">
                                                     <span class="old-price">{{$product->price}} €</span>
                                                     <span class="new-price">{{$product->reduction_price}} €</span>
@@ -110,32 +104,19 @@
 
                             </div>
                         </div>
-                        <!-- Ec Pagination Start -->
-                        {{-- <div class="ec-pro-pagination">
-                            <span>Showing 1-12 of 21 item(s)</span>
-                            <ul class="ec-pro-pagination-inner">
-                                <li><a class="active" href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a class="next" href="#">Next <i class="ecicon eci-angle-right"></i></a></li>
-                            </ul>
-                        </div> --}}
-                        <!-- Ec Pagination End -->
                     </div>
                 </div>
                 <div class="ec-shop-leftside col-lg-3 order-lg-first col-md-12 order-md-last">
                     <div id="shop_sidebar">
                         <div class="ec-sidebar-heading">
-                            <h1>Filter Products By</h1>
+                            <h1>Filtrer les produits par</h1>
                         </div>
                         <div class="ec-sidebar-wrap">
 
 
                             <div class="ec-sidebar-block">
                                 <div class="ec-sb-title">
-                                    <h3 class="ec-sidebar-title">Category</h3>
+                                    <h3 class="ec-sidebar-title">Categorie</h3>
                                 </div>
                                 <div class="ec-sb-block-content">
                                     <ul>
@@ -163,8 +144,7 @@
                                         </li>
                                         <li>
                                             <div class="ec-sidebar-block-item ec-more-toggle">
-                                                <span class="checked"></span><span id="ec-more-toggle">More
-                                                    Categories</span>
+                                                <span class="checked"></span><span id="ec-more-toggle">Plus de categories</span>
                                             </div>
                                         </li>
 
@@ -208,7 +188,7 @@
                             @endforeach
                             <div class="ec-sidebar-block">
                                 <div class="ec-sb-title">
-                                    <h3 class="ec-sidebar-title">Price</h3>
+                                    <h3 class="ec-sidebar-title">Prix</h3>
                                 </div>
                                 <div class="ec-sb-block-content es-price-slider">
                                     <div class="ec-price-filter">

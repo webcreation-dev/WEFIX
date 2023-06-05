@@ -7,19 +7,23 @@
                                 <i class="ecicon eci-star fill"></i>
                             @endfor
                         </div>
-                        <span class="ec-read-review"><a href="#ec-spt-nav-review">Be the first to
-                                review this product</a></span>
+                        <div class="ec-single-stoke">
+                            <span class="ec-single-ps-title"><strong>EN STOCK</strong></span>
+                        </div>
+                        {{-- <span class="ec-read-review"><a href="#ec-spt-nav-review">
+                            Be the first to
+                                review this product
+                            </a></span> --}}
                     </div>
 
                     <div class="ec-single-price-stoke">
                         <div class="ec-single-price ">
-                            <span class="ec-single-ps-title">As low as</span>
+                            <span class="ec-single-ps-title">A partir de </span>
 
                             <span style="text-decoration: line-through;" class="old-price">{{$product->price}} €</span>
                             <span class="new-price">{{$product->reduction_price}} €</span>
                         </div>
                         <div class="ec-single-stoke">
-                            <span class="ec-single-ps-title">IN STOCK</span>
                             <span class="ec-single-sku">SKU#: WH12</span>
                         </div>
                     </div>
@@ -62,7 +66,7 @@
 
                         @if ($this->insideCart($product->id))
                             <div class="ec-single-cart ">
-                                <button wire:click='goToCart' class="btn btn-success">GO TO CART</button>
+                                <button wire:click='goToCart' class="btn btn-success">ALER AU PANIER</button>
                             </div>
                         @else
                             <div class="qty-plus-minus ">

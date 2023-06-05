@@ -6,9 +6,9 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Product</th>
-                                <th>Price</th>
-                                <th style="text-align: center;">Quantity</th>
+                                <th>Produit</th>
+                                <th>Prix</th>
+                                <th style="text-align: center;">Quantité</th>
                                 <th>Total</th>
                                 <th></th>
                             </tr>
@@ -44,7 +44,7 @@
                                     </tr>
                                 @endforeach
                             @else
-                                {{-- <tr class="product-cart">Your cart is empty ..</tr> --}}
+                                <tr class="product-cart">Votre carte est vide ..</tr>
                             @endempty
                         </tbody>
                     </table>
@@ -52,8 +52,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="ec-cart-update-bottom">
-                            <a href="#">Continue Shopping</a>
-                            <button class="btn btn-primary">Check Out</button>
+                            <a href="#">Continuer les achats</a>
+                            <button wire:click="goToCheckout()" class="btn btn-primary">COMMANDER</button>
                         </div>
                     </div>
                 </div>

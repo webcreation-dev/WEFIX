@@ -343,7 +343,7 @@ h2 {
 .page-intro .type {
   background-color: #8cb6f5;
   background-image: -webkit-gradient(linear-gradient(135deg, #8cb6f5, #8cb6f5));
-  background-image: linear-gradient(135deg, #8cb6f5, #3474d4);
+  background-image: linear-gradient(135deg, #8cb6f5, #1d57c4);
   background-size: 100%;
   -webkit-box-decoration-break: clone;
   -webkit-background-clip: text;
@@ -576,8 +576,8 @@ h2 {
 }
 .section-header .title span {
   background-color: #8cb6f5;
-  background-image: -webkit-gradient(linear-gradient(135deg, #8cb6f5, #3474d4));
-  background-image: linear-gradient(135deg, #8cb6f5, #3474d4);
+  background-image: -webkit-gradient(linear-gradient(135deg, #8cb6f5, #1d57c4));
+  background-image: linear-gradient(135deg, #8cb6f5, #1d57c4);
   background-size: 100%;
   -webkit-box-decoration-break: clone;
   -webkit-background-clip: text;
@@ -760,8 +760,8 @@ h2 {
   text-transform: uppercase;
   font-size: 14px;
   color: #fff;
-  background-image: -webkit-gradient(linear, left top, right top, from(#3474d4), color-stop(#8cb6f5), to(#3474d4));
-  background-image: linear-gradient(90deg, #3474d4, #8cb6f5, #3474d4);
+  background-image: -webkit-gradient(linear, left top, right top, from(#1d57c4), color-stop(#8cb6f5), to(#1d57c4));
+  background-image: linear-gradient(90deg, #1d57c4, #8cb6f5, #1d57c4);
   background-size: 200% auto;
   font-weight: 500;
   -webkit-transition: all 0.3s ease-in-out;
@@ -771,8 +771,8 @@ h2 {
 }
 .portfolio .portfolio-menu ul li:hover {
   color: #fff;
-  background-image: -webkit-gradient(linear, left top, right top, from(#8cb6f5), color-stop(#3474d4), to(#8cb6f5));
-  background-image: linear-gradient(90deg, #8cb6f5, #3474d4, #8cb6f5);
+  background-image: -webkit-gradient(linear, left top, right top, from(#8cb6f5), color-stop(#1d57c4), to(#8cb6f5));
+  background-image: linear-gradient(90deg, #8cb6f5, #1d57c4, #8cb6f5);
   background-position: 100%;
 }
 .portfolio .portfolio-menu ul li .label {
@@ -822,8 +822,8 @@ h2 {
 }
 .portfolio .portfolio-menu ul .mixitup-control-active {
   border: 2px solid #688bbf;
-  background-image: -webkit-gradient(linear, left top, right top, from(#8cb6f5), color-stop(#3474d4), to(#8cb6f5));
-  background-image: linear-gradient(90deg, #8cb6f5, #3474d4, #8cb6f5);
+  background-image: -webkit-gradient(linear, left top, right top, from(#8cb6f5), color-stop(#1d57c4), to(#8cb6f5));
+  background-image: linear-gradient(90deg, #8cb6f5, #1d57c4, #8cb6f5);
   background-position: 100%;
   color: #fff;
 }
@@ -913,7 +913,7 @@ h2 {
   word-spacing: 0.05rem;
   padding: 15px 5px;
   cursor: pointer;
-  background-image: linear-gradient(135deg, #8cb6f5, #3474d4, #8cb6f5);
+  background-image: linear-gradient(135deg, #8cb6f5, #1d57c4, #8cb6f5);
   background-size: 200% auto;
   border-radius: 0 0 10px 10px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -923,7 +923,7 @@ h2 {
 .card-title:hover {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-image: linear-gradient(135deg, #8cb6f5, #3474d4, #8cb6f5);
+  background-image: linear-gradient(135deg, #8cb6f5, #1d57c4, #8cb6f5);
   background-position: 100%;
   text-decoration: none;
 }
@@ -1069,7 +1069,7 @@ h2 {
   text-align: center;
   text-decoration: none;
   border: 2px solid #fff;
-  background-image: linear-gradient(166deg, #8cb6f5, #3474d4);
+  background-image: linear-gradient(166deg, #8cb6f5, #1d57c4);
   z-index: 15;
   border-radius: 50px;
 }
@@ -1247,8 +1247,8 @@ p.service_text {
   font-size: 40px;
   margin-bottom: 5px;
   background-color: #fff;
-  background-image: -webkit-gradient(linear-gradient(135deg, #8cb6f5, #3474d4));
-  background-image: linear-gradient(135deg, #8cb6f5, #3474d4);
+  background-image: -webkit-gradient(linear-gradient(135deg, #8cb6f5, #1d57c4));
+  background-image: linear-gradient(135deg, #8cb6f5, #1d57c4);
   background-size: 100%;
   border-radius: 100%;
   -webkit-box-decoration-break: clone;
@@ -1289,8 +1289,8 @@ p.service_text {
 .item .feature_box_col_five,
 .item .feature_box_col_six {
   background-color: #8cb6f5;
-  background-image: -webkit-gradient(linear-gradient(135deg, #8cb6f5, #3474d4));
-  background-image: linear-gradient(135deg, #8cb6f5, #3474d4);
+  background-image: -webkit-gradient(linear-gradient(135deg, #8cb6f5, #1d57c4));
+  background-image: linear-gradient(135deg, #8cb6f5, #1d57c4);
   background-size: 100%;
   -webkit-box-decoration-break: clone;
   -webkit-background-clip: text;
@@ -2243,7 +2243,7 @@ body.dark .logo img {
 .ms-hover-cursor {
   width: 50px;
   height: 50px;
-  background-color: #3474d4;
+  background-color: #1d57c4;
   border: 1px solid transparent;
   opacity: 0.5;
   z-index: 9999;

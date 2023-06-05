@@ -3,7 +3,7 @@
      <div class="ec-cart-inner">
          <div class="ec-cart-top">
              <div class="ec-cart-title">
-                 <span class="cart_title">My Cart</span>
+                 <span class="cart_title">Mon Panier</span>
                  <button class="ec-close">×</button>
              </div>
              <ul class="eccart-pro-items">
@@ -30,7 +30,7 @@
                     </li>
                     @endforeach
                 @else
-                    <div>Your cart is empty ..</div>
+                    <div>Votre carte est vide ..</div>
                 @endempty
              </ul>
          </div>
@@ -39,11 +39,11 @@
                  <table class="table cart-table">
                      <tbody>
                          <tr>
-                             <td class="text-left">Sub-Total :</td>
+                             <td class="text-left">Sous-Total :</td>
                              <td class="text-right "><span class="side-subtotal" >300.00</span> <span>€</span></td>
                          </tr>
                          <tr>
-                             <td class="text-left">Delivery Charges :</td>
+                             <td class="text-left">Frais de paiement :</td>
                              <td class="text-right "><span class="side-delivery-charges">80.00</span> <span>€</span></td>
                          </tr>
                          <tr>
@@ -54,8 +54,8 @@
                  </table>
              </div>
              <div class="cart_btn">
-                 <a href="{{route('carts.index')}}" class="btn btn-primary">View Cart</a>
-                 <a href="#" class="btn btn-secondary">Checkout</a>
+                 <a href="{{route('carts.index')}}" class="btn btn-primary">VOIR LE PANIER</a>
+                 <a href="#" class="btn btn-secondary">COMMANDER</a>
              </div>
          </div>
      </div>

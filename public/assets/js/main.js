@@ -1120,13 +1120,13 @@ function ecCheckCookie()
     $(document).ready(function() {
         $(".ec-more-toggle").click(function() {
             var elem = $(".ec-more-toggle #ec-more-toggle").text();
-            if (elem == "More Categories") {
-                $(".ec-more-toggle #ec-more-toggle").text("Less Categories");
+            if (elem == "Plus de categories") {
+                $(".ec-more-toggle #ec-more-toggle").text("Moins de categories");
                 $(".ec-more-toggle").toggleClass('active');
                 $("#ec-more-toggle-content").slideDown();
             } else {
 
-                $(".ec-more-toggle  #ec-more-toggle").text("More Categories");
+                $(".ec-more-toggle  #ec-more-toggle").text("Plus de categories");
                 $(".ec-more-toggle").removeClass('active');
                 $("#ec-more-toggle-content").slideUp();
             }

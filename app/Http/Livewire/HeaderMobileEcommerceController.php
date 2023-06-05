@@ -2,13 +2,16 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Repair\TypeDevice;
 use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
-class SideCartController extends Component
+class HeaderMobileEcommerceController extends Component
 {
     public function render()
     {
+        $typedevices = TypeDevice::all();
+
         $cart = Session::get('cart');
 
         $cartActive = [];
@@ -20,15 +23,9 @@ class SideCartController extends Component
             }
         }
 
-        return view('livewire.side-cart', [
-            'cartActive' => $cartActive,
+        return view('livewire.header-mobile-ecommerce', [
+            'typedevices' => $typedevices,
+            'number_products_cart' =>  count($cartActive),
         ]);
-    }
-
-    public function deleteProductCart($product)
-    {
-        $cart = Session::get('cart');
-        unset($cart[$product]);
-        Session::put('cart', $cart);
     }
 }

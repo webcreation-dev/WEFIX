@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Ecommerce;
 
 use App\Http\Controllers\Controller;
 use App\Models\Ecommerce\Cart;
+use App\Models\Ecommerce\Category;
+use App\Models\Ecommerce\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -17,13 +19,16 @@ class CartController extends Controller
     public function index()
     {
         $cart = Session::get('cart');
+
+        $upsells = Product::limit(4)->get();
+
         $cartActive = [];
         foreach ($cart as $product => $item) {
             if (isset($item['status']) && $item['status'] == 'cart') {
                 $cartActive[$product] = $item;
             }
         }
-        return view('e-commerce.cart', compact('cartActive'));
+        return view('e-commerce.cart', compact('cartActive', 'upsells'));
     }
 
     /**

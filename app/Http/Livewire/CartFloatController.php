@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Livewire;
-
 use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
-class SideCartController extends Component
+class CartFloatController extends Component
 {
     public function render()
     {
@@ -20,15 +19,8 @@ class SideCartController extends Component
             }
         }
 
-        return view('livewire.side-cart', [
-            'cartActive' => $cartActive,
+        return view('livewire.cart-float', [
+            'number_products_cart' =>  count($cartActive),
         ]);
-    }
-
-    public function deleteProductCart($product)
-    {
-        $cart = Session::get('cart');
-        unset($cart[$product]);
-        Session::put('cart', $cart);
     }
 }

@@ -29,4 +29,9 @@ class CartController extends Component
         unset($cart[$product]);
         Session::put('cart', $cart);
     }
+
+    public function goToCheckout()
+    {
+        return redirect()->route('orders.index');
+    }
 }

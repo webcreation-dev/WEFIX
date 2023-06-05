@@ -9,6 +9,7 @@
       </div>
     </div>
 
+
     <div class="grid mt-3" style="--wf-gap: 16px">
       <div class="g-col-sm-6 g-col-12">
         <div class="form-floating">
@@ -96,7 +97,6 @@
     </div>
     <div class="text-center mt-md-3 mt-5">
       <button class="btn btn-lg cta-primary" type="submit" onclick="validateForm()" data-event-type="rdv" wire:click="submitForm" data-label-form-submit="" size="large">PRENDRE RENDEZ-VOUS</button>
-      {{-- <button class="btn btn-link fs-lg fw-bold text-dark underline wf-mt--2" wire:click="submitForm" type="submit" data-event-type="devis" data-label-devis-submit="" size="medium">Recevoir mon devis </button> --}}
     </div>
   </form>
 
