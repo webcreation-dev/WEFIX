@@ -6,7 +6,7 @@
     </style>
     <div class="ec-shop-rightside col-lg-9 order-lg-last col-md-12 order-md-first margin-b-30">
         <!-- Shop Top Start -->
-        <div class="ec-pro-list-top d-flex">
+        {{-- <div class="ec-pro-list-top d-flex">
             <div class="col-md-6 ec-grid-list">
                 <div class="ec-gl-btn">
                     <button class="btn btn-grid active"><img src="assets/images/icons/grid.svg" class="svg_img gl_svg"
@@ -23,7 +23,7 @@
                     </select>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="shop-pro-content">
             <div class="shop-pro-inner">
                 <div class="row">
