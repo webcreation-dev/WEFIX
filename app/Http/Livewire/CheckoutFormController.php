@@ -26,7 +26,9 @@ class CheckoutFormController extends Component
             }
         }
         if (empty($this->orderFields)) {
-            $this->orderFields = $checkout[0];
+            $checkout = [];
+            $checkout[0] = [];
+            $this->orderFields = $checkout;
         }
 
         return view('livewire.checkout-form', [

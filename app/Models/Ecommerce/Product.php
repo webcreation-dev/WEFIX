@@ -26,6 +26,11 @@ class Product extends Model
         return $this->hasMany(ProductImage::class);
     }
 
+    public function attributeNames()
+    {
+        return $this->belongsToMany(AttributeName::class, 'merge_product_attribute_names');
+    }
+
     public function attributes()
     {
         $attributes_name_id = $this->belongsToMany(AttributeName::class, 'merge_product_attribute_names')
@@ -52,4 +57,14 @@ class Product extends Model
         return $status;
     }
 
+    public function checkProductWishlist($product){
+
+        $wishlist = Session::get('wishlist');
+        $status = false;
+
+        if (in_array($product, $wishlist)) {
+            $status = true;
+        }
+        return $status;
+    }
 }

@@ -25,6 +25,9 @@ class ProductController extends Controller
         if (!Session::has('filter')) {
             Session::put('filter', []);
         }
+        if (!Session::has('wishlist')) {
+            Session::put('wishlist', []);
+        }
         return view('e-commerce.shop', compact('products', 'categories', 'attributes'));
     }
 

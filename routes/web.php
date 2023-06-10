@@ -6,7 +6,7 @@ use App\Http\Controllers\Ecommerce\CartController;
 use App\Http\Controllers\Ecommerce\OrderController;
 use App\Http\Controllers\Ecommerce\ProductController;
 use App\Http\Controllers\Ecommerce\PayPalController;
-
+use App\Http\Controllers\Ecommerce\WishlistController;
 use App\Http\Controllers\Repair\TypeDeviceController;
 use App\Http\Controllers\Repair\BrandDeviceController;
 use App\Http\Controllers\Repair\FailureDeviceController;
@@ -37,22 +37,6 @@ Route::get('/', function () {
     return view('layouts.app');
 })->name('home');
 
-// Route::get('/mail', function () {
-//     return view('mail.order_mail_view');
-// });
-
-
-Route::get('/shop_test', function () {
-    return view('e-commerce.shop');
-});
-Route::get('/single-product', function () {
-    return view('e-commerce.single-product');
-});
-
-Route::get('/estimation', function () {
-    return view('selling.estimation');
-});
-
 
 //Route ressource
 Route::resource('typedevices', TypeDeviceController::class);
@@ -69,6 +53,7 @@ Route::resource('questionsteps', QuestionStepSellingController::class);
 Route::resource('products', ProductController::class);
 Route::resource('carts', CartController::class);
 Route::resource('orders', OrderController::class);
+Route::resource('wishlists', WishlistController::class);
 Route::post('update_quantity_product_cart', [CartController::class, 'updateQuantityProductCart'])->name('update.quantity.product.cart');
 Route::post('delete_product_side_cart', [CartController::class, 'deleteProductSideCart'])->name('delete.product.side.cart');
 

@@ -14,6 +14,8 @@ class HeaderMobileEcommerceController extends Component
 
         $cart = Session::get('cart', []);
 
+        $wishlist = Session::get('wishlist', []);
+
         $cartActive = [];
         if(isset($cart) && count($cart) > 0) {
             foreach ($cart as $product => $item) {
@@ -26,6 +28,7 @@ class HeaderMobileEcommerceController extends Component
         return view('livewire.header-mobile-ecommerce', [
             'typedevices' => $typedevices,
             'number_products_cart' =>  count($cartActive),
+            'number_products_wishlist' => count($wishlist),
         ]);
     }
 }
