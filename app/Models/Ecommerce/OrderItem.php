@@ -12,6 +12,19 @@ class OrderItem extends Model
     protected $fillable = [
         'order_id',
         'product_id',
-        'price',
+        'quantity',
     ];
+    protected $appends = ['total'];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'product_id');
+    }
+
+    public function getTotalAttribute()
+    {
+        $product = Product::find($this->product_id);
+        return $product->reduction_price * $this->quantity;
+    }
+
 }

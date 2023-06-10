@@ -2,6 +2,7 @@
  <div id="ec-side-cart" class="ec-side-cart">
      <div class="ec-cart-inner">
          <div class="ec-cart-top">
+
              <div class="ec-cart-title">
                  <span class="cart_title">Mon Panier</span>
                  <button class="ec-close">×</button>
@@ -25,13 +26,14 @@
                             </div>
 
 
-                            <button wire:click="deleteProductCart({{$item['product']}})" class="remove">x</button>
+                            <button id="delete-product" wire:click="deleteProductCart({{$item['product']}})" class="remove">x</button>
                         </div>
                     </li>
                     @endforeach
                 @else
                     <div>Votre carte est vide ..</div>
                 @endempty
+
              </ul>
          </div>
          <div class="ec-cart-bottom">
@@ -55,7 +57,7 @@
              </div>
              <div class="cart_btn">
                  <a href="{{route('carts.index')}}" class="btn btn-primary">VOIR LE PANIER</a>
-                 <a href="#" class="btn btn-secondary">COMMANDER</a>
+                 <a href="{{route('orders.index')}}" class="btn btn-secondary">COMMANDER</a>
              </div>
          </div>
      </div>
@@ -63,7 +65,30 @@
 
 
 <script src="{{asset('assets/js/vendor/jquery-3.5.1.min.js')}}"></script>
- <script>
+<script>
+    $('#delete-product').click(function(e){
+        e.preventDefault();
+        var currentProduct = $(this).closest('.side-product-cart').find('.side-cart .product-id').text();
+
+        var data = {
+                product: currentProduct,
+            };
+            $.ajaxSetup({
+                headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                type:'POST',
+                url:"{{ route('delete.product.side.cart') }}",
+                data:{product:currentProduct},
+                    success: function(data){
+                        console.log(data.success);
+                }
+            });
+
+    });
+
     $('#overlay-cart').click(function(e){
         e.preventDefault();
         var sum = 0;
@@ -161,3 +186,4 @@
             });
         });
 </script>
+

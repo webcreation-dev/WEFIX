@@ -17,12 +17,18 @@ class OrderController extends Controller
     public function index()
     {
 
-        $cart = Session::get('cart');
+        $cart = Session::get('cart', []);
         $cartActive = [];
-        foreach ($cart as $product => $item) {
-            if (isset($item['status']) && $item['status'] == 'cart') {
-                $cartActive[$product] = $item;
+        if(isset($cart) && count($cart) > 0) {
+            foreach ($cart as $product => $item) {
+                if (isset($item['status']) && $item['status'] == 'cart') {
+                    $cartActive[$product] = $item;
+                }
             }
+        }
+
+        if (!Session::has('checkout')) {
+            Session::put('checkout', []);
         }
         return view('e-commerce.checkout', compact('cartActive'));
     }

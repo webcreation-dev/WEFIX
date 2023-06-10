@@ -4977,5 +4977,6 @@
         }
       }
     </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
     @livewireStyles
   </head>

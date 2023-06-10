@@ -9,7 +9,7 @@ class SideCartController extends Component
 {
     public function render()
     {
-        $cart = Session::get('cart');
+        $cart = Session::get('cart', []);
 
         $cartActive = [];
         if(isset($cart) && count($cart) > 0) {
@@ -19,16 +19,16 @@ class SideCartController extends Component
                 }
             }
         }
-
         return view('livewire.side-cart', [
             'cartActive' => $cartActive,
         ]);
     }
 
-    public function deleteProductCart($product)
+    public function deleteProductCart()
     {
-        $cart = Session::get('cart');
-        unset($cart[$product]);
-        Session::put('cart', $cart);
+        dd(1);
+        // $cart = Session::get('cart');
+        // unset($cart[$product]);
+        // Session::put('cart', $cart);
     }
 }

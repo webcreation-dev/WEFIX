@@ -8,9 +8,10 @@ class CartFloatController extends Component
 {
     public function render()
     {
-        $cart = Session::get('cart');
+        $cart = Session::get('cart', []);
 
         $cartActive = [];
+
         if(isset($cart) && count($cart) > 0) {
             foreach ($cart as $product => $item) {
                 if (isset($item['status']) && $item['status'] == 'cart') {

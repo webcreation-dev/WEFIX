@@ -27,8 +27,8 @@ return new class extends Migration
             $table->string('zip_code')->nullable();
             $table->string('phone');
             $table->string('total_amount');
-            $table->string('order_status')->nullable();
-            $table->string('payment_status')->nullable();
+            $table->string('order_status')->default('pending');
+            $table->string('payment_status')->default('pending');
             $table->string('payment_id')->nullable();
             $table->timestamps();
         });

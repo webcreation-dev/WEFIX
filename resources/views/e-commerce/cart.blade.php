@@ -61,7 +61,7 @@
                                     <div class="ec-cart-summary">
                                         <div>
                                             <span class="text-left">Sous-Total</span>
-                                            <span class="text-right subtotal">80.00 <span>€</span></span>
+                                            <span class="text-right "><span class="subtotal">00.000</span> <span>€</span></span>
                                         </div>
                                         <div>
                                             <span class="text-left">Frais de paiement</span>
@@ -69,7 +69,7 @@
                                         </div>
                                         <div class="ec-cart-summary-total">
                                             <span class="text-left">Total</span>
-                                            <span class="text-right total_global">80.00<span>€</span></span>
+                                            <span class="text-right "><span class="total_global">80.000</span><span>€</span></span>
 
                                         </div>
                                     </div>

@@ -12,7 +12,7 @@ class HeaderMobileEcommerceController extends Component
     {
         $typedevices = TypeDevice::all();
 
-        $cart = Session::get('cart');
+        $cart = Session::get('cart', []);
 
         $cartActive = [];
         if(isset($cart) && count($cart) > 0) {

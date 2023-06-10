@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="ec-cart-update-bottom">
-                            <a href="#">Continuer les achats</a>
+                            <a href="{{route('products.index')}}">Continuer les achats</a>
                             <button wire:click="goToCheckout()" class="btn btn-primary">COMMANDER</button>
                         </div>
                     </div>

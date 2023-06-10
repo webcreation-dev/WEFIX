@@ -18,14 +18,16 @@ class CartController extends Controller
      */
     public function index()
     {
-        $cart = Session::get('cart');
+        $cart = Session::get('cart', []);
 
         $upsells = Product::limit(4)->get();
 
         $cartActive = [];
-        foreach ($cart as $product => $item) {
-            if (isset($item['status']) && $item['status'] == 'cart') {
-                $cartActive[$product] = $item;
+        if(isset($cart) && count($cart) > 0) {
+            foreach ($cart as $product => $item) {
+                if (isset($item['status']) && $item['status'] == 'cart') {
+                    $cartActive[$product] = $item;
+                }
             }
         }
         return view('e-commerce.cart', compact('cartActive', 'upsells'));
@@ -102,6 +104,12 @@ class CartController extends Controller
         $cart[$request->product]['quantity'] = $request->quantity;
         Session::put('cart', $cart);
         return response()->json(['success' => true]);
+    }
 
+    public function deleteProductSideCart(Request $request){
+        $cart = Session::get('cart');
+        unset($cart[$request->product]);
+        Session::put('cart', $cart);
+        return response()->json(['success' => true]);
     }
 }

@@ -54,7 +54,7 @@
                                 <div class="ec-checkout-summary">
                                     <div>
                                         <span class="text-left">Sous-Total</span>
-                                        <span class="text-right subtotal">80.00 <span>€</span></span>
+                                        <span class="text-right"><span class="subtotal">80.000</span> <span>€</span></span>
                                     </div>
                                     <div>
                                         <span class="text-left">Frais de paiment</span>
@@ -77,7 +77,7 @@
 
                                     <div class="ec-checkout-summary-total">
                                         <span class="text-left">Total</span>
-                                        <span class="text-right total_global">80.00<span>€</span></span>
+                                        <span class="text-right "><span class="total_global">80.000</span><span>€</span></span>
                                     </div>
                                 </div>
 
@@ -230,13 +230,13 @@
                             </div>
                             <div class="ec-sb-block-content">
                                 <div class="ec-check-pay-img-inner">
-                                    <div class="ec-check-pay-img">
+                                    {{-- <div class="ec-check-pay-img">
                                         <img src="assets/images/icons/payment1.png" alt="">
-                                    </div>
+                                    </div> --}}
                                     <div class="ec-check-pay-img">
                                         <img src="assets/images/icons/payment2.png" alt="">
                                     </div>
-                                    <div class="ec-check-pay-img">
+                                    {{-- <div class="ec-check-pay-img">
                                         <img src="assets/images/icons/payment3.png" alt="">
                                     </div>
                                     <div class="ec-check-pay-img">
@@ -250,7 +250,7 @@
                                     </div>
                                     <div class="ec-check-pay-img">
                                         <img src="assets/images/icons/payment7.png" alt="">
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -281,7 +281,7 @@
 
         $('.subtotal').text(total.toFixed(2));
         $('.total_global').text(totalGlobal);
-        $('#total_amount_order').val(totalGlobal);
+        Livewire.emit('updateTotalAmountCart', totalGlobal);
 
     });
 </script>

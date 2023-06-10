@@ -57,7 +57,8 @@ class TestDataEcommerceTableSeeder extends Seeder
             Product::create([
                 'name'  => 'MacBook Air 13.3 v'.$i.' (2020)',
                 'price' => 11990.00 + ($i*100),
-                'reduction_price'  => 884.88 + ($i*100),
+                'percentage_reduction'  => $i * 10 * 0.5,
+                'reduction_price'  => (11990.00 + ($i*100)) * (1 - ($i * 10 * 0.5 / 100)),
                 'star'  => 4,
                 'note'  => 4.2,
                 'reviews_number'  => 54

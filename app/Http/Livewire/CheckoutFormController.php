@@ -1,24 +1,37 @@
 <?php
 
 namespace App\Http\Livewire;
+
+use App\Models\Ecommerce\Order;
 use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
 class CheckoutFormController extends Component
 {
     public $orderFields = [];
+    public $totalAmountCart;
 
     public function render()
     {
-        $cart = Session::get('cart');
+        $cart = Session::get('cart', []);
         $cartActive = [];
-        foreach ($cart as $product => $item) {
-            if (isset($item['status']) && $item['status'] == 'cart') {
-                $cartActive[$product] = $item;
+
+        $checkout = Session::get('checkout');
+
+        if(isset($cart) && count($cart) > 0) {
+            foreach ($cart as $product => $item) {
+                if (isset($item['status']) && $item['status'] == 'cart') {
+                    $cartActive[$product] = $item;
+                }
             }
         }
+        if (empty($this->orderFields)) {
+            $this->orderFields = $checkout[0];
+        }
+
         return view('livewire.checkout-form', [
             'cartActive' => $cartActive,
+            'checkout' => $checkout,
         ]);
     }
 
@@ -33,15 +46,35 @@ class CheckoutFormController extends Component
                 'orderFields.country' => 'required',
                 'orderFields.zip_code' => 'required',
                 'orderFields.phone' => 'required',
-                'orderFields.total_amount' => 'required',
           ];
     }
-
     public function submitFormCheckout() {
 
         $validatedData = $this->validate();
-        dd($validatedData);
+        $validatedData['orderFields']['total_amount'] = $this->totalAmountCart;
 
+        $checkout[] = $validatedData['orderFields'];
+        Session::put('checkout', $checkout);
+
+        $cart = Session::get('cart', []);
+        $cartActive = [];
+        if(isset($cart) && count($cart) > 0) {
+            foreach ($cart as $product => $item) {
+                if (isset($item['status']) && $item['status'] == 'cart') {
+                    $cartActive[$product] = $item;
+                }
+            }
+        }
+
+        return redirect()->route('processTransaction', ['total_amount' => $this->totalAmountCart]);
     }
+
+    protected $listeners = ['updateTotalAmountCart'];
+    public function updateTotalAmountCart($total)
+    {
+        $this->totalAmountCart = $total;
+    }
+
+
 
 }

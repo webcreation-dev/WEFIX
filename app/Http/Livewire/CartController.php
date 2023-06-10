@@ -11,11 +11,13 @@ class CartController extends Component
 
     public function render()
     {
-        $cart = Session::get('cart');
+        $cart = Session::get('cart', []);
         $cartActive = [];
-        foreach ($cart as $product => $item) {
-            if (isset($item['status']) && $item['status'] == 'cart') {
-                $cartActive[$product] = $item;
+        if(isset($cart) && count($cart) > 0) {
+            foreach ($cart as $product => $item) {
+                if (isset($item['status']) && $item['status'] == 'cart') {
+                    $cartActive[$product] = $item;
+                }
             }
         }
         return view('livewire.cart', [

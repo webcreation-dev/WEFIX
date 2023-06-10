@@ -22,6 +22,9 @@ class ProductController extends Controller
         $categories = new Category();
         $products = Product::all();
         $attributes = Attribute::all();
+        if (!Session::has('filter')) {
+            Session::put('filter', []);
+        }
         return view('e-commerce.shop', compact('products', 'categories', 'attributes'));
     }
 

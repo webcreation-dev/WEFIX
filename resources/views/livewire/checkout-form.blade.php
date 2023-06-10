@@ -58,14 +58,11 @@
 
                         <div class="ec-check-bill-form">
                             <form  wire:submit.prevent="submitFormCheckout">
-                                <span>
-                                    <input type="hidden" id="total_amount_order" name="total_amount"  wire:model="orderFields.total_amount" value="">
-                                </span>
+
                                 <span class="ec-bill-wrap ec-bill-half">
                                     <label>Prénom *</label>
                                     <input type="text"  name="first_name" wire:model="orderFields.first_name"
                                         placeholder="Entrez votre prénom" required />
-
                                 </span>
                                 <span class="ec-bill-wrap ec-bill-half">
                                     <label>Nom *</label>
@@ -79,7 +76,7 @@
                                 </span>
                                 <span class="ec-bill-wrap ec-bill-half">
                                     <label>Addresse</label>
-                                    <input type="text" name="apartement" requiredwire:model="orderFields.apartement" placeholder="Entrez votre addresse" />
+                                    <input type="text" name="apartment" required wire:model="orderFields.apartment" placeholder="Entrez votre addresse" />
 
                                 </span>
 
@@ -98,7 +95,7 @@
                                     <span class="ec-bl-select-inner">
                                         <select name="country" id="ec-select-country" required wire:model="orderFields.country"
                                             class="ec-bill-select">
-                                            <option selected disabled>Choisir</option>
+                                            <option selected >Choisir</option>
                                             <option value="1">Country 1</option>
                                             <option value="2">Country 2</option>
                                             <option value="3">Country 3</option>
@@ -113,7 +110,7 @@
                                     <span class="ec-bl-select-inner">
                                         <select name="city" id="ec-select-city" required wire:model="orderFields.city"
                                             class="ec-bill-select">
-                                            <option selected disabled>Choisir</option>
+                                            <option selected >Choisir</option>
                                             <option value="1">City 1</option>
                                             <option value="2">City 2</option>
                                             <option value="3">City 3</option>
