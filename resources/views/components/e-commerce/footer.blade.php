@@ -17,15 +17,16 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-3 ec-footer-contact">
                         <div class="ec-footer-widget">
-                            <div class="ec-footer-logo"><a href="#"><img src="{{asset('assets/images/logo/footer-logo.png')}}"
-                                        alt=""><img class="dark-footer-logo" src="{{asset('assets/images/logo/dark-logo.png')}}"
-                                        alt="Site Logo" style="display: none;" /></a></div>
+                            {{-- <div class="ec-footer-logo"> --}}
+                                <a href="/"><img src="{{asset('images/logo.png')}}" width="250"
+                                        alt=""><img class="dark-footer-logo" src="{{asset('images/logo.png')}}" width="250"
+                                        alt="Site Logo" style="display: none;" /></a>
+                            {{-- </div> --}}
                             <h4 class="ec-footer-heading">Contactez-nous </h4>
                             <div class="ec-footer-links">
                                 <ul class="align-items-center">
                                     <li class="ec-footer-link">71 Pilgrim Avenue Chevy Chase, east california.</li>
-                                    <li class="ec-footer-link"><span> Appelez-nous: </span><a href="tel:+440123456789">+44
-                                            0123 456 789</a></li>
+
                                     <li class="ec-footer-link"><span>Email:</span><a
                                             href="mailto:example@ec-email.com">maydayphone@gmail.com</a></li>
                                 </ul>
@@ -122,14 +123,13 @@
                     </div>
                     <!-- Footer Copyright End -->
                     <!-- Footer payment -->
-                    <div class="col footer-bottom-right">
+                    {{-- <div class="col footer-bottom-right">
                         <div class="footer-bottom-payment d-flex justify-content-end">
                             <div class="payment-link">
                                 <img src="{{asset('assets/images/icons/payment.png')}}" alt="">
                             </div>
-
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- Footer payment -->
                 </div>
             </div>
