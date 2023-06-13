@@ -33,7 +33,7 @@ use Illuminate\Support\Facades\Session;
 */
 
 Route::get('/', function () {
-    dd(Session::get('filter'));
+    // dd(Session::get('filter'));
     return view('layouts.app');
 })->name('home');
 

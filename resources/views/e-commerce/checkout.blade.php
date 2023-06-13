@@ -226,7 +226,7 @@
                         <!-- Sidebar Payment Block -->
                         <div class="ec-sidebar-block">
                             <div class="ec-sb-title">
-                                <h3 class="ec-sidebar-title">Payment Method</h3>
+                                <h3 class="ec-sidebar-title">Methode de paiement</h3>
                             </div>
                             <div class="ec-sb-block-content">
                                 <div class="ec-check-pay-img-inner">
