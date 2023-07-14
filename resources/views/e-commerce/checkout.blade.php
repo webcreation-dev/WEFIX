@@ -112,7 +112,7 @@
                                                         </div>
                                                         <span class="ec-price">
                                                             <span class="old-price ">{{App\Models\Ecommerce\Cart::getProduct($item['product'])->price}} €</span>
-                                                            <span class="new-price amount">{{App\Models\Ecommerce\Cart::getProduct($item['product'])->reduction_price}} €</span>
+                                                            <span class="new-price amount">{{$item['price']}} €</span>
                                                         </span>
                                                         {{-- <div class="ec-pro-option">
                                                             <div class="ec-pro-color">

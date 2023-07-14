@@ -24,7 +24,10 @@
                                             </a></td>
                                         <td data-label="Price" class="ec-cart-pro-price">
                                             <span
-                                                class="amount">{{App\Models\Ecommerce\Cart::getProduct($item['product'])->reduction_price}}</span>
+                                                class="amount">
+                                                {{$item['price']}}
+                                                {{-- {{App\Models\Ecommerce\Cart::getProduct($item['product'])->reduction_price}} --}}
+                                            </span>
                                                 <span>€</span>
                                         </td>
                                         <td data-label="Quantity" class="ec-cart-pro-qty"

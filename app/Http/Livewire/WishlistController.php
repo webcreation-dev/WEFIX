@@ -12,7 +12,7 @@ class WishlistController extends Component
 {
     public function render()
     {
-        $wishlist = Session::get('wishlist');
+        $wishlist = Session::get('wishlist', []);
         $products = Product::whereIn('id', $wishlist)->get();
 
         return view('livewire.wishlist', [

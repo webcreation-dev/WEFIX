@@ -17,7 +17,7 @@
                                 alt="product"></a>
                         <div class="ec-pro-content">
                             <a href="product-left-sidebar.html" class="cart_pro_title">{{App\Models\Ecommerce\Cart::getProduct($item['product'])->name}}</a>
-                            <span class="cart-price"><span class="side-amount">{{App\Models\Ecommerce\Cart::getProduct($item['product'])->reduction_price}}<span>€</span></span> </span>
+                            <span class="cart-price"><span class="side-amount">{{$item['price']}}<span>€</span></span> </span>
                             <div class="qty-plus-minus side-cart">
                                 <div class="dec ec_qtybtn" >-</div>
                                 <input class="qty-input" type="text" name="ec_qtybtn" value="{{$item['quantity'] ?? 1}}" />

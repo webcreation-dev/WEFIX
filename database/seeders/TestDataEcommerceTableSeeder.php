@@ -43,8 +43,6 @@ class TestDataEcommerceTableSeeder extends Seeder
         AttributeName::create(['attribute_id' => 2, 'name' => '512 Go']);
         AttributeName::create(['attribute_id' => 2, 'name' => '1 To']);
 
-
-
         Attribute::create(['name' => 'Couleur']);
         AttributeName::create(['attribute_id' => 3, 'name' => 'black']);
         AttributeName::create(['attribute_id' => 3, 'name' => 'gray']);

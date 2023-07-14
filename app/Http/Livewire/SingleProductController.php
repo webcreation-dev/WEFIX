@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Ecommerce\MergeProductAttributeName;
 use App\Models\Ecommerce\Product;
 use Livewire\Component;
 use Illuminate\Support\Facades\Session;
@@ -51,27 +52,46 @@ class SingleProductController extends Component
         return $status;
     }
 
-        public function addProductCart($product)
-        {
-            $status = true;
-            $product = Product::find($product);
-            $attributes = $product->attributes()->pluck('id')->toArray();
-            $cart = Session::get('cart');
+    public function getCurrentPrice($product){
 
-            foreach ($attributes as $attribute) {
+        $cart = Session::get('cart');
+        $product = Product::find($product);
 
-                if(array_key_exists('attributes', $cart[$product->id])){
-                    if (!array_key_exists($attribute, $cart[$product->id]['attributes'])) {
-                        $status = false;
-                        break;
-                    }
-                }else {
+        $supplement = 0;
+
+        if(array_key_exists($product->id, $cart) && array_key_exists('attributes', $cart[$product->id])){
+                $supplement = MergeProductAttributeName::whereIn('attribute_name_id', array_values($cart[$product->id]['attributes']))
+                ->where('product_id', $product->id)
+                ->sum('price');
+        }
+
+        $cart[$product->id]['price'] = $product->reduction_price + $supplement;
+        Session::put('cart', $cart);
+
+        return $supplement;
+    }
+
+    public function addProductCart($product)
+    {
+        $status = true;
+        $product = Product::find($product);
+        $attributes = $product->attributes()->pluck('id')->toArray();
+        $cart = Session::get('cart');
+
+        foreach ($attributes as $attribute) {
+
+            if(array_key_exists('attributes', $cart[$product->id])){
+                if (!array_key_exists($attribute, $cart[$product->id]['attributes'])) {
                     $status = false;
                     break;
                 }
+            }else {
+                $status = false;
+                break;
             }
-            return $status;
         }
+        return $status;
+    }
 
     public function insideCart($product){
         $status = false;

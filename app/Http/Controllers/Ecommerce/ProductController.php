@@ -75,7 +75,6 @@ class ProductController extends Controller
             Session::put('cart', $cart);
         }
 
-
         return view('e-commerce.single-product', compact('product', 'upsells'));
     }
 
