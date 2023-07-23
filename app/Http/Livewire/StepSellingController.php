@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
 class StepSellingController extends Component
@@ -31,10 +32,29 @@ class StepSellingController extends Component
         redirect()->route('stepsellings.edit', ['model' => $model, 'stepselling' => $current_step]);
     }
 
-
     public function estimatePriceDevice($model)
     {
         return redirect()->route('estimate.price.device');
+    }
+
+    public function sellAsks($stepSelling, $answer, $model) {
+
+        $quote_stepselling = Session::get('quote_stepselling');
+        $quote_stepselling[$model]['answers'][$stepSelling] = $answer;
+        Session::put('quote_stepselling', $quote_stepselling);
+    }
+
+    public function isActive($stepSelling, $answer, $model){
+
+        $status = false;
+        $quote_stepselling = Session::get('quote_stepselling');
+
+        if(array_key_exists($model, $quote_stepselling) && array_key_exists('answers', $quote_stepselling[$model])){
+            if(array_key_exists($stepSelling, $quote_stepselling[$model]['answers'])){
+                $status = ($quote_stepselling[$model]['answers'][$stepSelling] == $answer) ? true : false;
+            }
+        }
+        return $status;
     }
 
 }

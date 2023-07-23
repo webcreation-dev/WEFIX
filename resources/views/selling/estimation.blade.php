@@ -26,21 +26,26 @@
 
             <div class="form wf-form-client-reparation mt-4 title mb-1"
                 style="opacity: 0.8; text-align:left !important;">
+                Récapitulatifs du questionnaire pour votre
+                <strong>{{ $stepSelling['model']->name }}</strong>.
+            </div>
+            {{-- <div class="form wf-form-client-reparation mt-4 title mb-1"
+                style="opacity: 0.8; text-align:left !important;">
                 Le reconditionneur vous fait une offre à <strong>456,00 €</strong> pour votre
                 <strong>{{ $stepSelling['model']->name }}</strong>.
                 C’est la plus élevée parmi tous nos partenaires.
-            </div>
+            </div> --}}
 
             <div class="form wf-form-client-reparation mt-4" wire:submit.prevent="submitForm" novalidate="">
 
                 <div class="grid" style="--wf-gap: 16px;" style="text-align: right;">
                     <div class="d-flex g-col-sm-6 g-col-12">
-                        <input class="btn-check" type="radio" id="MR" name="civility"
-                            wire:model="appointmentFields.civility" required value="MR" checked="f">
-                        <label class="btn btn-outline-primary fw-medium w-50 me-2" for="MR">Acepter</label>
-                        <input class="btn-check" type="radio" id="MME" name="civility"
+                        {{-- <input class="btn-check" type="radio" id="MR" name="civility"
+                            wire:model="appointmentFields.civility" required value="MR" checked="f"> --}}
+                        <button class="btn btn-outline-primary fw-medium w-50 me-2" for="MR"><a href="{{route('send.request.selling')}}">Vendre</a></button>
+                        {{-- <input class="btn-check" type="radio" id="MME" name="civility"
                             wire:model="appointmentFields.civility" required value="MME">
-                        <label class="btn btn-outline-primary fw-medium w-50" for="MME">Non merci</label>
+                        <label class="btn btn-outline-primary fw-medium w-50" for="MME">Non merci</label> --}}
                     </div>
                 </div>
 

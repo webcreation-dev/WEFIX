@@ -8,6 +8,7 @@ use App\Models\Repair\BrandDevice;
 use App\Models\Repair\ModelBrand;
 use App\Models\Repair\TypeDevice;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class StepSellingController extends Controller
 {
@@ -18,6 +19,8 @@ class StepSellingController extends Controller
      */
     public function index()
     {
+        session('quote_stepselling', []);
+
         $typedevices = TypeDevice::all();
         return view('selling.typedevice', compact('typedevices'));
     }
@@ -69,6 +72,7 @@ class StepSellingController extends Controller
             'stepSelling.answer',
             'stepSelling.functions',
         ]);
+        Session::forget('quote_stepselling');
 
         $model_brands = $brand->modelBrand()->get();
         return view('selling.model_brand', compact('model_brands'));
@@ -82,6 +86,9 @@ class StepSellingController extends Controller
      */
     public function edit(Request $request,StepSelling $stepSelling)
     {
+        $quote_stepselling = Session::get('quote_stepselling', []);
+        $quote_stepselling[$request->model]['model'] = $request->model;
+        Session::put('quote_stepselling', $quote_stepselling);
 
         $stepSelling = session('stepSelling', []);
         if (!isset($stepSelling['step'])) {
@@ -154,7 +161,21 @@ class StepSellingController extends Controller
 
         session(['stepSelling' => $stepSelling]);
 
+        $currentStep = $request->input('currentStep');
+        $question =  $request->input('question');
+        $model = $request->input('model');
+
+        $quote_stepselling = Session::get('quote_stepselling');
+        $quote_stepselling[$model]['answers'][$currentStep] = $question ;
+        Session::put('quote_stepselling', $quote_stepselling);
+
         return response()->json(['success' => true]);
+    }
+
+    public function sendRequestSelling() {
+        $stepSelling = session('stepSelling', []);
+        return view('selling.send_request_selling', compact('stepSelling'));
+
     }
 
 }

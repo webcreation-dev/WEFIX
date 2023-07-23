@@ -33,7 +33,10 @@ use Illuminate\Support\Facades\Session;
 */
 
 Route::get('/', function () {
-    // dd(Session::get('cart'));
+    // Session::forget('quote_stepselling');
+    dd(Session::get('quoteData', []));
+    // dd(Session::get('quote_stepselling', []));
+    // return view('mail.step_selling_quote_view');
     return view('layouts.app');
 })->name('home');
 
@@ -62,6 +65,7 @@ Route::post('update_attribute_failure_quotedata', [FailureDeviceController::clas
 Route::post('update_attribute_failure_quotedata', [FailureDeviceController::class, 'updateAttributeFailureQuoteData'])->name('update.attribute.failure.quote.post');;
 Route::post('update_question_selling_device', [StepSellingController::class, 'updateQuestionSellingDevice'])->name('update.question.selling.device.post');;
 Route::get('estimate_price_device', [StepSellingController::class, 'estimatePriceDevice'])->name('estimate.price.device');
+Route::get('send_request_selling', [StepSellingController::class, 'sendRequestSelling'])->name('send.request.selling');
 
 // Paypal Gateway for payment method in E-commerce  module
 

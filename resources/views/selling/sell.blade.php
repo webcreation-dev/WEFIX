@@ -10,7 +10,6 @@
     <main class="wrapper">
         @livewire('header-controller')
 
-
       <div class="none" id="spin-data" data-product="samsung-galaxy-s23"></div>
       <section class="container mt-3">
         <div class="wf-step sal-animate" aria-label="stepper" role="navigation" data-sal="fade-in" data-sal-delay="200" data-sal-duration="200" data-sal-once="data-sal-once">

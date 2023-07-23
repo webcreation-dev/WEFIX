@@ -89,7 +89,7 @@
                   </div>
                 </div>
 
-                @foreach ($failures as $failure)
+                @foreach ($failures_list as $failure)
                     <div class="d-flex justify-content-between align-items-center p-2 border-bottom">
                     <div class="d-flex align-items-center me-2">
                         <img class="rounded-1" src="{{asset('reparation/'. $failure->image)}}" srcset="https://intranet.wefix.net/WB/services/restauration.webp 1.5x" alt="Restauration effacement des données" width="35">
