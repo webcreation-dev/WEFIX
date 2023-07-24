@@ -2,6 +2,7 @@
 
 namespace App\Models\Ecommerce;
 
+use App\Models\ProductDevices;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Session;
@@ -48,6 +49,12 @@ class Product extends Model
     public function category()
     {
         return $this->belongsToMany(Category::class, 'product_categories');
+    }
+
+    public static function productDevices($product_device_id)
+    {
+        $categories = ProductDevices::findMany($product_device_id)->categories;
+        dd($categories);
     }
 
     public function isActive($product, $attribute, $attributeName){

@@ -128,19 +128,19 @@
                         width="100%">
                         <tr>
                             <td style="text-align: center;">
-                                <img src="{{asset('images/logo.png')}}" alt="" style="margin-bottom: 30px;">
+                                <img src="{{asset('images/logo.png')}}" width='200' alt="" style="margin-bottom: 30px;">
                             </td>
                         </tr>
-                        {{-- <tr>
+                        <tr>
                             <td>
                                 <p style="font-size: 14px;"><b>Salut {{$order->first_name}},</b></p>
                                 <p style="font-size: 14px;">La commande a été traitée avec succès et elle est en cours d'acheminement,</p>
                                 <p style="font-size: 14px;">Transaction ID : {{$order->payment_id}},</p>
                             </td>
-                        </tr> --}}
+                        </tr>
                     </table>
 
-                    {{-- <table cellpadding="0" cellspacing="0" border="0" align="left"
+                    <table cellpadding="0" cellspacing="0" border="0" align="left"
                         style="width: 100%; margin-top: 10px; margin-bottom: 10px;">
                         <tbody>
                             <tr>
@@ -161,7 +161,7 @@
                                 </td>
                             </tr>
                         </tbody>
-                    </table> --}}
+                    </table>
                     <table class="order-detail" border="0" cellpadding="0" cellspacing="0" align="left"
                         style="width: 100%;    margin-bottom: 50px;">
                         <tr align="left">
@@ -170,7 +170,7 @@
                             <th>QUANTITE</th>
                             <th>PRIX </th>
                         </tr>
-                        {{-- @foreach ($order_items as $order_item)
+                        @foreach ($order_items as $order_item)
                             <tr>
                                 <td>
                                     <img src="{{ asset('e-commerce/' . $order_item->product->productImages->first()->image) }}" alt="" width="80">
@@ -188,7 +188,7 @@
                                     <h5 style="font-size: 14px; color:#444;margin-top:15px"><b class="mr-1">{{$order_item->total}}</b><b>€</b></h5>
                                 </td>
                             </tr>
-                        @endforeach --}}
+                        @endforeach
 
 
                         <tr class="pad-left-right-space ">
@@ -196,7 +196,8 @@
                                 <p style="font-size: 14px;">SOUS TOTAL : </p>
                             </td>
                             <td class="m-t-5" colspan="2" align="right">
-                                <b class="mr-1" >{{$totalSum}}</b><b>€</b>
+                                <b class="mr-1">80</b><b>€</b>
+                                {{-- <b class="mr-1" >{{$totalSum}}</b><b>€</b> --}}
                             </td>
                         </tr>
                         <tr class="pad-left-right-space">
@@ -212,7 +213,8 @@
                                 <p style="font-size: 14px;">TOTAL :</p>
                             </td>
                             <td class="m-b-5" colspan="2" align="right">
-                                <b class="mr-1">{{$totalSum }} </b> <b>€</b>
+                                <b class="mr-1">80</b><b>€</b>
+                                {{-- <b class="mr-1">{{$totalSum }} </b> <b>€</b> --}}
                             </td>
                         </tr>
 

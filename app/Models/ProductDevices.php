@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Models\Ecommerce;
+namespace App\Models;
 
+use App\Models\Ecommerce\Category;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class ProductDevices extends Model
 {
     use HasFactory;
 
@@ -13,11 +14,10 @@ class Category extends Model
         'name',
         'image',
         'description',
-        'product_device'
     ];
 
-    public function products()
+    public function categories()
     {
-        return $this->belongsToMany(Product::class, 'product_categories');
+        return $this->hasMany(Category::class);
     }
 }

@@ -19,8 +19,8 @@ class AttributeName extends Model
 
         $filter = Session::get('filter');
 
-        if (!array_key_exists('categorie', $filter)) {
-            $filter['categorie'] = [];
+        if (!array_key_exists('product_device', $filter)) {
+            $filter['product_device'] = [];
         }
 
         if (!isset($filter['attributes']) || !is_array($filter['attributes'])) {

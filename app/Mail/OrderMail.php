@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class OrderPaymentMail extends Mailable
+class OrderMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -22,7 +22,7 @@ class OrderPaymentMail extends Mailable
      *
      * @return void
      */
-    public function __construct($order, $order_items, $totalSum, $name)
+    public function __construct($order_items, $totalSum, $order, $name)
     {
         $this->order = $order;
         $this->order_items = $order_items;
@@ -37,6 +37,6 @@ class OrderPaymentMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.order_payment_view')->subject('Confirmation de paiement');
+        return $this->markdown('mail.order_mail_view')->subject('Confirmation de paiement');
     }
 }

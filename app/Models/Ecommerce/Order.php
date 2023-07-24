@@ -25,4 +25,6 @@ class Order extends Model
         'payment_id',
 
     ];
+
+
 }

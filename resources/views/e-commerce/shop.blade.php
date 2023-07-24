@@ -26,8 +26,7 @@
 
     <section class="ec-page-content section-space-p">
         <div class="container">
-
-                    @livewire('shop-controller')
+            @livewire('shop-controller')
         </div>
     </section>
 

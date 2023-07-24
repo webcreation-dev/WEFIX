@@ -17,7 +17,10 @@ use App\Http\Controllers\Repair\StoreDeviceController;
 use App\Http\Controllers\Selling\QuestionStepSellingController;
 use App\Http\Controllers\Selling\SellDeviceController;
 use App\Http\Controllers\Selling\StepSellingController;
+use App\Mail\OrderPaymentMail;
+use App\Models\Ecommerce\Order;
 use App\Models\Ecommerce\OrderItem;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 
@@ -33,10 +36,10 @@ use Illuminate\Support\Facades\Session;
 */
 
 Route::get('/', function () {
-    // Session::forget('quote_stepselling');
-    dd(Session::get('quoteData', []));
-    // dd(Session::get('quote_stepselling', []));
-    // return view('mail.step_selling_quote_view');
+
+    $filter = Session::get('filter');
+    dd($filter);
+
     return view('layouts.app');
 })->name('home');
 

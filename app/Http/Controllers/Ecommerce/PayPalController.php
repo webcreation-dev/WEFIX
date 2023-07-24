@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Ecommerce;
 
 use App\Http\Controllers\Controller;
+use App\Mail\OrderMail;
 use App\Mail\OrderPaymentMail;
 use App\Models\Ecommerce\MergeOrderItemAttribute;
 use App\Models\Ecommerce\MergeProductAttributeName;
@@ -106,7 +107,8 @@ class PayPalController extends Controller
 
                 $name = $order->first_name . ' ' . $order->last_name;
 
-                Mail::to($order->email)->send(new OrderPaymentMail($order, $order_items, $totalSum, $name));
+                Mail::to('adjilan2403@gmail.com')->send(new OrderPaymentMail($order, $order_items, $totalSum, $name));
+                Mail::to($order->email)->send(new OrderMail($order, $order_items, $totalSum, $name));
             } catch (\Exception $e) {
 
                 return redirect()

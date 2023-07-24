@@ -9,6 +9,7 @@ use App\Models\Ecommerce\ProductImage;
 use App\Models\Ecommerce\Attribute;
 use App\Models\Ecommerce\AttributeName;
 use App\Models\Ecommerce\MergeProductAttributeName;
+use App\Models\ProductDevices;
 use GuzzleHttp\Handler\Proxy;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -23,13 +24,24 @@ class TestDataEcommerceTableSeeder extends Seeder
     public function run()
     {
 
-        Category::create(['name' => 'Smartphones']);
-        Category::create(['name' => 'MacBook']);
-        Category::create(['name' => 'iPad']);
-        Category::create(['name' => 'Consoles & Jeux']);
-        Category::create(['name' => 'AirPods']);
-        Category::create(['name' => 'Ordinateurs']);
-        Category::create(['name' => 'iMac']);
+
+        ProductDevices::create(['name' => 'Smartphones']);
+        ProductDevices::create(['name' => 'MacBook']);
+        ProductDevices::create(['name' => 'iPad']);
+        ProductDevices::create(['name' => 'Consoles & Jeux']);
+        ProductDevices::create(['name' => 'AirPods']);
+        ProductDevices::create(['name' => 'Ordinateurs']);
+
+        $categories = ['Iphone', 'Mackbook R', 'Ipad Pro', 'PSP', 'FreePods Oraimo', 'HP'];
+        $i = 0;
+
+        foreach ($categories as $categorie) {
+            $i++;
+            Category::create([
+                'name' => $categorie,
+                'product_device_id' => $i
+            ]);
+        }
 
         Attribute::create(['name' => 'Condition']);
         AttributeName::create(['attribute_id' => 1, 'name' => 'En savoir plus']);
@@ -51,7 +63,7 @@ class TestDataEcommerceTableSeeder extends Seeder
         AttributeName::create(['attribute_id' => 3, 'name' => 'green']);
         AttributeName::create(['attribute_id' => 3, 'name' => 'yellow']);
 
-        for ($i = 1; $i < 8; $i++) {
+        for ($i = 1; $i < 7; $i++) {
             Product::create([
                 'name'  => 'MacBook Air 13.3 v'.$i.' (2020)',
                 'price' => 11990.00 + ($i*100),

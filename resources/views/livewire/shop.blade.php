@@ -102,19 +102,18 @@
                         <h3 class="ec-sidebar-title">Categorie</h3>
                     </div>
                     <div class="ec-sb-block-content">
-                        <ul>
-                            @foreach ($categories->take(4)->get() as $category)
+                        <ul style="border-bottom: 1px solid #eeeeee">
+                            @foreach ($product_devices->take(4)->get() as $product_device)
                                 <li>
                                     <div class="ec-sidebar-block-item">
-                                        <input type="checkbox" wire:model.lazy="checkedCategories.{{ $category->id }}" value="{{ $category->id }}">
-                                        <a href="#">{{ $category->name }}</a><span
+                                        <input type="checkbox" wire:model.lazy="checkedProductDevices.{{ $product_device->id }}" value="{{ $product_device->id }}">
+                                        <a href="#">{{ $product_device->name }}</a><span
                                             class="checked"></span>
                                     </div>
                                 </li>
                             @endforeach
 
-
-                            <li id="ec-more-toggle-content" style="padding: 0; display: none;">
+                            {{-- <li id="ec-more-toggle-content" style="padding: 0; display: none;">
                                 <ul>
                                     @foreach ($categories->get(); as $category)
                                     <li>
@@ -125,17 +124,30 @@
                                     </li>
                                     @endforeach
                                 </ul>
-                            </li>
+                            </li> --}}
                             {{-- <li>
                                 <div class="ec-sidebar-block-item ec-more-toggle">
                                     <span class="checked"></span><span id="ec-more-toggle">Plus de categories</span>
                                 </div>
                             </li> --}}
-
                         </ul>
+
+                        <br>
+                            <ul>
+                                @foreach ($categories as $category)
+                                    <li>
+                                        <div class="ec-sidebar-block-item">
+                                            <input type="checkbox"
+                                            wire:model.lazy="checkedCategories.{{ $category->id }}" value="{{ $category->id }}"
+                                            >
+                                            <a href="#">{{ $category->name }}</a><span
+                                                class="checked"></span>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
                     </div>
                 </div>
-
 
                 {{-- @foreach ($attributes as $attribute)
                 <div class="ec-sidebar-block ">
