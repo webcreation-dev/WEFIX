@@ -37,8 +37,8 @@ use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
 
-    $filter = Session::get('filter');
-    dd($filter);
+    // $filter = Session::get('filter');
+    // dd($filter);
 
     return view('layouts.app');
 })->name('home');
