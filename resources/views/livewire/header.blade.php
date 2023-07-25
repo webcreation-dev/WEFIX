@@ -61,7 +61,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <ul class="dropdown-menu" style="width: 270px" role="list">
+                                <ul class="dropdown-menu" style="width: 270px; left:auto; right:0;" role="list">
                                     @foreach ($typedevice->brandDevices()->get() as $brand)
                                     <li>
                                         <a class="dropdown-item d-flex align-items-center py-2"
