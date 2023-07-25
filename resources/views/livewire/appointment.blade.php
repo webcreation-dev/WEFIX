@@ -54,6 +54,7 @@
       <div class="g-col-sm-6 g-col-12">
         <div class="form-floating">
           <select class="form-select" name="country" required id="country" wire:model="appointmentFields.country">
+            <option disabled>Choisir</option>
             <option value="France" selected="">France</option>
             <option value="Belgique">Belgique</option>
           </select>

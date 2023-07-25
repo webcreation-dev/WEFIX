@@ -24,17 +24,25 @@ class ShopController extends Component
         $filter = Session::get('filter');
         $productsQuery = Product::query();
 
-        if (isset($filter['attributes']) && is_array($filter['attributes']) && count($filter['attributes']) > 0) {
-            foreach ($filter['attributes'] as $attributeId => $attributeValues) {
-                foreach ($attributeValues as $attributeValue) {
-                    $this->checkedAttributes[$attributeValue] = true;
-                }
-            }
-        }
+        // if (isset($filter['attributes']) && is_array($filter['attributes']) && count($filter['attributes']) > 0) {
+        //     foreach ($filter['attributes'] as $attributeId => $attributeValues) {
+        //         foreach ($attributeValues as $attributeValue) {
+        //             $this->checkedAttributes[$attributeValue] = true;
+        //         }
+        //     }
+        // }
 
         if (isset($filter['product_device']) && is_array($filter['product_device'])) {
             foreach ($filter['product_device'] as $categoryId) {
                 $this->checkedProductDevices[$categoryId] = true;
+            }
+        }
+
+        if (isset($filter['categories']) && is_array($filter['categories'])) {
+            foreach ($filter['categories'] as $categoryId => $categoryValues) {
+                foreach ($categoryValues as $categoryValue) {
+                    $this->checkedCategories[$categoryValue] = true;
+                }
             }
         }
 
