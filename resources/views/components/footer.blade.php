@@ -3,8 +3,8 @@
       <div class="container py-5">
         <div class="grid-footer">
           <div>
-            <div class="title">RÉPARATION</div>
-            <ul role="list">
+            <div class="title"><a href="{{ route('typedevices.index') }}">RÉPARATION</a></div>
+            {{-- <ul role="list">
               <li>
                 <a href="#" aria-label="Rendez-vous réparation">Rendez-vous réparation</a>
               </li>
@@ -29,11 +29,11 @@
               <li>
                 <a href="#" aria-label="Tablettes">Tablettes</a>
               </li>
-            </ul>
+            </ul> --}}
           </div>
           <div>
-            <div class="title">DÉCOUVREZ AUSSI</div>
-            <ul role="list">
+            <div class="title"><a href="{{route('stepsellings.index')}}">REVENDRE</a></div>
+            {{-- <ul role="list">
               <li>
                 <a href="#" aria-label="Protection XFORCE">Protection XFORCE</a>
               </li>
@@ -58,11 +58,11 @@
               <li>
                 <a href="#" aria-label="Abonné Darty Max Intégral ?">Abonné Darty Max Intégral ?</a>
               </li>
-            </ul>
+            </ul> --}}
           </div>
           <div>
-            <div class="title">BESOIN D'AIDE ?</div>
-            <ul role="list">
+            <div class="title"><a href="{{route('products.index')}}">NOTRE BOUTIQUE</a></div>
+            {{-- <ul role="list">
               <li>
                 <a href="#" aria-label="Trouver une boutique">Trouver une boutique</a>
               </li>
@@ -81,11 +81,11 @@
               <li>
                 <a href="#" aria-label="Politique de confidentialité">Politique de confidentialité</a>
               </li>
-            </ul>
+            </ul> --}}
           </div>
           <div>
-            <div class="title">À PROPOS DE NOUS</div>
-            <ul role="list">
+            <div class="title"><a target="_blank" href="https://www.custom.maydayphone.com/phone_case">COQUES PERSONNALISEES</a></div>
+            {{-- <ul role="list">
               <li>
                 <a href="#" aria-label="Qui sommes-nous ?">Qui sommes-nous ?</a>
               </li>
@@ -98,13 +98,14 @@
               <li>
                 <a href="#" aria-label="Index égalité H/F">Index égalité H/F</a>
               </li>
-            </ul>
+            </ul> --}}
           </div>
         </div>
       </div>
     </div>
     <div class="container my-lg-4 my-3 py-2">
-      <div class="container-fluid mb-md-0 mb-3">
+
+      {{-- <div class="container-fluid mb-md-0 mb-3">
         <div class="widget widget-newsletter">
           <div class="title-section widget-title" data-sal="slide-up" data-sal-delay="400" data-sal-duration="600">S'inscrire à notre newsletter</div>
           <form class="form-newsletter subscription-form validate" novalidate="">
@@ -120,7 +121,8 @@
           </form>
           <div class="subscription-status"></div>
         </div>
-      </div>
+      </div> --}}
+
       <div class="d-flex flex-md-row flex-column align-items-center justify-content-md-between">
         <div class="d-flex flex-column align-items-center align-items-md-start">
           <a href="/" aria-label="Retourner à l&#39;accueil">

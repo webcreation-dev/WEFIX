@@ -103,6 +103,12 @@
 
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-medium" target="_blank" href="https://www.custom.maydayphone.com/phone_case""
+                            aria-label="Protégez tous vos appareils !">
+                            <span>COQUES PERSONNALISES</span>
+                        </a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('products.index')}}" aria-label="Toutes nos boutiques Mayday Phone !">
