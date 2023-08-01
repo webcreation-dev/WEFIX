@@ -32,6 +32,6 @@ class SendRequestSellingMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.send_request_selling_view')->subject('Confirmation de votre rendez-vous');
+        return $this->markdown('mail.send_request_selling_view')->subject('ESTIMATION DU PRIX DE VOTRE APPAREIL');
     }
 }

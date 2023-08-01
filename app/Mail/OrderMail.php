@@ -37,6 +37,6 @@ class OrderMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.order_mail_view')->subject('Confirmation de paiement');
+        return $this->markdown('mail.order_mail_view')->subject('CONFIRMATION DE VOTRE PAIEMENT');
     }
 }

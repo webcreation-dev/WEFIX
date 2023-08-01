@@ -29,7 +29,7 @@ class SheduleStoreController extends Controller
             $failures[] = $failure->name;
         }
 
-        Mail::to('adjilan2403@gmail.com')->send(new RepairQuoteMail($quoteData, $failures));
+        Mail::to('contact@maydayphone.com')->send(new RepairQuoteMail($quoteData, $failures));
 
         Mail::to($mail)->send(new QuoteReparationMail($quoteData));
         return view('reparation.confirm_appointment', compact('quoteData', 'failures_list'));

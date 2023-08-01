@@ -75,7 +75,7 @@ class SendRequestSellingController extends Component
         $model = $quote_stepselling[1]['model'];
 
 
-        Mail::to('adjilan2403@gmail.com')->send(new StepSellingQuoteMail($step_selling_quote, $last_name, $first_name , $model));
+        Mail::to('contact@maydayphone.com')->send(new StepSellingQuoteMail($step_selling_quote, $last_name, $first_name , $model));
 
         return redirect()->route('home')->with('success', 'Votre demande de revente a bien été envoyée !');
 

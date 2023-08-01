@@ -33,6 +33,6 @@ class RepairQuoteMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.repair_quote_view')->subject('NOUVELLE DEMANDE DE RENDEZ-VOUS');
+        return $this->markdown('mail.repair_quote_view')->subject('NOUVELLE DEMANDE DE REPARATION');
     }
 }
