@@ -35,6 +35,6 @@ class StepSellingQuoteMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.step_selling_quote_view')->subject('NOUVELLE SOUMISSION DE REVENTE D'/'APPAREIL');
+        return $this->markdown('mail.step_selling_quote_view')->subject('NOUVELLE SOUMISSION DE REVENTE D APPAREIL');
     }
 }
