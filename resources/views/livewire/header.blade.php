@@ -112,7 +112,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('products.index')}}" aria-label="Toutes nos boutiques Mayday Phone !">
-                            <span class="fw-medium">NOS BOUTIQUES</span>
+                            <span class="fw-medium">BOUTIQUE EN LIGNE</span>
                         </a>
                     </li>
 
@@ -169,7 +169,7 @@
 
 
                 <a class="wf-aside__screen-content-card" href="#" aria-label="Effectuez une réclamation">
-                    <div class="wf-aside__screen-content-card--title"><span>NOS BOUTIQUES</span> </div>
+                    <div class="wf-aside__screen-content-card--title"><span>BOUTIQUE EN LIGNE</span> </div>
                 </a>
             </div>
             <div class="wf-aside__screen-footer modal-footer">

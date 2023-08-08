@@ -42,13 +42,6 @@
         </div>
     @endif
 
-    <p class="text-muted fs-sm mt-3" style="text-align: justify; float: left;" data-pannes-total-ten="">
-        <sup>*</sup>Réduction de 10% applicable sur la réparation la plus chère de la prestation réservée via une prise
-        de rendez-vous sur le site <a class="wf-decoration--underline" href="https://wefix.net/">wefix.net</a>. Sous
-        réserve que la réparation soit effectuée dans le point de vente et a l’heure choisie lors de la prise de
-        rendez-vous. Mayday Phone se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une
-        autre offre.
-    </p>
 
 </div>
 

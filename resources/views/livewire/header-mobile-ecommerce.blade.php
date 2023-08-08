@@ -91,7 +91,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{route('stepsellings.index')}}">REVENDRE</a></li>
-                                <li><a href="{{route('products.index')}}">NOS BOUTIQUES</a></li>
+                                <li><a href="{{route('products.index')}}">BOUTIQUE EN LIGNE</a></li>
                             </ul>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                 <ul>
                     <li><a href="{{route('stepsellings.index')}}">REVENDRE</a></li>
                     <li><a href="{{ route('typedevices.index') }}">REPARER</a></li>
-                    <li><a href="{{route('products.index')}}">NOS BOUTIQUES</a></li>
+                    <li><a href="{{route('products.index')}}">BOUTIQUE EN LIGNE</a></li>
                 </ul>
             </div>
         </div>

@@ -10,12 +10,12 @@
                 <div class="col-12">
                     <div class="row ec_breadcrumb_inner">
                         <div class="col-md-6 col-sm-12">
-                            <h2 class="ec-breadcrumb-title">NOS BOUTIQUES</h2>
+                            <h2 class="ec-breadcrumb-title">BOUTIQUE EN LIGNE</h2>
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <ul class="ec-breadcrumb-list">
                                 <li class="ec-breadcrumb-item"><a href="index.html">ACCUEIL</a></li>
-                                <li class="ec-breadcrumb-item active">NOS BOUTIQUES</li>
+                                <li class="ec-breadcrumb-item active">BOUTIQUE EN LIGNE</li>
                             </ul>
                         </div>
                     </div>

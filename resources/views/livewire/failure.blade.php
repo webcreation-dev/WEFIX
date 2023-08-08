@@ -628,9 +628,7 @@
       <i class="ci-announcement"></i>
       <span>Nos tarifs sont indiqués à titre indicatif et pourront évoluer selon le diagnostic effectué en boutique Mayday Phone. </span>
     </alert>
-    <p class="text-muted fs-sm mt-3" data-pannes-total-ten="">
-      <sup>*</sup>Réduction de 10% applicable sur la réparation la plus chère de la prestation réservée via une prise de rendez-vous sur le site <a class="wf-decoration--underline" href="https://wefix.net/">wefix.net</a>. Sous réserve que la réparation soit effectuée dans le point de vente et a l’heure choisie lors de la prise de rendez-vous. Mayday Phone se réserve le droit d’annuler le rendez-vous à tout moment. Offre non cumulable avec une autre offre.
-    </p>
+
   </div>
 
 <script>
