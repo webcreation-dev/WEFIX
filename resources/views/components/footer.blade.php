@@ -4,101 +4,21 @@
         <div class="grid-footer">
           <div>
             <div class="title"><a href="{{ route('typedevices.index') }}">RÉPARATION</a></div>
-            {{-- <ul role="list">
-              <li>
-                <a href="#" aria-label="Rendez-vous réparation">Rendez-vous réparation</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Réparation iPhone 11">Réparation iPhone 11</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Réparation iPhone 12">Réparation iPhone 12</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Réparation Apple">Réparation Apple</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Réparation Samsung">Réparation Samsung</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Réparation Huawei">Réparation Huawei</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Smartphones">Smartphones</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Tablettes">Tablettes</a>
-              </li>
-            </ul> --}}
           </div>
           <div>
             <div class="title"><a href="{{route('stepsellings.index')}}">REVENDRE</a></div>
-            {{-- <ul role="list">
-              <li>
-                <a href="#" aria-label="Protection XFORCE">Protection XFORCE</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Transfert de données">Transfert de données</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Smartphones reconditionnés">Smartphones reconditionnés</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Nos accessoires">Nos accessoires</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Changement batterie">Changement batterie</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Changer écran iPhone">Changer écran iPhone</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Client Bouygues Telecom ?">Client Bouygues Telecom ?</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Abonné Darty Max Intégral ?">Abonné Darty Max Intégral ?</a>
-              </li>
-            </ul> --}}
           </div>
           <div>
             <div class="title"><a href="{{route('products.index')}}">NOTRE BOUTIQUE</a></div>
-            {{-- <ul role="list">
-              <li>
-                <a href="#" aria-label="Trouver une boutique">Trouver une boutique</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Besoin d&#39;aide ?">Besoin d'aide ?</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Nos CGV">Nos CGV</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Nous contacter">Nous contacter</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Politique cookies">Politique cookies</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Politique de confidentialité">Politique de confidentialité</a>
-              </li>
-            </ul> --}}
           </div>
           <div>
             <div class="title"><a target="_blank" href="https://www.custom.maydayphone.com/phone_case">COQUES PERSONNALISEES</a></div>
-            {{-- <ul role="list">
-              <li>
-                <a href="#" aria-label="Qui sommes-nous ?">Qui sommes-nous ?</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Mayday Phone recrute">Mayday Phone recrute</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Mentions légales">Mentions légales</a>
-              </li>
-              <li>
-                <a href="#" aria-label="Index égalité H/F">Index égalité H/F</a>
-              </li>
-            </ul> --}}
+          </div>
+          <div>
+            <div class="title"><a target="_blank" href="route('faq')">FAQ</a></div>
+          </div>
+          <div>
+            <div class="title"><a target="_blank" href="route('contact')">CONTACT</a></div>
           </div>
         </div>
       </div>

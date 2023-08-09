@@ -36,12 +36,13 @@ use Illuminate\Support\Facades\Session;
 */
 
 Route::get('/', function () {
-
     // $filter = Session::get('filter');
     // dd($filter);
-
     return view('layouts.app');
 })->name('home');
+
+Route::get('/contact', function () {return view('app.contact');})->name('contact');
+Route::get('/faq', function () {return view('app.faq');})->name('faq');
 
 
 //Route ressource
