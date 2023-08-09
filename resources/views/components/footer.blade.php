@@ -15,10 +15,10 @@
             <div class="title"><a target="_blank" href="https://www.custom.maydayphone.com/phone_case">COQUES PERSONNALISEES</a></div>
           </div>
           <div>
-            <div class="title"><a target="_blank" href="route('faq')">FAQ</a></div>
+            <div class="title"><a target="_blank" href="{{route('faq')}}">FAQ</a></div>
           </div>
           <div>
-            <div class="title"><a target="_blank" href="route('contact')">CONTACT</a></div>
+            <div class="title"><a target="_blank" href="{{route('contact')}}">CONTACT</a></div>
           </div>
         </div>
       </div>
