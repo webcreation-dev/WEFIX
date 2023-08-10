@@ -135,8 +135,11 @@
 
         <section class="container mt-5">
             <div>
-                <form class="modal-content needs-validation" action="https://formspree.io/f/xeqwepjj"
+                <form class="modal-content needs-validation"
+                action="{{route('services.store')}}"
+                {{-- action="https://formspree.io/f/xeqwepjj" --}}
                 method="POST">
+                @csrf
                     <div class="modal-body">
                         <div class="position-relative zindex-10">
                             <blockquote class="blockquote">

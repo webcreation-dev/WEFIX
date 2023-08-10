@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Repair;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactMail;
 use App\Models\Repair\ServiceDevice;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ServiceDeviceController extends Controller
 {
@@ -36,7 +38,8 @@ class ServiceDeviceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Mail::to('contact@maydayphone.com')->send(new ContactMail($request->all()));
+        return back()->with('success', 'Votre message a bien été envoyé !');
     }
 
     /**

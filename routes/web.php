@@ -11,6 +11,7 @@ use App\Http\Controllers\Repair\TypeDeviceController;
 use App\Http\Controllers\Repair\BrandDeviceController;
 use App\Http\Controllers\Repair\FailureDeviceController;
 use App\Http\Controllers\Repair\ModelBrandController;
+use App\Http\Controllers\Repair\ServiceDeviceController;
 use App\Http\Controllers\Repair\SheduleStoreController;
 use App\Http\Controllers\Repair\StoreDeviceController;
 
@@ -41,7 +42,7 @@ Route::get('/', function () {
     return view('layouts.app');
 })->name('home');
 
-Route::get('/contact', function () {return view('app.contact');})->name('contact');
+Route::get('/contact', function () {return view('app.contact');})->name('get.contact');
 Route::get('/faq', function () {return view('app.faq');})->name('faq');
 
 
@@ -52,6 +53,7 @@ Route::resource('models', ModelBrandController::class);
 Route::resource('failures', FailureDeviceController::class);
 Route::resource('stores', StoreDeviceController::class);
 Route::resource('schedules', SheduleStoreController::class);
+Route::resource('services', ServiceDeviceController::class);
 
 Route::resource('sells', SellDeviceController::class);
 Route::resource('stepsellings', StepSellingController::class);
