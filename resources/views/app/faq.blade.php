@@ -44,94 +44,51 @@
                             <div class="accordion-item bg-white border-0 rounded-3 mb-3">
                                 <div class="accordion-header">
                                     <button class="accordion-button mts fw-bold" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#id-0" aria-expanded="" aria-controls="id-0">Où se trouvent les
-                                        boutiques Mayday Phone ?</button>
+                                        data-bs-target="#id-0" aria-expanded="" aria-controls="id-0">Quels types d’appareils prenez-vous en charge ?</button>
                                 </div>
                                 <div class="accordion-collapse collapse show" aria-labelledby="id-0"
                                     data-bs-parent="#reparation" id="id-0">
                                     <div class="accordion-body">
-                                        <p class="fs-lg">Pour connaître les adresses ou les horaires d'ouverture de nos
-                                            boutiques, veuillez vous rendre sur la section "Nos boutiques" de notre site
-                                            web. Nos experts vous y attendent pour effectuer gratuitement un diagnostic
-                                            pannes de votre appareil.</p>
+                                        <p class="fs-lg">Nous prenons en charge la réparation de nombreux modèles de smartphones et tablettes, ainsi que les consoles de jeux vidéos. Si vous avez une question sur un modèle précis et vous ne trouvez pas de réponse sur notre site web, n'hésitez pas à nous contacter.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item bg-white border-0 rounded-3 mb-3">
                                 <div class="accordion-header">
                                     <button class="accordion-button mts fw-bold collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#id-1" aria-controls="id-1">Comment
-                                        établir un devis pour ma réparation ?</button>
+                                        data-bs-toggle="collapse" data-bs-target="#id-1" aria-controls="id-1">Combien de temps dure une réparation ? </button>
                                 </div>
                                 <div class="accordion-collapse collapse" aria-labelledby="id-1"
                                     data-bs-parent="#reparation" id="id-1">
                                     <div class="accordion-body">
-                                        <p class="fs-lg">Consultez nos tarifs et bénéficiez d’une remise exceptionnelle
-                                            en faisant gratuitement un devis sur notre site. Choisissez votre marque,
-                                            votre modèle et votre panne, et nous vous enverrons votre devis
-                                            personnalisé.</p>
+                                        <p class="fs-lg">Dans la plupart des cas, la réparation dure environ 30 minutes, vous pouvez attendre sur place. Si la réparation prend plus de temps, nous vous l’indiquerons à l’avance.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item bg-white border-0 rounded-3 mb-3">
                                 <div class="accordion-header">
                                     <button class="accordion-button mts fw-bold collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#id-2" aria-controls="id-2">Comment
-                                        savoir si la pièce nécessaire à ma réparation est en stock ?</button>
+                                        data-bs-toggle="collapse" data-bs-target="#id-2" aria-controls="id-2">Vais-je perdre mes données ? </button>
                                 </div>
                                 <div class="accordion-collapse collapse" aria-labelledby="id-2"
                                     data-bs-parent="#reparation" id="id-2">
                                     <div class="accordion-body">
-                                        <p class="fs-lg">Nos 130 boutiques sont approvisionnées quotidiennement. Si
-                                            besoin, nous commandons la pièce nécessaire à votre réparation sur simple
-                                            demande.</p>
+                                        <p class="fs-lg">Pendant les réparations matérielles, vous ne perdrez aucune donnée, nous vous recommandons de sauvegarder vos fichiers avant de soumettre votre appareil pour réparation.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item bg-white border-0 rounded-3 mb-3">
                                 <div class="accordion-header">
                                     <button class="accordion-button mts fw-bold collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#id-3" aria-controls="id-3">Quels
-                                        types d’appareils prenez-vous en charge ?</button>
+                                        data-bs-toggle="collapse" data-bs-target="#id-3" aria-controls="id-3">Combien de temps dure la garantie ? </button>
                                 </div>
                                 <div class="accordion-collapse collapse" aria-labelledby="id-3"
                                     data-bs-parent="#reparation" id="id-3">
                                     <div class="accordion-body">
-                                        <p class="fs-lg">Nous prenons en charge la réparation de nombreux modèles de
-                                            smartphones et tablettes, ainsi que la Nintendo Switch. Si vous avez une
-                                            question sur un modèle précis et vous ne trouvez pas de réponse sur notre
-                                            site web, n'hésitez pas à contacter notre service client.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item bg-white border-0 rounded-3 mb-3">
-                                <div class="accordion-header">
-                                    <button class="accordion-button mts fw-bold collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#id-4" aria-controls="id-4">Qu’est-ce
-                                        que la protection XFORCE ?</button>
-                                </div>
-                                <div class="accordion-collapse collapse" aria-labelledby="id-4"
-                                    data-bs-parent="#reparation" id="id-4">
-                                    <div class="accordion-body">
-                                        <p class="fs-lg">XFORCE de Mayday Phone est un film de protection découpé sur mesure,
-                                            ultra-résistant et auto-cicatrisant. Il convient à tous les appareils
-                                            connectés avec un écran jusqu’à 13.3 pouces car la découpe se fait
-                                            sur-mesure sur une machine professionnelle. Rendez-vous en boutique et
-                                            faites poser votre protection écran dès aujourd’hui !</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item bg-white border-0 rounded-3 mb-3">
-                                <div class="accordion-header">
-                                    <button class="accordion-button mts fw-bold collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#id-5" aria-controls="id-5">Quels
-                                        modes de paiement acceptez-vous ?</button>
-                                </div>
-                                <div class="accordion-collapse collapse" aria-labelledby="id-5"
-                                    data-bs-parent="#reparation" id="id-5">
-                                    <div class="accordion-body">
-                                        <p class="fs-lg">Le règlement en boutique peut être effectué en espèces, par CB,
-                                            Visa, Mastercard, e-carte Bleue, Maestro ou Visa Electron.</p>
+                                        <p class="fs-lg">Vous recevrez une garantie de 6 mois de notre part sur la nouvelle pièce que nous avons remplacée. Cela ne s’applique pas aux rayures et autres dommages externes causés par l’utilisation.
+                                            <br>
+                                            Veuillez noter que vous devez tenir compte du fait que la garantie du fabricant expire si une entreprise non autorisée ouvre votre appareil.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -144,8 +101,7 @@
         <section class="wf-container--default mt-5">
             <div class="wf-engagements wf-mt--5 wf-mb--3">
                 <div class="wf-heading--md">Les <span>engagements</span> de Mayday Phone </div>
-                <div class="wf-paragraph--md">Chaque mois, c’est plus de <strong>30000 réparations</strong> qui sont
-                    assurées par les techniciens <strong>Mayday Phone</strong> ! 👍 </div>
+
                 <div class="wf-engagements-snap wf-mt--3">
                     <div class="wf-engagements-grid">
                         <sl-card class="wf-card">
