@@ -108,9 +108,14 @@
         <div class="wf-grid wf-grid--devices wf-mt--4 wf-mb--3 data-grid-html" data-grid="">
             @foreach ($brand_devices as $brand)
                 <sl-card class="wf-card wf-card--model sal-animate" data-grid-item="" data-sal="slide-up" data-sal-delay="100" data-sal-duration="200">
-                    <a href="{{ route('stepsellings.show', ['brand' => $brand, 'stepselling' => 5]) }}">
-                    <img src="{{asset('reparation/'. $brand->image )}}" alt="">
+                    <a href="{{
+                        $brand->id == 1
+                        ? route('step.selling.families', ['brand' => $brand])
+                        : route('stepsellings.show', ['brand' => $brand, 'stepselling' => 5])
+                    }}">
+                        <img src="{{ asset('reparation/' . $brand->image) }}" alt="">
                     </a>
+
                 </sl-card>
             @endforeach
 

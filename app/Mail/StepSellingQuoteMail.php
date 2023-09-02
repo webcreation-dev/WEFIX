@@ -13,19 +13,21 @@ class StepSellingQuoteMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $step_selling_quote, $last_name, $first_name , $model;
+    public $step_selling_quote, $last_name, $first_name , $typedevice, $model, $family;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($step_selling_quote, $last_name, $first_name , $model)
+    public function __construct($step_selling_quote, $last_name, $first_name , $typedevice, $family, $model)
     {
         $this->step_selling_quote = $step_selling_quote;
         $this->last_name = $last_name;
         $this->first_name = $first_name;
         $this->model = $model;
+        $this->typedevice = $typedevice;
+        $this->family = $family;
     }
 
     /**

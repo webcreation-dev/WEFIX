@@ -327,6 +327,12 @@ ul.social li{
             				<h4> <strong>NOM & PRENOM : </strong> {{$last_name}} {{$first_name}} </h4>
             			</div>
                         <div class="text">
+            				<h4> <strong>TYPE D'APPAREIL : </strong> {{$typedevice}}</h4>
+            			</div>
+                        <div class="text">
+            				<h4> <strong>FAMILLE : </strong> {{$family}}</h4>
+            			</div>
+                        <div class="text">
             				<h4> <strong>MODELE : </strong> {{$model}}</h4>
             			</div>
             		</td>

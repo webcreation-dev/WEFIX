@@ -86,6 +86,21 @@
                     </div>
                 </div>
 
+                @isset($stepSelling['family'])
+                    <div class="grid mt-3" style="--wf-gap: 16px">
+                        <div class="g-col-sm-12 g-col-12">
+                            <div class="form-floating">
+                                <input class="form-control" type="text" disabled required name="surname" id="surname"
+                                    wire:model="appointmentFields.surname" style="text-transform: capitalize"
+                                    placeholder="..." maxlength="40" autofocus="" autocomplete="" required="">
+                                <label class="fs-sm mts" for="surname" style="text-align: left; font-size: 15px !important;">Famille</label>
+                                <label class="fs-sm mts" for="surname" style="text-align: right; font-size: 15px !important;">{{ $stepSelling['family']->name }}</label>
+
+                            </div>
+                        </div>
+                    </div>
+                @endisset
+
                 @isset($stepSelling['functions'])
                     @foreach ($stepSelling['functions'] as $function)
                         <div class="grid mt-3" style="--wf-gap: 16px">

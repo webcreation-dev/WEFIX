@@ -1,9 +1,18 @@
 <div class="g-col-md-6 g-col-12">
     <div class="title-section fs-lg fw-bold widget-title text-center"> {{$current_step_selling->title}}</div>
+    <br>
+    <div class="title-section fs-lg fw-bold widget-title text-center">
+        @if ($current_step_selling->id == 2)
+            <img src="{{asset('reparation/notice.png')}}" alt="">
+        @elseif($current_step_selling->id == 5)
+            <img src="{{asset('reparation/fonctionnel.png')}}" alt="">
+        @endif
+    </div>
 
     <sl-details class="wf-mt--3 wf-details wf-details--static wf-details--pannes" summary="" open="">
 
         @foreach ($current_step_selling->questionStepSellings()->get() as $question)
+
             <div class="select-pannes-container">
                 <label class="select-pannes">
                     <input class="pannes-checkbox" name="pannes" type="radio" data-pannes="" autocomplete="off"
@@ -14,7 +23,7 @@
                         data-id="{{ $question->id }}N" data-titre="Façade avant" data-step-selling-id="{{$current_step_selling->id}}" data-question-step-selling-id="{{ $question->id }}"
                         onclick="updateQuestionSellingDevice(this)" @isset($stepSelling['answer'][$current_step_selling->id]) @if($stepSelling['answer'][$current_step_selling->id] == $question->id) checked @endif @endisset  >
 
-                    <div class="card-pannes" style="height: 5rem !important">
+                    <div class="card-pannes" style="height: auto;" >
                         <div>
                             <img src="{{asset('reparation/autres.svg')}}"
                                 srcset="{{asset('reparation/autres.svg')}}"
@@ -22,7 +31,7 @@
                         </div>
                         <div>
                             <div class="subtitle mb-1">{{$question->title}}</div>
-                            <div class="title mb-1" style="opacity: 0.8;">{{$question->description}}</div>
+                            <div class="title mb-1" style="opacity: 0.8; margin:15px;">{{$question->description}}</div>
                         </div>
                         <div>
                             <div class="list-prices">
@@ -36,6 +45,10 @@
     </sl-details>
 
     @if ($total_step == $current_step)
+    <p class="text-muted fs-sm mt-3" data-pannes-total-ten=""><sup>*</sup>Une dernière chose… <br>
+        Votre appareil sera vérifié en magasin. Si les informations que vous avez fournies sont inexactes, notre vendeur vous fera une contre-offre. Nous ne reprenons pas les appareils blacklistés, greylistés, rootés ou contrefaits.
+        Une pièce d’identité sera demandée pour tout rachat.
+    </p>
         <div class="btn btn-lg cta-primary" wire:click="estimatePriceDevice('{{$model}}')" style="float: right;">VOIR L'ESTIMATION</div>
     @else
         <div class="btn btn-lg cta-primary" wire:click="nextStepSelling('{{$current_step}}', '{{$model}}')"    style="float: right;">CONTINUER

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Selling;
 
 use App\Models\Selling\StepSelling;
 use App\Http\Controllers\Controller;
+use App\Models\Family;
 use App\Models\Repair\BrandDevice;
 use App\Models\Repair\ModelBrand;
 use App\Models\Repair\TypeDevice;
@@ -42,6 +43,20 @@ class StepSellingController extends Controller
         return view('selling.brand_device', compact('brand_devices'));
     }
 
+    public function familyBrand(Request $request)
+    {
+        $brand_id = $request->brand;
+        $brand = BrandDevice::find($brand_id);
+
+        $stepSelling = session('stepSelling', []);
+        $stepSelling['brand'] = $brand;
+        session(['stepSelling' => $stepSelling]);
+
+        $family_brands = $brand->familyBrand()->get();
+
+        return view('selling.family_brand', compact('family_brands', 'brand_id'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -61,9 +76,16 @@ class StepSellingController extends Controller
      */
     public function show(Request $request, StepSelling $stepSelling)
     {
-        $brand = BrandDevice::find($request->brand);
-
         $stepSelling = session('stepSelling', []);
+        $family_display = false;
+
+        if ($request->family !== null) {
+            $family = Family::find($request->family);
+            $stepSelling['family'] = $family;
+            $family_display = true;
+        }
+
+        $brand = BrandDevice::find($request->brand);
         $stepSelling['brand'] = $brand;
         session(['stepSelling' => $stepSelling]);
 
@@ -75,7 +97,7 @@ class StepSellingController extends Controller
         Session::forget('quote_stepselling');
 
         $model_brands = $brand->modelBrand()->get();
-        return view('selling.model_brand', compact('model_brands'));
+        return view('selling.model_brand', compact('model_brands', 'family_display'));
     }
 
     /**

@@ -68,12 +68,10 @@
                 </a>
             @endforeach
 
-
-
           </sl-resize-observer>
         </div>
 
-        <h1 class="title-section text-center my-4 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">{{$stepSelling['typedevice']->name}} - {{$stepSelling['brand']->name}} - {{$stepSelling['model']->name}} </h1>
+        <h1 class="title-section text-center my-4 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">{{$stepSelling['typedevice']->name}} - {{$stepSelling['brand']->name}} - {{$stepSelling['model']->name}} @isset($stepSelling['family']) - {{$stepSelling['family']->name}} @endisset  </h1>
 
         <div class="grid mt-4" style="--wf-gap: 16px">
             <div class="g-col-lg-6 g-col-12 ps-xl-5 mt-lg-0 mt-3">

@@ -72,10 +72,18 @@ class SendRequestSellingController extends Component
 
         $last_name =  $quote_stepselling['appointment'][0]['name'];
         $first_name = $quote_stepselling['appointment'][0]['surname'];
-        $model = $quote_stepselling[1]['model'];
 
 
-        Mail::to('contact@maydayphone.com')->send(new StepSellingQuoteMail($step_selling_quote, $last_name, $first_name , $model));
+        $stepSelling = session('stepSelling', []);
+        $typedevice = $stepSelling['typedevice']->name;
+        $model =  $stepSelling['brand']->name;
+
+        if(isset($stepSelling['family'])) {
+            $family = $stepSelling['family']->name;
+        }
+
+        Mail::to($mail)->send(new StepSellingQuoteMail($step_selling_quote, $last_name, $first_name , $typedevice, $model, $family));
+        // Mail::to('contact@maydayphone.com')->send(new StepSellingQuoteMail($step_selling_quote, $last_name, $first_name , $typedevice, $model, $family));
 
         return redirect()->route('home')->with('success', 'Votre demande de revente a bien été envoyée !');
 

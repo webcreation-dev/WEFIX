@@ -71,6 +71,34 @@
                   <div class="wf-step__item--text" aria-current="page">Marque</div>
                 </a>
 
+                @if ($family_display)
+                    <a class="wf-step__item" aria-label="Modèle">
+                        <div class="wf-step__item--dot">
+                        <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                            <template shadowrootmode="open">
+                            <!---->
+                            </template>
+                        </sl-divider>
+                        <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
+                            <sl-icon library="heroicons" name="check" label="Marque" role="img" aria-label="Marque">
+                                <template shadowrootmode="open">
+                                    <!---->
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" part="svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                                    </svg>
+                                </template>
+                                </sl-icon>
+                        </sl-button>
+                        <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                            <template shadowrootmode="open">
+                            <!---->
+                            </template>
+                        </sl-divider>
+                        </div>
+                        <div class="wf-step__item--text" aria-current="page">Famille</div>
+                    </a>
+                @endif
+
                 <a class="wf-step__item  wf-step__item--active" aria-label="Panne">
                   <div class="wf-step__item--dot">
                     <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">

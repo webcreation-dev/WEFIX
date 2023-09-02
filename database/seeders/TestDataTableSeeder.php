@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Family;
 use App\Models\Repair\BrandDevice;
 use App\Models\Repair\FailureAttribute;
 use App\Models\Repair\FailureDevice;
@@ -27,6 +28,7 @@ class TestDataTableSeeder extends Seeder
      */
     public function run()
     {
+
         //Type d'appareils
 
         TypeDevice::create([
@@ -35,7 +37,7 @@ class TestDataTableSeeder extends Seeder
             'icon' => 'smartphones.svg',
             'estimate_price' => '800',
         ]);
-        TypeDevice::create([
+        /*TypeDevice::create([
             'name' => 'TABLETTES',
             'image' => 'tablettes.jpg',
             'icon' => 'tablettes.svg',
@@ -58,7 +60,7 @@ class TestDataTableSeeder extends Seeder
             'image' => 'macbook.jpg',
             'icon' => 'macbook.svg',
             'estimate_price' => '1300',
-        ]);
+        ]);*/
 
         //Marques d'appareils
         BrandDevice::create([
@@ -69,13 +71,13 @@ class TestDataTableSeeder extends Seeder
         BrandDevice::create([
             'name' => 'APPLE',
             'image' => 'apple.webp',
-            'type_device_id' => 2
+            'type_device_id' => 1
         ]);
-        BrandDevice::create([
+        /*BrandDevice::create([
             'name' => 'NINTENDO',
             'image' => 'NINTENDO.jpg',
             'type_device_id' => 3
-        ]);
+        ]);*/
 
         //Modèles de marques
         ModelBrand::create([
@@ -83,22 +85,368 @@ class TestDataTableSeeder extends Seeder
             'image' => 'U12PLUS.png',
             'brand_device_id' => 1,
         ]);
+
         ModelBrand::create([
-            'name' => 'IPAD 7EGE (10,2) 2019 A2197-A2198-A220',
-            'image' => 'IPAD20197E.png',
+            'name' => 'iPhone SE (2016)',
+            'image' => 'iphone-se-2016.png',
             'brand_device_id' => 2,
         ]);
+
         ModelBrand::create([
+            'name' => 'iPhone SE (2020)',
+            'image' => 'iphone-se-2020.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone SE (2022)',
+            'image' => 'iphone-se-2022.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 6S',
+            'image' => 'iphone-6s.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 6S Plus',
+            'image' => 'iphone-6s-plus.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 7',
+            'image' => 'iphone-7.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 7 Plus',
+            'image' => 'iphone-7-plus.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 8',
+            'image' => 'iphone-8.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 8 Plus',
+            'image' => 'iphone-8-plus.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone X',
+            'image' => 'iphone-x.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone XS Max',
+            'image' => 'iphone-xs-max.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone XS',
+            'image' => 'iphone-xs.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone XR',
+            'image' => 'iphone-xr.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 11',
+            'image' => 'iphone-11.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 11 Pro',
+            'image' => 'iphone-11-pro.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 11 Pro Max',
+            'image' => 'iphone-11-pro-max.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 12',
+            'image' => 'iphone-12.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 12 Pro',
+            'image' => 'iphone-12-pro.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 12 Pro Max',
+            'image' => 'iphone-12-pro-max.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 12 Pro mini',
+            'image' => 'iphone-12-pro-mini.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 13',
+            'image' => 'iphone-13.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 13 mini',
+            'image' => 'iphone-13-mini.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 13 Pro',
+            'image' => 'iphone-13-pro.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 13 Pro Max',
+            'image' => 'iphone-13-pro-max.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 14',
+            'image' => 'iphone-14.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 14 Plus',
+            'image' => 'iphone-14-plus.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 14 Pro',
+            'image' => 'iphone-14-pro.png',
+            'brand_device_id' => 2,
+        ]);
+
+        ModelBrand::create([
+            'name' => 'iPhone 14 Pro Max',
+            'image' => 'iphone-14-pro-max.png',
+            'brand_device_id' => 2,
+        ]);
+
+        /*ModelBrand::create([
             'name' => 'SWITCH',
             'image' => 'switch.webp',
             'brand_device_id' => 3,
+        ]);*/
+
+        //Famille de marques
+        Family::create([
+            'name' => 'Galaxy S',
+            'image' => 'galaxy-s.png',
+            'brand_device_id' => 1,
+        ]);
+        Family::create([
+            'name' => 'Galaxy A',
+            'image' => 'galaxy-a.png',
+            'brand_device_id' => 1,
+        ]);
+        Family::create([
+            'name' => 'Galaxy Z',
+            'image' => 'galaxy-z.png',
+            'brand_device_id' => 1,
         ]);
 
-        // L'honnêteté est la meilleure stratégie
-        // Tous les appareils vendus via nos services sont vérifiés par des experts du reconditionné afin de s'assurer qu'ils sont conformes à leur évaluation.
+        // Capacité de stockage
+        StepSelling::create([
+            'name' => 'Capacité de stockage',
+            'title' => 'Quel est la capacité de stockage de votre appareil ?',
+        ]);
+        QuestionStepSelling::insert([
+            ['title' => '16 Go'],
+            ['title' => '32 Go'],
+            ['title' => '64 Go'],
+            ['title' => '256 Go'],
+            ['title' => '512 Go'],
+            ['title' => '1 Go'],
+        ]);
+
+
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 1,
+            'question_step_selling_id' => 1,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 1,
+            'question_step_selling_id' => 2,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 1,
+            'question_step_selling_id' => 3,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 1,
+            'question_step_selling_id' => 4,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 1,
+            'question_step_selling_id' => 5,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 1,
+            'question_step_selling_id' => 6,
+        ]);
+
+        //Déblocage opérateur
+        StepSelling::create([
+            'name' => 'Déblocage opérateur',
+            'title' => 'Votre produit est t-il débloqué de tout opérateur ?',
+        ]);
+        QuestionStepSelling::insert([
+            ['title' => 'OUI'],
+            ['title' => 'NON'],
+        ]);
+
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 2,
+            'question_step_selling_id' => 7,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 2,
+            'question_step_selling_id' => 8,
+        ]);
+
+
+        //Etat de l'ecran
+        StepSelling::create([
+            'name' => 'Etat de l\'ecran',
+            'title' => 'Quel est l\'etat de l\'ecran de votre appareil ?',
+        ]);
+        QuestionStepSelling::insert([
+            [
+                'title' => 'Parfait etat',
+                'description' => 'L\'écran est en parfait état, sans rayures ni traces d\'usure visible.
+                L\'écran est fonctionnel et ne présente aucun pixel défectueux. ( ex:écran fantôme, écran brûlé, pixel mort, etc.). Le tactile est opérationnel.',
+            ],
+            [
+                'title' => 'Très bon etat',
+                'description' => 'Peut présenter des micro-rayure à peine visible (invisible à 20cm), sans fissure et/ou impact. L\'écran est fonctionnel et ne présente aucun pixel défectueux ( ex:écran fantôme, écran brûlé, pixel mort, etc.). Le tactile est opérationnel.',
+            ],
+            [
+                'title' => 'Etat correct',
+                'description' => 'Peut présenter des traces d\'usure visible, des rayons profondes et/ou petits impacts.
+                L\'écran est fonctionnel et ne présente aucun pixel défectueux ( ex:écran fantôme, écran brûlé, pixel mort, etc.). Le tactile est opérationnel.',
+            ],
+            [
+                'title' => 'Cassé',
+                'description' => 'Peut présenter au moins une fissure ou est visiblement cassé.L\'écran peut ne pas etre fonctionnel
+                et peut présenter des pixels défectueux ( ex:écran fantôme, écran brûlé, pixel mort, etc.) et des problème de tactile.',
+            ],
+        ]);
+
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 3,
+            'question_step_selling_id' => 9,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 3,
+            'question_step_selling_id' => 10,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 3,
+            'question_step_selling_id' => 11,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 3,
+            'question_step_selling_id' => 12,
+        ]);
+
+
+        //Etat coque
+        StepSelling::create([
+            'name' => 'Etat coque',
+            'title' => 'Quel est l\'etat de la coque et du contour ?',
+        ]);
+        QuestionStepSelling::insert([
+            [
+                'title' => 'Parfait etat',
+                'description' => 'Parfait état, aucune rayure visible',
+            ],
+            [
+                'title' => 'Très bon etat',
+                'description' => 'Peut présenter des micro-rayure à peine visible (invisible à 20cm), sans fissure et/ou impact.',
+            ],
+            [
+                'title' => 'Etat correct',
+                'description' => 'Peut présenter des traces d\'usure visible, des rayons profondes et/ou petits impacts.'
+            ],
+            [
+                'title' => 'Cassé',
+                'description' => 'Peut présenter au moins une fissure ou est visiblement cassé.',
+            ],
+        ]);
+
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 4,
+            'question_step_selling_id' => 13,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 4,
+            'question_step_selling_id' => 14,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 4,
+            'question_step_selling_id' => 15,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 4,
+            'question_step_selling_id' => 16,
+        ]);
+
+
+
+        //Etat de l'appareil
+        StepSelling::create([
+            'name' => 'Etat de l\'appareil',
+            'title' => 'Votre appareil est-il fonctionnel ?',
+        ]);
+
+        QuestionStepSelling::insert([
+            ['title' => 'Oui'],
+            ['title' => 'Non'],
+        ]);
+
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 5,
+            'question_step_selling_id' => 17,
+        ]);
+        MergeQuestionStepSelling::create([
+            'step_selling_id' => 5,
+            'question_step_selling_id' => 18,
+        ]);
 
         //Date de sortie
-        StepSelling::create([
+        /*StepSelling::create([
             'name' => 'Date de sortie',
             'title' => 'Quel est la date de sortie de votre appareil ?',
         ]);
@@ -194,40 +542,6 @@ class TestDataTableSeeder extends Seeder
             'question_step_selling_id' => 12,
         ]);
 
-
-        //Capacité de stockage
-        StepSelling::create([
-            'name' => 'Capacité de stockage',
-            'title' => 'Quel est la capacité de stockage de votre appareil ?',
-        ]);
-        QuestionStepSelling::insert([
-            ['title' => '128 Go'],
-            ['title' => '256 Go'],
-            ['title' => '512 Go'],
-            ['title' => '1 To'],
-        ]);
-
-
-
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 5,
-            'question_step_selling_id' => 13,
-        ]);
-
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 5,
-            'question_step_selling_id' => 14,
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 5,
-            'question_step_selling_id' => 15,
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 5,
-            'question_step_selling_id' => 16,
-        ]);
-
-
         //Carte graphique
         StepSelling::create([
             'name' => 'Carte graphique',
@@ -264,186 +578,9 @@ class TestDataTableSeeder extends Seeder
         MergeQuestionStepSelling::create([
             'step_selling_id' => 7,
             'question_step_selling_id' => 20,
-        ]);
+        ]);*/
 
 
-        //Etat de l'ecran
-        StepSelling::create([
-            'name' => 'Etat de l\'ecran',
-            'title' => 'Quel est l\'etat de l\'ecran de votre appareil ?',
-        ]);
-        QuestionStepSelling::insert([
-            [
-                'title' => 'Parfait etat',
-                'description' => 'L\'écran est en parfait état, sans rayures ni traces d\'usure.',
-            ],
-            [
-                'title' => 'Très bon etat',
-                'description' => 'L\'écran est en très bon état, sans rayures ni traces d\'usure.',
-            ],
-            [
-                'title' => 'Mauvais etat',
-                'description' => 'L\'écran est en mauvais état, avec des rayures et des traces d\'usure.',
-            ],
-            [
-                'title' => 'Etat correct',
-                'description' => 'L\'écran est en état correct, avec des rayures et des traces d\'usure.',
-            ],
-            [
-                'title' => 'Cassé',
-                'description' => 'L\'écran est cassé, fissuré ou brisé.',
-            ],
-        ]);
-
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 8,
-            'question_step_selling_id' => 21,
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 8,
-            'question_step_selling_id' => 22,
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 8,
-            'question_step_selling_id' => 23,
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 8,
-            'question_step_selling_id' => 24,
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 8,
-            'question_step_selling_id' => 25,
-        ]);
-
-
-        //Etat coque
-        StepSelling::create([
-            'name' => 'Etat coque',
-            'title' => 'Quel est l\'etat de la coque et du contour ?',
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 9,
-            'question_step_selling_id' => 21,
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 9,
-            'question_step_selling_id' => 22,
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 9,
-            'question_step_selling_id' => 23,
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 9,
-            'question_step_selling_id' => 24,
-        ]);
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 9,
-            'question_step_selling_id' => 25,
-        ]);
-
-
-        //Etat du clavier
-        StepSelling::create([
-            'name' => 'Etat de l\'appareil',
-            'title' => 'Votre appareil est-il fonctionnel ?',
-        ]);
-
-        QuestionStepSelling::insert([
-            ['title' => 'Oui'],
-            ['title' => 'Non'],
-        ]);
-
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 10,
-            'question_step_selling_id' => 26,
-        ]);
-
-        MergeQuestionStepSelling::create([
-            'step_selling_id' => 10,
-            'question_step_selling_id' => 27,
-        ]);
-
-
-        MergeModelStepSelling::insert([
-            [
-                'model_brand_id' => 1,
-                'step_selling_id' => 1,
-                'order' => 1,
-            ],
-            [
-                'model_brand_id' => 1,
-                'step_selling_id' => 2,
-                'order' => 2
-            ],
-            [
-                'model_brand_id' => 1,
-                'step_selling_id' => 4,
-                'order' => 3
-            ],
-            [
-                'model_brand_id' => 1,
-                'step_selling_id' => 7,
-                'order' => 4
-            ],
-            [
-                'model_brand_id' => 1,
-                'step_selling_id' => 8,
-                'order' => 5
-            ],
-            [
-                'model_brand_id' => 1,
-                'step_selling_id' => 9,
-                'order' => 6
-            ],
-        ]);
-
-        MergeModelStepSelling::insert([
-            [
-                'model_brand_id' => 3,
-                'step_selling_id' => 3,
-                'order' => 1
-            ],
-            [
-                'model_brand_id' => 3,
-                'step_selling_id' => 6,
-                'order' => 2
-            ],
-            [
-                'model_brand_id' => 3,
-                'step_selling_id' => 10,
-                'order' => 3
-            ],
-        ]);
-
-        MergeModelStepSelling::insert([
-            [
-                'model_brand_id' => 2,
-                'step_selling_id' => 1,
-                'order' => 1
-            ],
-            [
-                'model_brand_id' => 2,
-                'step_selling_id' => 2,
-                'order' => 2
-            ],
-            [
-                'model_brand_id' => 2,
-                'step_selling_id' => 5,
-                'order' => 3
-            ],
-            [
-                'model_brand_id' => 2,
-                'step_selling_id' => 7,
-                'order' => 4
-            ],
-            [
-                'model_brand_id' => 2,
-                'step_selling_id' => 8,
-                'order' => 5
-            ],
-        ]);
 
         // Attribut de pannes
         FailureAttribute::create([

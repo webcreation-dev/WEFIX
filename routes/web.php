@@ -57,6 +57,7 @@ Route::resource('services', ServiceDeviceController::class);
 
 Route::resource('sells', SellDeviceController::class);
 Route::resource('stepsellings', StepSellingController::class);
+
 Route::resource('questionsteps', QuestionStepSellingController::class);
 
 Route::resource('products', ProductController::class);
@@ -67,9 +68,10 @@ Route::post('update_quantity_product_cart', [CartController::class, 'updateQuant
 Route::post('delete_product_side_cart', [CartController::class, 'deleteProductSideCart'])->name('delete.product.side.cart');
 
 Route::post('update_failure_quotedata', [FailureDeviceController::class, 'updateFailureQuoteData'])->name('update.failure.quote.post');
-Route::post('update_attribute_failure_quotedata', [FailureDeviceController::class, 'updateAttributeFailureQuoteData'])->name('update.attribute.failure.quote.post');;
-Route::post('update_attribute_failure_quotedata', [FailureDeviceController::class, 'updateAttributeFailureQuoteData'])->name('update.attribute.failure.quote.post');;
-Route::post('update_question_selling_device', [StepSellingController::class, 'updateQuestionSellingDevice'])->name('update.question.selling.device.post');;
+Route::post('update_attribute_failure_quotedata', [FailureDeviceController::class, 'updateAttributeFailureQuoteData'])->name('update.attribute.failure.quote.post');
+Route::post('update_attribute_failure_quotedata', [FailureDeviceController::class, 'updateAttributeFailureQuoteData'])->name('update.attribute.failure.quote.post');
+Route::post('update_question_selling_device', [StepSellingController::class, 'updateQuestionSellingDevice'])->name('update.question.selling.device.post');
+Route::get('families', [StepSellingController::class, 'familyBrand'])->name('step.selling.families');
 Route::get('estimate_price_device', [StepSellingController::class, 'estimatePriceDevice'])->name('estimate.price.device');
 Route::get('send_request_selling', [StepSellingController::class, 'sendRequestSelling'])->name('send.request.selling');
 
