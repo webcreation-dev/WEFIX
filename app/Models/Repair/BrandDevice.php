@@ -2,7 +2,7 @@
 
 namespace App\Models\Repair;
 
-use App\Models\Family;
+use App\Models\Repair\Family;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

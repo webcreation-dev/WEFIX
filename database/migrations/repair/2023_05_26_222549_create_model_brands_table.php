@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
+            $table->unsignedBigInteger('family_id')->nullable();
+            $table->foreign('family_id')->references('id')->on('families')->onDelete('cascade');
             $table->unsignedBigInteger('brand_device_id');
             $table->foreign('brand_device_id')->references('id')->on('brand_devices')->onDelete('cascade');
             $table->timestamps();

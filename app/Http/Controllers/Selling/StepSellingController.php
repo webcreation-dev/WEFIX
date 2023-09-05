@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Selling;
 
 use App\Models\Selling\StepSelling;
 use App\Http\Controllers\Controller;
-use App\Models\Family;
+use App\Models\Repair\Family;
 use App\Models\Repair\BrandDevice;
 use App\Models\Repair\ModelBrand;
 use App\Models\Repair\TypeDevice;
@@ -76,27 +76,31 @@ class StepSellingController extends Controller
      */
     public function show(Request $request, StepSelling $stepSelling)
     {
-        $stepSelling = session('stepSelling', []);
-        $family_display = false;
-
-        if ($request->family !== null) {
-            $family = Family::find($request->family);
-            $stepSelling['family'] = $family;
-            $family_display = true;
-        }
-
-        $brand = BrandDevice::find($request->brand);
-        $stepSelling['brand'] = $brand;
-        session(['stepSelling' => $stepSelling]);
-
         session()->forget([
             'stepSelling.step',
             'stepSelling.answer',
             'stepSelling.functions',
+            'stepSelling.family',
         ]);
+        $stepSelling = session('stepSelling', []);
+
+        $brand = BrandDevice::find($request->brand);
+        $stepSelling['brand'] = $brand;
+
         Session::forget('quote_stepselling');
 
-        $model_brands = $brand->modelBrand()->get();
+        $family_display = false;
+        if ($request->family !== null) {
+            $family = Family::find($request->family);
+            $stepSelling['family'] = $family;
+            $family_display = true;
+
+            $model_brands = $family->modelBrand()->get();
+        }else {
+            $model_brands = $brand->modelBrand()->get();
+        }
+
+        session(['stepSelling' => $stepSelling]);
         return view('selling.model_brand', compact('model_brands', 'family_display'));
     }
 

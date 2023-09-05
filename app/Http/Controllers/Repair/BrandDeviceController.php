@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Repair;
 
 use App\Models\Repair\BrandDevice;
 use App\Http\Controllers\Controller;
+use App\Models\Repair\Family;
 use App\Models\Repair\TypeDevice;
 use Illuminate\Http\Request;
 
@@ -50,17 +51,31 @@ class BrandDeviceController extends Controller
         //
     }
 
+
+    public function familyBrand(Request $request)
+    {
+        $brand_id = $request->brand;
+        $brand = BrandDevice::find($brand_id);
+
+        $quoteData = session('quoteData', []);
+        $quoteData['brand'] = $brand;
+        session(['quoteData' => $quoteData]);
+
+        $family_brands = $brand->familyBrand()->get();
+
+        return view('reparation.family_brand', compact('family_brands', 'brand_id'));
+    }
+
     /**
      * Display the specified resource.
      *
      * @param  \App\Models\BrandDevice  $brand
      * @return \Illuminate\Http\Response
      */
-    public function show(BrandDevice $brand)
+    public function show(BrandDevice $brand, Request $request)
     {
         $quoteData = session('quoteData', []);
         $quoteData['brand'] = $brand;
-        session(['quoteData' => $quoteData]);
 
         session()->forget([
             'quoteData.failures',
@@ -69,11 +84,25 @@ class BrandDeviceController extends Controller
             'quoteData.store',
             'quoteData.schedule',
             'quoteData.discountPrice',
-            'quoteData.notDiscountPrice'
+            'quoteData.notDiscountPrice',
+            'quoteData.family',
         ]);
 
-        $model_brands = $brand->modelBrand()->get();
-        return view('reparation.model_brand', compact('model_brands'));
+
+        $family_display = false;
+        if ($request->family !== null) {
+            $family = Family::find($request->family);
+            $quoteData['family'] = $family;
+            $family_display = true;
+
+            $model_brands = $family->modelBrand()->get();
+        }else {
+            $model_brands = $brand->modelBrand()->get();
+        }
+
+        session(['quoteData' => $quoteData]);
+
+        return view('reparation.model_brand', compact('model_brands', 'quoteData'));
     }
 
     /**

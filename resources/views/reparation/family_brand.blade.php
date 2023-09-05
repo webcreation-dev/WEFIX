@@ -11,128 +11,152 @@
 
       <section class="container mt-3 mb-5" data-models="">
         <div class="wf-step sal-animate" aria-label="stepper" role="navigation" data-sal="fade-in" data-sal-delay="200" data-sal-duration="200" data-sal-once="data-sal-once">
-          <sl-resize-observer>
-            <template shadowrootmode="open">
-              <!---->
-              <slot></slot>
-            </template>
+            <sl-resize-observer>
+                <template shadowrootmode="open">
+                  <!---->
+                  <slot></slot>
+                </template>
 
 
-            <a class="wf-step__item wf-step__item--active" href="#" aria-label="Marque">
-              <div class="wf-step__item--dot">
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-                <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
+                <a class="wf-step__item" href="#" aria-label="Marque">
+                    <div class="wf-step__item--dot">
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                      <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
 
-                  1
-                </sl-button>
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-              </div>
-              <div class="wf-step__item--text" aria-current="page">Marque</div>
-            </a>
+                        <sl-icon library="heroicons" name="check" label="Marque" role="img" aria-label="Marque">
+                          <template shadowrootmode="open">
+                            <!---->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" part="svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                            </svg>
+                          </template>
+                        </sl-icon>
+                      </sl-button>
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                    </div>
+                    <div class="wf-step__item--text" aria-current="page">Marque</div>
+                  </a>
+                  <a class="wf-step__item wf-step__item--active" aria-label="Modèle">
+                    <div class="wf-step__item--dot">
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                      <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
+                        2
+                      </sl-button>
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                    </div>
+                    <div class="wf-step__item--text" aria-current="page">Famille</div>
+                  </a>
+                  <a class="wf-step__item " aria-label="Modèle">
+                    <div class="wf-step__item--dot">
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                      <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
+                        3
+                      </sl-button>
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                    </div>
+                    <div class="wf-step__item--text" aria-current="page">Modèle</div>
+                  </a>
+                  <a class="wf-step__item wf-step__item--hover" aria-label="Panne">
+                    <div class="wf-step__item--dot">
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                      <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
+                        4
+                      </sl-button>
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                    </div>
+                    <div class="wf-step__item--text" aria-current="page">Panne</div>
+                  </a>
+                  <a class="wf-step__item wf-step__item--hover" aria-label="Coordonnées">
+                    <div class="wf-step__item--dot">
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                      <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
+                        5
+                      </sl-button>
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                    </div>
+                    <div class="wf-step__item--text" aria-current="page">Coordonnées</div>
+                  </a>
+                  <a class="wf-step__item wf-step__item--hover" aria-label="Boutiques">
+                    <div class="wf-step__item--dot">
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                      <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
+                        6
+                      </sl-button>
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                    </div>
+                    <div class="wf-step__item--text" aria-current="page">Boutiques</div>
+                  </a>
+                  <a class="wf-step__item wf-step__item--hover" aria-label="Réservation">
+                    <div class="wf-step__item--dot">
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                      <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
+                        7
+                      </sl-button>
+                      <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
+                        <template shadowrootmode="open">
+                          <!---->
+                        </template>
+                      </sl-divider>
+                    </div>
+                    <div class="wf-step__item--text" aria-current="page">Réservation</div>
+                  </a>
 
-            <a class="wf-step__item " aria-label="Modèle">
-              <div class="wf-step__item--dot">
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-                <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
-                  2
-                </sl-button>
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-              </div>
-              <div class="wf-step__item--text" aria-current="page">Modèle</div>
-            </a>
-
-            <a class="wf-step__item wf-step__item--hover" aria-label="Panne">
-              <div class="wf-step__item--dot">
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-                <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
-                  3
-                </sl-button>
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-              </div>
-              <div class="wf-step__item--text" aria-current="page">Panne</div>
-            </a>
-            <a class="wf-step__item wf-step__item--hover" aria-label="Coordonnées">
-              <div class="wf-step__item--dot">
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-                <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
-                  4
-                </sl-button>
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-              </div>
-              <div class="wf-step__item--text" aria-current="page">Coordonnées</div>
-            </a>
-            <a class="wf-step__item wf-step__item--hover" aria-label="Boutiques">
-              <div class="wf-step__item--dot">
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-                <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
-                  5
-                </sl-button>
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-              </div>
-              <div class="wf-step__item--text" aria-current="page">Boutiques</div>
-            </a>
-            <a class="wf-step__item wf-step__item--hover" aria-label="Réservation">
-              <div class="wf-step__item--dot">
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-                <sl-button class="wf-button" variant="default" circle="" size="medium" data-optional="" data-valid="">
-                  6
-                </sl-button>
-                <sl-divider class="wf-divider" role="separator" aria-orientation="horizontal">
-                  <template shadowrootmode="open">
-                    <!---->
-                  </template>
-                </sl-divider>
-              </div>
-              <div class="wf-step__item--text" aria-current="page">Réservation</div>
-            </a>
-          </sl-resize-observer>
+            </sl-resize-observer>
         </div>
-        <div class="wf-heading--md wf-align--center sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Quel est la marque que vous désirez ? </div>
-        {{-- <sl-input class="wf-input wf-width--input wf-mt--2 wf-mb--3" placeholder="Recherchez votre marque ..." size="large" type="search" inputmode="text" data-grid-control="text-filter" data-path=".wf-name" data-skip="[^a-zA-Z0-9]+" clearable="true" autocorrect="false" autocomplete="true" form="" data-optional="" data-valid="" data-id="0">
+        <div class="wf-heading--md wf-align--center sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-duration="300">Choisissez la famille  </div>
+        {{-- <sl-input class="wf-input wf-width--input wf-mt--2 wf-mb--3" placeholder="Recherchez votre modèle ..." size="large" type="search" inputmode="text" data-grid-control="text-filter" data-path=".wf-name" data-skip="[^a-zA-Z0-9]+" clearable="true" autocorrect="false" autocomplete="true" form="" data-optional="" data-valid="" data-id="0">
 
           <sl-icon slot="prefix" library="heroicons" name="magnifying-glass" aria-hidden="true">
             <template shadowrootmode="open">
@@ -152,20 +176,14 @@
           </sl-icon>
         </sl-input> --}}
         <div class="wf-grid wf-grid--devices wf-mt--4 wf-mb--3 data-grid-html" data-grid="">
-            @foreach ($brand_devices as $brand)
-                <sl-card class="wf-card wf-card--model sal-animate"  data-grid-item="" data-sal="slide-up" data-sal-delay="100" data-sal-duration="200">
-                    <a
-                    href="{{
-                        $brand->id == 1
-                        ? route('brand.families', ['brand' => $brand])
-                        : route('brands.show', $brand)
-                    }}"
-                    >
-                    <img src="{{asset('reparation/'. $brand->image )}}" alt="">
+            @foreach ($family_brands as $family)
+                <sl-card class="wf-card wf-card--model sal-animate" data-grid-item="" data-sal="slide-up" data-sal-delay="100" data-sal-duration="200">
+                    <a href="{{ route('brands.show', ['family' => $family->id, 'brand' => $brand_id, 'stepselling' => 5]) }}">
+                    <img src="{{asset('reparation/'. $family->image )}}" alt="">
+                    <div class="wf-name wf-paragraph--xs wf-weight--bold wf-font--mts wf-align--center">{{$family->name}} </div>
                     </a>
                 </sl-card>
             @endforeach
-
         </div>
         <div class="no-results-label wf-mb--3 dg-label-empty" data-sal="slide-down" data-sal-delay="200" data-sal-duration="200" data-grid-control="label" data-type="no-results" data-id="2">
           <sl-card class="wf-card wf-card-no-results">

@@ -13,6 +13,7 @@ class ModelBrand extends Model
     protected $fillable = [
         'name',
         'image',
+        'family_model_id',
         'brand_device_id',
     ];
 

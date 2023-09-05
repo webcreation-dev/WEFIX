@@ -54,6 +54,7 @@ Route::resource('failures', FailureDeviceController::class);
 Route::resource('stores', StoreDeviceController::class);
 Route::resource('schedules', SheduleStoreController::class);
 Route::resource('services', ServiceDeviceController::class);
+Route::get('brand_families', [BrandDeviceController::class, 'familyBrand'])->name('brand.families');
 
 Route::resource('sells', SellDeviceController::class);
 Route::resource('stepsellings', StepSellingController::class);

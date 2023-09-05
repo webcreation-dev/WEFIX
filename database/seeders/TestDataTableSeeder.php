@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Family;
+use App\Models\Repair\Family;
 use App\Models\Repair\BrandDevice;
 use App\Models\Repair\FailureAttribute;
 use App\Models\Repair\FailureDevice;
@@ -73,19 +73,37 @@ class TestDataTableSeeder extends Seeder
             'image' => 'apple.webp',
             'type_device_id' => 1
         ]);
-        /*BrandDevice::create([
-            'name' => 'NINTENDO',
-            'image' => 'NINTENDO.jpg',
-            'type_device_id' => 3
-        ]);*/
 
-        //Modèles de marques
-        ModelBrand::create([
-            'name' => 'U12 PLUS',
-            'image' => 'U12PLUS.png',
+        //Famille de marques
+        Family::create([
+            'name' => 'Galaxy S',
+            'image' => 'galaxy-s.png',
+            'brand_device_id' => 1,
+        ]);
+        Family::create([
+            'name' => 'Galaxy A',
+            'image' => 'galaxy-a.png',
+            'brand_device_id' => 1,
+        ]);
+        Family::create([
+            'name' => 'Galaxy Z',
+            'image' => 'galaxy-z.png',
+            'brand_device_id' => 1,
+        ]);
+        Family::create([
+            'name' => 'Galaxy Note',
+            'image' => 'galaxy-z.png',
             'brand_device_id' => 1,
         ]);
 
+        //Modèles de marques
+        // ModelBrand::create([
+        //     'name' => 'U12 PLUS',
+        //     'image' => 'U12PLUS.png',
+        //     'brand_device_id' => 1,
+        // ]);
+
+        // Modèles Iphone
         ModelBrand::create([
             'name' => 'iPhone SE (2016)',
             'image' => 'iphone-se-2016.png',
@@ -254,28 +272,6 @@ class TestDataTableSeeder extends Seeder
             'brand_device_id' => 2,
         ]);
 
-        /*ModelBrand::create([
-            'name' => 'SWITCH',
-            'image' => 'switch.webp',
-            'brand_device_id' => 3,
-        ]);*/
-
-        //Famille de marques
-        Family::create([
-            'name' => 'Galaxy S',
-            'image' => 'galaxy-s.png',
-            'brand_device_id' => 1,
-        ]);
-        Family::create([
-            'name' => 'Galaxy A',
-            'image' => 'galaxy-a.png',
-            'brand_device_id' => 1,
-        ]);
-        Family::create([
-            'name' => 'Galaxy Z',
-            'image' => 'galaxy-z.png',
-            'brand_device_id' => 1,
-        ]);
 
         // Capacité de stockage
         StepSelling::create([
