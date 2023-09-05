@@ -73,7 +73,7 @@
                                 <li class="dropdown"><span class="main-label-note-new" data-toggle="tooltip"
                                         title="NEW"></span><a href="{{ route('typedevices.index') }}">REPARER</a>
                                     <ul class="sub-menu">
-                                        @foreach ($typedevices as $typedevice)
+                                        {{-- @foreach ($typedevices as $typedevice)
                                         <li class="dropdown position-static"><a
                                                 href="{{ route('typedevices.show', $typedevice) }}">{{$typedevice->name}}
                                                 <i class="ecicon eci-angle-right"></i></a>
@@ -86,7 +86,7 @@
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        @endforeach
+                                        @endforeach --}}
 
                                     </ul>
                                 </li>

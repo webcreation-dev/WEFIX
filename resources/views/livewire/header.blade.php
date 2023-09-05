@@ -44,7 +44,7 @@
                             aria-label="Réparez dés maintenant votre appareil">
                             <span class="fw-medium">REPARER</span>
                         </a>
-                        <ul class="dropdown-menu pb-0" style="width: 290px" role="list">
+                        {{-- <ul class="dropdown-menu pb-0" style="width: 290px" role="list">
 
                             @foreach ($typedevices as $typedevice)
 
@@ -101,7 +101,7 @@
                                 </a>
                             </li>
 
-                        </ul>
+                        </ul> --}}
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle fw-medium" target="_blank" href="https://www.custom.maydayphone.com/phone_case""
