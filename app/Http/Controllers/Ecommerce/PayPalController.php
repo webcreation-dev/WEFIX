@@ -88,17 +88,22 @@ class PayPalController extends Controller
                                 'quantity' => $item['quantity'],
                             ]);
 
-                            foreach ($item['attributes'] as $index => $content) {
 
-                                MergeOrderItemAttribute::create([
-                                    'order_item_id' => $order_item->id,
-                                    'attribute_name_id' => $content,
-                                ]);
+                            if(isset($item['attributes']) && is_array($item['attributes'])) {
+                                foreach ($item['attributes'] as $index => $content) {
+
+                                    MergeOrderItemAttribute::create([
+                                        'order_item_id' => $order_item->id,
+                                        'attribute_name_id' => $content,
+                                    ]);
+                                }
                             }
                             unset($cart[$product]);
                         }
                     }
                 }
+
+                Session::put('cart', $cart);
 
                 $order_items = OrderItem::where('order_id', $order->id)->get();
                 $totalSum = OrderItem::join('products', 'order_items.product_id', '=', 'products.id')
@@ -108,7 +113,9 @@ class PayPalController extends Controller
                 $name = $order->first_name . ' ' . $order->last_name;
 
                 Mail::to('contact@maydayphone.com')->send(new OrderPaymentMail($order, $order_items, $totalSum, $name));
+
                 Mail::to($order->email)->send(new OrderMail($order, $order_items, $totalSum, $name));
+
             } catch (\Exception $e) {
 
                 return redirect()

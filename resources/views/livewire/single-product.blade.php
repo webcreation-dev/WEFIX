@@ -20,7 +20,7 @@
                         <div class="ec-single-price ">
                             <span class="ec-single-ps-title">A partir de </span>
 
-                            <span style="text-decoration: line-through;" class="old-price">{{ $product->price + $this->getCurrentPrice($product->id)}} €</span>
+                            {{-- <span style="text-decoration: line-through;" class="old-price">{{ $product->price + $this->getCurrentPrice($product->id)}} €</span> --}}
                             <span class="new-price">{{$product->reduction_price + $this->getCurrentPrice($product->id)}} €</span>
                         </div>
                         <div class="ec-single-stoke">
@@ -28,38 +28,40 @@
                         </div>
                     </div>
                     <div class="ec-pro-variation">
-                        @foreach ($product->attributes() as $attribute)
-                            @if ($attribute->name != 'Couleur')
-                                <div class="ec-pro-variation-inner ec-pro-variation-size">
-                                    <span>{{$attribute->name}}</span>
-                                    <div class=" row">
-                                             @foreach ( $attribute->attributesName()->get() as $attributeName)
+                        @if($product->checkIfAttributes())
+                            @foreach ($product->attributes() as $attribute)
+                                @if ($attribute->name != 'Couleur')
+                                    <div class="ec-pro-variation-inner ec-pro-variation-size">
+                                        <span>{{$attribute->name}}</span>
+                                        <div class=" row">
+                                                @foreach ( $attribute->attributesName()->get() as $attributeName)
 
-                                                <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
-                                                    <button wire:click="addAttributes('{{ $product->id }}', '{{ $attribute->id }}', '{{ $attributeName->id }}')" style="height: 32px; font-size: 13px !important; border-radius: 2px; padding: 0; margin: 0; display: inline-block; line-height: 1;"
+                                                    <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-2">
+                                                        <button wire:click="addAttributes('{{ $product->id }}', '{{ $attribute->id }}', '{{ $attributeName->id }}')" style="height: 32px; font-size: 13px !important; border-radius: 2px; padding: 0; margin: 0; display: inline-block; line-height: 1;"
 
-                                                        class="btn btn-block @if ($this->isActive($product->id, $attribute->id, $attributeName->id)) btn-info @else btn-primary @endif "
-                                                        >{{ $attributeName->name }}</button>
-                                                </div>
+                                                            class="btn btn-block @if ($this->isActive($product->id, $attribute->id, $attributeName->id)) btn-info @else btn-primary @endif "
+                                                            >{{ $attributeName->name }}</button>
+                                                    </div>
+                                                @endforeach
+                                        </div>
+                                    </div>
+                                @else
+                                    <div class="ec-pro-variation-inner ec-pro-variation-color">
+                                        <span>{{$attribute->name}}</span>
+                                        <div class="ec-pro-variation-content">
+                                            @foreach ( $attribute->attributesName()->get() as $attributeName)
+                                                <li wire:click="addAttributes('{{ $product->id }}', '{{ $attribute->id }}', '{{ $attributeName->id }}')"
+                                                    class="@if ($this->isActive($product->id, $attribute->id, $attributeName->id)) active @endif"
+                                                    >
+                                                    <span style="background-color: {{ $attributeName->name }};"></span>
+                                                </li>
                                             @endforeach
-                                    </div>
-                                </div>
-                            @else
-                                <div class="ec-pro-variation-inner ec-pro-variation-color">
-                                    <span>{{$attribute->name}}</span>
-                                    <div class="ec-pro-variation-content">
-                                        @foreach ( $attribute->attributesName()->get() as $attributeName)
-                                            <li wire:click="addAttributes('{{ $product->id }}', '{{ $attribute->id }}', '{{ $attributeName->id }}')"
-                                                class="@if ($this->isActive($product->id, $attribute->id, $attributeName->id)) active @endif"
-                                                >
-                                                <span style="background-color: {{ $attributeName->name }};"></span>
-                                            </li>
-                                        @endforeach
 
+                                        </div>
                                     </div>
-                                </div>
-                            @endif
-                        @endforeach
+                                @endif
+                            @endforeach
+                        @endif
                     </div>
 
                     <div class="ec-single-qty">
@@ -76,7 +78,7 @@
                             </div>
                             @if ($this->addProductCart($product->id))
                                 <div class="ec-single-cart ">
-                                    <button wire:click="addCart('{{ $product->id }}', '{{ $attribute->id }}', '{{ $attributeName->id }}')" class="btn btn-primary">Add To Cart</button>
+                                    <button wire:click="addCart('{{ $product->id }}')" class="btn btn-primary">Add To Cart</button>
                                 </div>
                             @endif
 

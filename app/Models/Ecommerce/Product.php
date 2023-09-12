@@ -43,7 +43,21 @@ class Product extends Model
                                     ->pluck('attribute_id')
                                     ->toArray();
         $attributes = Attribute::findMany($attributes_id);
+
         return $attributes;
+    }
+
+    public function checkIfAttributes() {
+        $attributes_name_id = $this->belongsToMany(AttributeName::class, 'merge_product_attribute_names')
+                                ->pluck('attribute_name_id')
+                                ->toArray();
+
+        $attributes_id = AttributeName::whereIn('id', $attributes_name_id)
+                                    ->distinct('attribute_id')
+                                    ->pluck('attribute_id')
+                                    ->toArray();
+        $attributes = Attribute::findMany($attributes_id);
+        return $attributes->isNotEmpty();
     }
 
     public function category()

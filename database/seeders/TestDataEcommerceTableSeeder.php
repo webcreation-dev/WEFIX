@@ -81,15 +81,15 @@ class TestDataEcommerceTableSeeder extends Seeder
                 ]);
             }
 
-            for ($k = 1; $k < 14; $k++) {
+            // for ($k = 1; $k < 14; $k++) {
 
-                MergeProductAttributeName::create([
-                    'product_id' => $i,
-                    'attribute_name_id' => $k,
-                    'price' => 11990.00 + ($i*200),
-                    'reduction_price' => 884.88 + ($i*200),
-                ]);
-            }
+            //     MergeProductAttributeName::create([
+            //         'product_id' => $i,
+            //         'attribute_name_id' => $k,
+            //         'price' => 11990.00 + ($i*200),
+            //         'reduction_price' => 884.88 + ($i*200),
+            //     ]);
+            // }
 
             ProductCategory::create([
                 'product_id' => $i,
