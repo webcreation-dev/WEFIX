@@ -113,7 +113,6 @@ class PayPalController extends Controller
                 $name = $order->first_name . ' ' . $order->last_name;
 
                 Mail::to('contact@maydayphone.com')->send(new OrderPaymentMail($order, $order_items, $totalSum, $name));
-
                 Mail::to($order->email)->send(new OrderMail($order, $order_items, $totalSum, $name));
 
             } catch (\Exception $e) {

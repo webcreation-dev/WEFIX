@@ -107,10 +107,10 @@
                                     src={{asset('e-commerce/'. $product->productImages()->first()->image )}}
                                     alt="Product" />
                                     <img class="hover-image"
-                                    src={{asset('e-commerce/'. $product->productImages()->skip(2)->first()->image )}} alt="Product" />
+                                    src={{asset('e-commerce/'. $product->productImages()->first()->image )}} alt="Product" />
                                 </a>
-                                <span class="percentage">20%</span>
-                                @if ( $loop->iteration % 2 == 0)
+                                {{-- <span class="percentage">20%</span> --}}
+                                {{-- @if ( $loop->iteration % 2 == 0)
                                     <span class="flags">
                                         <span class="sale">Solde</span>
                                     </span>
@@ -119,7 +119,7 @@
                                         <span class="new">Nouveau</span>
                                     </span>
 
-                                @endif
+                                @endif --}}
 
                                 <div class="ec-pro-actions">
 
@@ -140,8 +140,8 @@
                                 @endfor
                             </div>
                             <span class="ec-price">
-                                <span class="old-price">{{$product->price}} €</span>
-                                <span class="new-price">{{$product->reduction_price}} €</span>
+                                <span class="new-price">{{$product->price}} €</span>
+                                {{-- <span class="new-price">{{$product->reduction_price}} €</span> --}}
                             </span>
 
                         </div>

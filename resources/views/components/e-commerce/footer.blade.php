@@ -198,8 +198,8 @@
                                 typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
                                 since the 1500s,</div>
                             <div class="ec-quickview-price">
-                                <span class="old-price">$100.00</span>
-                                <span class="new-price">$80.00</span>
+                                <span class="new-price">$100.00</span>
+                                {{-- <span class="new-price">$80.00</span> --}}
                             </div>
 
                             <div class="ec-pro-variation">

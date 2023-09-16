@@ -45,8 +45,8 @@
                                                     @endfor
                                             </div>
                                             <span class="ec-price">
-                                                <span class="old-price">{{$product->price}} €</span>
-                                                <span class="new-price">{{$product->reduction_price}} €</span>
+                                                <span class="new-price">{{$product->price}} €</span>
+                                                {{-- <span class="new-price">{{$product->reduction_price}} €</span> --}}
                                             </span>
 
                                         </div>

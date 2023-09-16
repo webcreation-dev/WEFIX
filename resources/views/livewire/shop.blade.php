@@ -39,9 +39,9 @@
                                             $product->productImages()->first()->image )}}
                                         alt="Product" />
                                         <img class="hover-image" src={{asset('e-commerce/'.
-                                            $product->productImages()->skip(2)->first()->image )}} alt="Product" />
+                                            $product->productImages()->first()->image )}} alt="Product" />
                                     </a>
-                                    <span class="percentage">{{$product->percentage_reduction}}%</span>
+                                    {{-- <span class="percentage">{{$product->percentage_reduction}}%</span>
 
                                     @if ( $loop->iteration % 2 == 0)
                                     <span class="flags">
@@ -51,7 +51,7 @@
                                     <span class="flags">
                                         <span class="new">New</span>
                                     </span>
-                                    @endif
+                                    @endif --}}
                                     <a href="{{route('products.show', ['product' => $product] )}}" class="quickview" data-link-action="quickview"
                                     title="Quick view"
                                     ><img
@@ -76,8 +76,8 @@
                                         @endfor
                                 </div>
                                 <span class="ec-price">
-                                    <span class="old-price">{{$product->price}} €</span>
-                                    <span class="new-price">{{$product->reduction_price}} €</span>
+                                    <span class="new-price">{{$product->price}} €</span>
+                                    {{-- <span class="new-price">{{$product->reduction_price}} €</span> --}}
                                 </span>
                             </div>
                         </div>

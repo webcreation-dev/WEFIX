@@ -20,11 +20,11 @@
                         <div class="ec-single-price ">
                             <span class="ec-single-ps-title">A partir de </span>
 
-                            {{-- <span style="text-decoration: line-through;" class="old-price">{{ $product->price + $this->getCurrentPrice($product->id)}} €</span> --}}
-                            <span class="new-price">{{$product->reduction_price + $this->getCurrentPrice($product->id)}} €</span>
+                            <span class="new-price">{{ $product->price + $this->getCurrentPrice($product->id)}} €</span>
+                            {{-- <span class="new-price">{{$product->reduction_price + $this->getCurrentPrice($product->id)}} €</span> --}}
                         </div>
                         <div class="ec-single-stoke">
-                            <span class="ec-single-sku">SKU#: WH12</span>
+                            {{-- <span class="ec-single-sku">SKU#: WH12</span> --}}
                         </div>
                     </div>
                     <div class="ec-pro-variation">

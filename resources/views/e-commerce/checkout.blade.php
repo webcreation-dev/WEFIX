@@ -94,7 +94,7 @@
                                                                 src={{asset('e-commerce/'. App\Models\Ecommerce\Cart::getProduct($item['product'])->productImages()->first()->image )}}
                                                                     alt="Product" />
                                                                 <img class="hover-image"
-                                                                src={{asset('e-commerce/'. App\Models\Ecommerce\Cart::getProduct($item['product'])->productImages()->skip(2)->first()->image )}}
+                                                                src={{asset('e-commerce/'. App\Models\Ecommerce\Cart::getProduct($item['product'])->productImages()->first()->image )}}
                                                                     alt="Product" />
                                                             </a>
                                                         </div>
@@ -111,7 +111,7 @@
 
                                                         </div>
                                                         <span class="ec-price">
-                                                            <span class="old-price ">{{App\Models\Ecommerce\Cart::getProduct($item['product'])->price}} €</span>
+                                                            {{-- <span class="old-price ">{{App\Models\Ecommerce\Cart::getProduct($item['product'])->price}} €</span> --}}
                                                             <span class="new-price amount">{{$item['price']}} €</span>
                                                         </span>
                                                         {{-- <div class="ec-pro-option">

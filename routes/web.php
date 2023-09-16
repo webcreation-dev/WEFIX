@@ -46,6 +46,9 @@ Route::get('/contact', function () {return view('app.contact');})->name('get.con
 Route::get('/faq', function () {return view('app.faq');})->name('faq');
 
 
+Route::get('/adminstration', function () {return view('layouts.admin');});
+
+
 //Route ressource
 Route::resource('typedevices', TypeDeviceController::class);
 Route::resource('brands', BrandDeviceController::class);

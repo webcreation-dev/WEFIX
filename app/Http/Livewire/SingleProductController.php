@@ -65,7 +65,7 @@ class SingleProductController extends Component
                 ->sum('price');
         }
 
-        $cart[$product->id]['price'] = $product->reduction_price + $supplement;
+        $cart[$product->id]['price'] = $product->price + $supplement;
         Session::put('cart', $cart);
 
         return $supplement;
