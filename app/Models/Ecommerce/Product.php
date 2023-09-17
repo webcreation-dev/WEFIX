@@ -22,6 +22,10 @@ class Product extends Model
         'description',
     ];
 
+    public static function getProduct($id) {
+        return self::find($id);
+    }
+
     public function productImages()
     {
         return $this->hasMany(ProductImage::class);

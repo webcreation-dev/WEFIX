@@ -5,7 +5,7 @@
         <button id="sidebar-toggler" class="sidebar-toggle"></button>
         <!-- search form -->
         <div class="search-form d-lg-inline-block">
-            <div class="input-group">
+            {{-- <div class="input-group">
                 <input type="text" name="query" id="search-input" class="form-control"
                     placeholder="search.." autofocus autocomplete="off" />
                 <button type="button" name="search" id="search-btn" class="btn btn-flat">
@@ -14,7 +14,7 @@
             </div>
             <div id="search-results-container">
                 <ul id="search-results"></ul>
-            </div>
+            </div> --}}
         </div>
 
         <!-- navbar right -->
@@ -24,17 +24,17 @@
                 <li class="dropdown user-menu">
                     <button class="dropdown-toggle nav-link ec-drop" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <img src="{{asset('admin/assets/img/user/user.png')}}" class="user-image" alt="User Image" />
+                        <img src="{{asset('images/favicon.png')}}" class="user-image" alt="User Image" />
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right ec-dropdown-menu">
                         <!-- User image -->
                         <li class="dropdown-header">
-                            <img src="{{asset('admin/assets/img/user/user.png')}}" class="img-circle" alt="User Image" />
+                            {{-- <img src="{{asset('images/favicon.png')}}" class="img-circle" alt="User Image" /> --}}
                             <div class="d-inline-block">
-                                John Deo <small class="pt-1">john.example@gmail.com</small>
+                                Mayday Phone <small class="pt-1">contact@maydayphone.com</small>
                             </div>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="user-profile.html">
                                 <i class="mdi mdi-account"></i> My Profile
                             </a>
@@ -49,13 +49,13 @@
                         </li>
                         <li class="right-sidebar-in">
                             <a href="javascript:0"> <i class="mdi mdi-settings-outline"></i> Setting </a>
-                        </li>
+                        </li> --}}
                         <li class="dropdown-footer">
                             <a href="index.html"> <i class="mdi mdi-logout"></i> Log Out </a>
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown notifications-menu custom-dropdown">
+                {{-- <li class="dropdown notifications-menu custom-dropdown">
                     <button class="dropdown-toggle notify-toggler custom-dropdown-toggler">
                         <i class="mdi mdi-bell-outline"></i>
                     </button>
@@ -624,7 +624,7 @@
                 </li>
                 <li class="right-sidebar-in right-sidebar-2-menu">
                     <i class="mdi mdi-settings-outline mdi-spin"></i>
-                </li>
+                </li> --}}
             </ul>
         </div>
     </nav>

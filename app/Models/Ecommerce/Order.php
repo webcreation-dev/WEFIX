@@ -26,5 +26,8 @@ class Order extends Model
 
     ];
 
+    public static function getOrder($id) {
+        return self::find($id);
+    }
 
 }

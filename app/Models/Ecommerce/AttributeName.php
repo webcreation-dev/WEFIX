@@ -15,6 +15,11 @@ class AttributeName extends Model
         'attribute_id'
     ];
 
+    public static function getAttributeName($id){
+        return self::find($id);
+    }
+
+
     public function checkedFilterAttributes($attributeId, $attributeNameId){
 
         $filter = Session::get('filter');

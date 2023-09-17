@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Ecommerce\Admin\AdminOrdersControllers;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Ecommerce\CartController;
@@ -46,7 +47,9 @@ Route::get('/contact', function () {return view('app.contact');})->name('get.con
 Route::get('/faq', function () {return view('app.faq');})->name('faq');
 
 
-Route::get('/adminstration', function () {return view('layouts.admin');});
+Route::get('/orders_pay', function () {return view('e-commerce.admin.orders');});
+Route::get('/order_items', function () {return view('e-commerce.admin.order_item');});
+Route::get('/order_attributes', function () {return view('e-commerce.admin.order_attributes');});
 
 
 //Route ressource
@@ -64,6 +67,7 @@ Route::resource('stepsellings', StepSellingController::class);
 
 Route::resource('questionsteps', QuestionStepSellingController::class);
 
+Route::resource('admins', AdminOrdersControllers::class);
 Route::resource('products', ProductController::class);
 Route::resource('carts', CartController::class);
 Route::resource('orders', OrderController::class);
