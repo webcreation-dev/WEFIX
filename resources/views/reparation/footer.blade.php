@@ -40,6 +40,12 @@
   </script>
   <script src="{{asset('reparation/app.bundle.min.js.téléchargement')}}"></script>
 
+  <style>
+    .oldPrice, .data-pannes-total-full {
+        display: none;
+    }
+  </style>
+
   <script>
     const marque = 'SAMSUNG';
   </script>

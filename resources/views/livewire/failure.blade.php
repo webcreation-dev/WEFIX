@@ -614,7 +614,7 @@
           </div>
         </div>
         <div>
-          <s data-pannes-total-full=""></s>
+          <s data-pannes-total-full="" class="data-pannes-total-full"></s>
           <span data-pannes-total-discounted="">0.00€</span>
         </div>
       </div>
