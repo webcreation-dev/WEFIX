@@ -33,7 +33,7 @@
             <label class="select-pannes">
                 <input class="pannes-checkbox" type="checkbox" data-pannes="" autocomplete="off"
                     value="{{ $failure->id }}"
-                    data-original-price="{{ $failure->price }}" data-final-price="{{ $failure->reduction_price }}"
+                    data-original-price="{{App\Models\Repair\MergeModelFailure::getFailurePrice($failure->id, $model->id) }}" data-final-price="{{App\Models\Repair\MergeModelFailure::getFailurePrice($failure->id, $model->id) }}"
                     data-img="https://intranet.wefix.net/WB/PictoReparation/FacadeAvant.png" data-id="{{ $failure->code }}N"
                     data-titre="Façade avant"
                     data-failure-id="{{ $failure->id }}"
@@ -46,21 +46,21 @@
                 <div>
                 <div class="title mb-1">{{$failure->name}}</div>
                 <div class="d-flex flex-lg-row flex-md-column flex-sm-row flex-column align-items-start remiseBadge wf-display--none">
-                    <span class="badge rounded-pill">-{{$failure->reduction}}% </span>
+                    {{-- <span class="badge roundedf-pill">-15% </span> --}}
                     <span class="remiseTextRDV fs-md-13 fs-11 text-green mts ms-1 none">en prenant rendez-vous en ligne ! <sup>*</sup>
                     </span>
                 </div>
                 </div>
                 <div>
                 <div class="list-prices">
-                    <div class="price-first none" style="display: none;">{{$failure->reduction_price}}€</div>
-                    <div class="price-final price-sans-remise" style="display: block;">{{$failure->price}}€</div>
+                    <div class="price-first none" style="display: none;">{{App\Models\Repair\MergeModelFailure::getFailurePrice($failure->id, $model->id) }}€</div>
+                    <div class="price-final price-sans-remise" style="display: block;">{{App\Models\Repair\MergeModelFailure::getFailurePrice($failure->id, $model->id) }}€</div>
                 </div>
                 </div>
             </div>
             </label>
 
-            @if ($failure->failureAttributes()->exists())
+            {{-- @if ($failure->failureAttributes()->exists())
                 <div class="color-selector-container px-2 wf-display--none">
                     <div class="title-section fs-16 fw-bold mt-3">Sélection de la couleur de votre façade avant :</div>
                     <ul class="wf-colors-selector my-3">
@@ -68,7 +68,7 @@
                             <li class="wf-colors-selector-item"
                             onclick="updateAttributeFailureQuoteData({{$failure->id}}, {{$attribute->id}})"
                             >
-                                <sl-card class="wf-colors-selector-item-card wf-card"  data-id="{{ $failure->code . substr($attribute->name, 0, 1) }}" data-prix="{{$failure->price}}" data-color="Noir">
+                                <sl-card class="wf-colors-selector-item-card wf-card"  data-id="{{ $failure->code . substr($attribute->name, 0, 1) }}" data-prix="{{App\Models\Repair\MergeModelFailure::getFailurePrice($failure->id, $model->id) }}" data-color="Noir">
 
                                     <div class="wf-colors-selector-item-card-body">
                                     <div class="wf-colors-selector-item-card-body-badge" style="background-color: {{$attribute->code}}; border: 1px solid #{{$attribute->code}};"></div>
@@ -82,7 +82,7 @@
                         @endforeach
                     </ul>
                 </div>
-            @endif
+            @endif --}}
         </div>
       @endforeach
 

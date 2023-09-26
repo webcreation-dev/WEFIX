@@ -79,10 +79,10 @@
                                         <a class="nav-link active" data-bs-toggle="tab"
                                             data-bs-target="#ec-spt-nav-details" role="tablist">Détail</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#ec-spt-nav-info"
                                             role="tablist">Plus d'information</a>
-                                    </li>
+                                    </li> --}}
                                     {{-- <li class="nav-item">
                                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#ec-spt-nav-review"
                                             role="tablist">Avis</a>
@@ -92,21 +92,18 @@
                             <div class="tab-content  ec-single-pro-tab-content">
                                 <div id="ec-spt-nav-details" class="tab-pane fade show active">
                                     <div class="ec-single-pro-tab-desc">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type specimen book. It has survived not only five centuries, but also
-                                            the leap into electronic typesetting, remaining essentially unchanged.
+                                        <p>
+                                            {{$product->description}}
                                         </p>
-                                        <ul>
+                                        {{-- <ul>
                                             <li>Any Product types that You want - Simple, Configurable</li>
                                             <li>Downloadable/Digital Products, Virtual Products</li>
                                             <li>Inventory Management with Backordered items</li>
                                             <li>Flatlock seams throughout.</li>
-                                        </ul>
+                                        </ul> --}}
                                     </div>
                                 </div>
-                                <div id="ec-spt-nav-info" class="tab-pane fade">
+                                {{-- <div id="ec-spt-nav-info" class="tab-pane fade">
                                     <div class="ec-single-pro-tab-moreinfo">
                                         <ul>
                                             <li><span>Weight</span> 1000 g</li>
@@ -114,7 +111,7 @@
                                             <li><span>Color</span> Black, Pink, Red, White</li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

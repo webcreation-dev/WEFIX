@@ -73,6 +73,16 @@ class TestDataTableSeeder extends Seeder
             'image' => 'apple.webp',
             'type_device_id' => 1
         ]);
+        BrandDevice::create([
+            'name' => 'Huawei',
+            'image' => 'samsung.webp',
+            'type_device_id' => 1
+        ]);
+        BrandDevice::create([
+            'name' => 'Ipad',
+            'image' => 'samsung.webp',
+            'type_device_id' => 1
+        ]);
 
         //Famille de marques
         Family::create([
@@ -94,6 +104,33 @@ class TestDataTableSeeder extends Seeder
             'name' => 'Galaxy Note',
             'image' => 'galaxy-z.png',
             'brand_device_id' => 1,
+        ]);
+
+        Family::create([
+            'name' => 'Galaxy Tab',
+            'image' => 'galaxy-z.png',
+            'brand_device_id' => 1,
+        ]);
+        Family::create([
+            'name' => 'Galaxy J',
+            'image' => 'galaxy-z.png',
+            'brand_device_id' => 1,
+        ]);
+        Family::create([
+            'name' => 'Galaxy M',
+            'image' => 'galaxy-z.png',
+            'brand_device_id' => 1,
+        ]);
+
+        Family::create([
+            'name' => 'Huawei Y_Nova',
+            'image' => 'galaxy-z.png',
+            'brand_device_id' => 3,
+        ]);
+        Family::create([
+            'name' => 'Huawei P_Smart_Mate',
+            'image' => 'galaxy-z.png',
+            'brand_device_id' => 3,
         ]);
 
         //Modèles de marques
@@ -577,199 +614,20 @@ class TestDataTableSeeder extends Seeder
         ]);*/
 
 
-
-        // Attribut de pannes
-        FailureAttribute::create([
-            'name' => 'Noir',
-            'code' => '#272727',
-        ]);
-        FailureAttribute::create([
-            'name' => 'Gris',
-            'code' => '#808080',
-        ]);
-        FailureAttribute::create([
-            'name' => 'Crème',
-            'code' => '#F0EBE1',
-        ]);
-        FailureAttribute::create([
-            'name' => 'Jaune',
-            'code' => '#FFFF00',
-        ]);
-        FailureAttribute::create([
-            'name' => 'Mauve',
-            'code' => '#D4C8DA',
-        ]);
-        FailureAttribute::create([
-            'name' => 'Vert',
-            'code' => '#12AD2B',
-        ]);
-
-
-        //Pannes d'appareils
-        FailureDevice::create([
-            'name' => 'Façade avant',
-            'image' => 'FacadeAvant.png',
-            'price' => '279.90',
-            'reduction_price' => '251.91',
-            'reduction' => '10',
-            'rdv_online' => true,
-            'code' => 'FA',
-        ]);
-        FailureDevice::create([
-            'name' => 'Batterie',
-            'image' => 'Batterie.png',
-            'price' => '79.90',
-            'reduction_price' => '63.92',
-            'reduction' => '20',
-            'rdv_online' => false,
-            'code' => 'BA',
-        ]);
-        FailureDevice::create([
-            'name' => 'Appareil photo arrière',
-            'image' => 'AppareilPhotoArriere.png',
-            'price' => '89.90',
-            'reduction_price' => '71.92',
-            'reduction' => '20',
-            'rdv_online' => false,
-            'code' => 'APA',
-        ]);
-        FailureDevice::create([
-            'name' => 'Appareil photo avant',
-            'image' => 'AppareilPhotoAvant.png',
-            'price' => '59.90',
-            'reduction_price' => '47.92',
-            'reduction' => '20',
-            'rdv_online' => false,
-            'code' => 'APAV',
-        ]);
-        FailureDevice::create([
-            'name' => ' Connecteur de charge',
-            'image' => 'ConnecteurCharge.png',
-            'price' => '69.90',
-            'reduction_price' => '55.92',
-            'reduction' => '20',
-            'rdv_online' => false,
-            'code' => 'CC',
-        ]);
-        FailureDevice::create([
-            'name' => 'Façade arrière',
-            'image' => 'FacadeArriere.png',
-            'price' => '75.90',
-            'reduction_price' => '60.72',
-            'reduction' => '20',
-            'rdv_online' => false,
-            'code' => 'FAR',
-        ]);
-        FailureDevice::create([
-            'name' => 'Haut-parleur',
-            'image' => 'HautParleur.png',
-            'price' => '39.90',
-            'reduction_price' => '31.92',
-            'reduction' => '20',
-            'rdv_online' => false,
-            'code' => 'HP',
-        ]);
-        FailureDevice::create([
-            'name' => 'Diagnostic de la panne',
-            'image' => 'autres.webp',
-            'price' => '0',
-            'reduction_price' => '0',
-            'reduction' => '0',
-            'rdv_online' => false,
-            'code' => 'DP',
-        ]);
-
-        //Association des attributs de pannes aux pannes d'appareils
-        MergeFailureAttribute::create([
-            'failure_device_id' => 1,
-            'failure_attribute_id' => 1,
-        ]);
-        MergeFailureAttribute::create([
-            'failure_device_id' => 1,
-            'failure_attribute_id' => 2,
-        ]);
-        MergeFailureAttribute::create([
-            'failure_device_id' => 1,
-            'failure_attribute_id' => 3,
-        ]);
-        MergeFailureAttribute::create([
-            'failure_device_id' => 1,
-            'failure_attribute_id' => 4,
-        ]);
-        MergeFailureAttribute::create([
-            'failure_device_id' => 1,
-            'failure_attribute_id' => 5,
-        ]);
-        MergeFailureAttribute::create([
-            'failure_device_id' => 1,
-            'failure_attribute_id' => 6,
-        ]);
-
-        MergeFailureAttribute::create([
-            'failure_device_id' => 6,
-            'failure_attribute_id' => 1,
-        ]);
-        MergeFailureAttribute::create([
-            'failure_device_id' => 6,
-            'failure_attribute_id' => 2,
-        ]);
-        MergeFailureAttribute::create([
-            'failure_device_id' => 6,
-            'failure_attribute_id' => 3,
-        ]);
-        MergeFailureAttribute::create([
-            'failure_device_id' => 6,
-            'failure_attribute_id' => 4,
-        ]);
-        MergeFailureAttribute::create([
-            'failure_device_id' => 6,
-            'failure_attribute_id' => 5,
-        ]);
-        MergeFailureAttribute::create([
-            'failure_device_id' => 6,
-            'failure_attribute_id' => 6,
-        ]);
-
         //Association de pannes d'appareil aux modèles de marques
 
-        MergeModelFailure::create([
-            'model_brand_id' => 1,
-            'failure_device_id' => 1,
-        ]);
-        MergeModelFailure::create([
-            'model_brand_id' => 1,
-            'failure_device_id' => 2,
-        ]);
-        MergeModelFailure::create([
-            'model_brand_id' => 1,
-            'failure_device_id' => 3,
-        ]);
+        // $j = 0;
+        // $k = 0;
 
-        MergeModelFailure::create([
-            'model_brand_id' => 2,
-            'failure_device_id' => 4,
-        ]);
-        MergeModelFailure::create([
-            'model_brand_id' => 2,
-            'failure_device_id' => 5,
-        ]);
-        MergeModelFailure::create([
-            'model_brand_id' => 2,
-            'failure_device_id' => 6,
-        ]);
+        // for($k = 1; $k <= 102; $k++){
 
-        MergeModelFailure::create([
-            'model_brand_id' => 3,
-            'failure_device_id' => 1,
-        ]);
-        MergeModelFailure::create([
-            'model_brand_id' => 3,
-            'failure_device_id' => 7,
-        ]);
-        MergeModelFailure::create([
-            'model_brand_id' => 3,
-            'failure_device_id' => 8,
-        ]);
+        //     for($j = 1; $j <= 3; $j++) {
+        //         MergeModelFailure::create([
+        //             'model_brand_id' => $k,
+        //             'failure_device_id' => $j,
+        //         ]);
+        //     }
+        // }
 
         // Boutiques
         StoreDevice::create([

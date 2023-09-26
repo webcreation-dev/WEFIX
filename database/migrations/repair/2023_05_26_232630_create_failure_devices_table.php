@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
-            $table->string('price');
-            $table->string('reduction_price');
-            $table->string('reduction');
+            $table->string('price')->nullable();
+            $table->string('reduction_price')->nullable();
+            $table->string('reduction')->nullable();
             $table->string('code');
             $table->boolean('rdv_online')->default(false);
             $table->timestamps();

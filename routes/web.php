@@ -40,6 +40,7 @@ use Illuminate\Support\Facades\Session;
 Route::get('/', function () {
     // $filter = Session::get('filter');
     // dd($filter);
+    // dd(session('quoteData', []));
     return view('layouts.app');
 })->name('home');
 

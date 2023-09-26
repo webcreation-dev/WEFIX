@@ -8,7 +8,6 @@ class FailureController extends Component
 {
     public $model;
 
-
     public function render()
     {
         $failures = $this->model->failureDevices()->get();
@@ -37,4 +36,5 @@ class FailureController extends Component
     public function getAppointment() {
         return redirect()->route('failures.create');
     }
+
 }

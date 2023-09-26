@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('failure_device_id');
             $table->foreign('failure_device_id')->references('id')->on('failure_devices')->onDelete('cascade');
+            $table->string('price');
 
             $table->unsignedBigInteger('model_brand_id');
             $table->foreign('model_brand_id')->references('id')->on('model_brands')->onDelete('cascade');

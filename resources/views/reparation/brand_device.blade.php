@@ -156,7 +156,7 @@
                 <sl-card class="wf-card wf-card--model sal-animate"  data-grid-item="" data-sal="slide-up" data-sal-delay="100" data-sal-duration="200">
                     <a
                     href="{{
-                        $brand->id == 1
+                        ($brand->id == 1 || $brand->id == 3)
                         ? route('brand.families', ['brand' => $brand])
                         : route('brands.show', $brand)
                     }}"
