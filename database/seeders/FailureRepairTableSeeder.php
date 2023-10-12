@@ -2611,9 +2611,6 @@ class FailureRepairTableSeeder extends Seeder
 
         ];
 
-
-
-
         foreach($model_ids as $model_id) {
             for($j = 1; $j <= 8; $j++) {
                 if( isset($failure_price[$model_id][$j]) ) {

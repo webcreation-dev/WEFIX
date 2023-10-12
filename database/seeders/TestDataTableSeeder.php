@@ -75,12 +75,12 @@ class TestDataTableSeeder extends Seeder
         ]);
         BrandDevice::create([
             'name' => 'Huawei',
-            'image' => 'samsung.webp',
+            'image' => 'huawei.webp',
             'type_device_id' => 1
         ]);
         BrandDevice::create([
             'name' => 'Ipad',
-            'image' => 'samsung.webp',
+            'image' => 'ipad.png',
             'type_device_id' => 1
         ]);
 

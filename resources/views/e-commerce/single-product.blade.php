@@ -138,7 +138,7 @@
                         <div class="ec-product-inner">
                             <div class="ec-pro-image-outer">
                                 <div class="ec-pro-image">
-                                    <a href="product-left-sidebar.html" class="image">
+                                    <a href="{{route('products.show', ['product' => $product->id] )}}" class="image">
                                         <img class="main-image"
                                         src={{asset('e-commerce/'. $product->productImages()->first()->image )}}
                                         alt="Product" />
@@ -169,7 +169,7 @@
                                 </div>
                             </div>
                             <div class="ec-pro-content">
-                                <h5 class="ec-pro-title"><a href="product-left-sidebar.html">{{$product->name}}</a></h5>
+                                <h5 class="ec-pro-title"><a href="{{route('products.show', ['product' => $product->id] )}}">{{$product->name}}</a></h5>
                                 <div class="ec-pro-rating">
                                     @for ($i = 0; $i < $product->star; $i++)
                                         <i class="ecicon eci-star fill"></i>
