@@ -631,23 +631,24 @@ class TestDataTableSeeder extends Seeder
 
         // Boutiques
         StoreDevice::create([
-            'name' => 'Centre commercial Cap 3000',
-            'address' => 'Avenue Eugène Donadeï, 06700 Saint-Laurent-du-Var',
+            'name' => 'Boutique Mayday Phone',
+            'address' => '13 Avenue Gabriel Péri, Sainte-Geneviève-des-Bois',
             'city' => 'France',
-            'zip_code' => '06260',
+            'zip_code' => '91700',
         ]);
-        StoreDevice::create([
-            'name' => 'Mayday Phone - Fnac Nice',
-            'address' => '44 avenue Jean Médecin, 06000 Nice',
-            'city' => 'France',
-            'zip_code' => '06260',
-        ]);
-        StoreDevice::create([
-            'name' => 'Fnac Cannes',
-            'address' => '83 rue d\'Antibes, 06400 Cannes',
-            'city' => 'France',
-            'zip_code' => '06260',
-        ]);
+
+        // StoreDevice::create([
+        //     'name' => 'Mayday Phone - Fnac Nice',
+        //     'address' => '44 avenue Jean Médecin, 06000 Nice',
+        //     'city' => 'France',
+        //     'zip_code' => '06260',
+        // ]);
+        // StoreDevice::create([
+        //     'name' => 'Fnac Cannes',
+        //     'address' => '83 rue d\'Antibes, 06400 Cannes',
+        //     'city' => 'France',
+        //     'zip_code' => '06260',
+        // ]);
 
         //Horaire d'ouverture des boutiques
 
@@ -671,44 +672,44 @@ class TestDataTableSeeder extends Seeder
         ]);
 
 
-        SheduleStore::create([
-            'store_device_id' => 2,
-            'day' => 'Jeudi',
-            'hour_open' => '10:00',
-            'hour_close' => '20:00',
-        ]);
-        SheduleStore::create([
-            'store_device_id' => 2,
-            'day' => 'Vendredi',
-            'hour_open' => '10:00',
-            'hour_close' => '20:00',
-        ]);
-        SheduleStore::create([
-            'store_device_id' => 2,
-            'day' => 'Lundi',
-            'hour_open' => '10:00',
-            'hour_close' => '20:00',
-        ]);
+        // SheduleStore::create([
+        //     'store_device_id' => 2,
+        //     'day' => 'Jeudi',
+        //     'hour_open' => '10:00',
+        //     'hour_close' => '20:00',
+        // ]);
+        // SheduleStore::create([
+        //     'store_device_id' => 2,
+        //     'day' => 'Vendredi',
+        //     'hour_open' => '10:00',
+        //     'hour_close' => '20:00',
+        // ]);
+        // SheduleStore::create([
+        //     'store_device_id' => 2,
+        //     'day' => 'Lundi',
+        //     'hour_open' => '10:00',
+        //     'hour_close' => '20:00',
+        // ]);
 
 
-        SheduleStore::create([
-            'store_device_id' => 3,
-            'day' => 'Jeudi',
-            'hour_open' => '10:00',
-            'hour_close' => '20:00',
-        ]);
-        SheduleStore::create([
-            'store_device_id' => 3,
-            'day' => 'Samedi',
-            'hour_open' => '10:00',
-            'hour_close' => '20:00',
-        ]);
-        SheduleStore::create([
-            'store_device_id' => 3,
-            'day' => 'Dimaanche',
-            'hour_open' => '10:00',
-            'hour_close' => '20:00',
-        ]);
+        // SheduleStore::create([
+        //     'store_device_id' => 3,
+        //     'day' => 'Jeudi',
+        //     'hour_open' => '10:00',
+        //     'hour_close' => '20:00',
+        // ]);
+        // SheduleStore::create([
+        //     'store_device_id' => 3,
+        //     'day' => 'Samedi',
+        //     'hour_open' => '10:00',
+        //     'hour_close' => '20:00',
+        // ]);
+        // SheduleStore::create([
+        //     'store_device_id' => 3,
+        //     'day' => 'Dimaanche',
+        //     'hour_open' => '10:00',
+        //     'hour_close' => '20:00',
+        // ]);
 
     }
 }

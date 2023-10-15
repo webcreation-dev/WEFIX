@@ -101,7 +101,7 @@
                                     </svg>
                                 <div class="title-section fs-19 ms-3">Téléphone
                                     <p class="card-text fs-md fw-medium text-muted mt-1">
-                                        07.65.28.69.67
+                                        +33765286967
                                     </p>
                                 </div>
 
@@ -122,7 +122,7 @@
                                     </svg>
                                 <div class="title-section fs-19 ms-3">Email
                                     <p class="card-text fs-md fw-medium text-muted mt-1">
-                                        maydayphone.contact@gmail.com
+                                        maydayphones@gmail.com
                                     </p>
                                 </div>
 

@@ -15,7 +15,7 @@
         <div class="footer-top section-space-footer-p">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-lg-3 ec-footer-contact">
+                    <div class="col-sm-12 col-lg-4 ec-footer-contact">
                         <div class="ec-footer-widget">
                             {{-- <div class="ec-footer-logo"> --}}
                                 <a href="/"><img src="{{asset('images/logo.png')}}" width="250"
@@ -25,23 +25,24 @@
                             <h4 class="ec-footer-heading">Contactez-nous </h4>
                             <div class="ec-footer-links">
                                 <ul class="align-items-center">
-                                    <li class="ec-footer-link">71 Pilgrim Avenue Chevy Chase, east california.</li>
+                                    <li class="ec-footer-link">13 Avenue Gabriel Péri, 91700 Sainte-Geneviève-des-Bois
+                                        .</li>
 
                                     <li class="ec-footer-link"><span>Email:</span><a
-                                            href="mailto:example@ec-email.com">maydayphone@gmail.com</a></li>
+                                            href="mailto:example@ec-email.com">maydayphones@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-3 ec-footer-info">
+                    <div class="col-sm-12 col-lg-4 ec-footer-info">
                         <div class="ec-footer-widget">
-                            <h4 class="ec-footer-heading">Information</h4>
+                            <h4 class="ec-footer-heading">Informations</h4>
                             <div class="ec-footer-links">
                                 <ul class="align-items-center">
-                                    <li class="ec-footer-link"><a href="about-us.html"> A propos </a></li>
-                                    <li class="ec-footer-link"><a href="faq.html">FAQ</a></li>
-                                    <li class="ec-footer-link"><a href="#">Information de livraison</a></li>
-                                    <li class="ec-footer-link"><a href="contact-us.html">Contactez-nous</a></li>
+                                    <li class="ec-footer-link"><a href="{{ route('typedevices.index') }}"> REPARATION </a></li>
+                                    <li class="ec-footer-link"><a href="{{route('stepsellings.index')}}">REVENDRE</a></li>
+                                    <li class="ec-footer-link"><a href="https://www.custom.maydayphone.com/phone_case">COQUES PERSONNALISEES</a></li>
+                                    {{-- <li class="ec-footer-link"><a href="contact-us.html">Contactez-nous</a></li> --}}
                                 </ul>
                             </div>
                         </div>
@@ -59,21 +60,21 @@
                             </div>
                         </div>
                     </div> --}}
-                    <div class="col-sm-12 col-lg-3 ec-footer-service">
+                    <div class="col-sm-12 col-lg-4 ec-footer-service">
                         <div class="ec-footer-widget">
                             <h4 class="ec-footer-heading">Services</h4>
                             <div class="ec-footer-links">
                                 <ul class="align-items-center">
-                                    <li class="ec-footer-link"><a href="#">Remboursement</a></li>
-                                    <li class="ec-footer-link"><a href="#">Politique privée</a></li>
-                                    <li class="ec-footer-link"><a href="#">Service client</a></li>
-                                    <li class="ec-footer-link"><a href="terms-condition.html">Termes & conditions</a>
+                                    <li class="ec-footer-link"><a href="/faq"> FAQ </a></li>
+                                    <li class="ec-footer-link"><a href="/contact">CONTACT</a></li>
+                                    {{-- <li class="ec-footer-link"><a href="#">Service client</a></li>
+                                    <li class="ec-footer-link"><a href="terms-condition.html">Termes & conditions</a> --}}
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-3 ec-footer-news">
+                    {{-- <div class="col-sm-12 col-lg-3 ec-footer-news">
                         <div class="ec-footer-widget">
                             <h4 class="ec-footer-heading">Newsletter</h4>
                             <div class="ec-footer-links">
@@ -94,7 +95,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -103,7 +104,7 @@
                 <div class="row align-items-center">
                     <!-- Footer social Start -->
                     <div class="col text-left footer-bottom-left">
-                        <div class="footer-bottom-social">
+                        {{-- <div class="footer-bottom-social">
                             <span class="social-text text-upper">Suivez-nous :</span>
                             <ul class="mb-0">
                                 <li class="list-inline-item"><a class="hdr-facebook" href="#"><i class="ecicon eci-facebook"></i></a></li>
@@ -111,7 +112,7 @@
                                 <li class="list-inline-item"><a class="hdr-instagram" href="#"><i class="ecicon eci-instagram"></i></a></li>
                                 <li class="list-inline-item"><a class="hdr-linkedin" href="#"><i class="ecicon eci-linkedin"></i></a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                     <!-- Footer social End -->
                     <!-- Footer Copyright Start -->
